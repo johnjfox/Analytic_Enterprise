@@ -1,0 +1,56 @@
+## Local tweaks
+*.ini 
+
+## Potentially large files 
+*.zip
+*.csv 
+*.xls
+*.xlsx
+*.exe 
+
+.dropbox
+.dropbox.attr
+.ini
+*.sqlite
+.ipynb_checkpoints/
+Untitled*.ipynb
+
+## Video and images 
+*.mp4
+*.mov
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
+
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+
+## Intermediate documents:
+*.dvi
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.bak
+*.sav
+*.synctex.gz(busy)
+*.pdfsync
+*.tex.bak
+*.tex.sav
+
+
+## Compiled python files:
+*.pyc
+Code/IPython/.ipynb_checkpoints/
+
+## website
+*.sublime-project
+*.sublime-workspace
