@@ -1,5 +1,13 @@
 # Pandas
 
+<div class="alert alert-info">
+This notebook is intended only to provide an overview of the pandas package. More complete documentation can be found at
+<ul>
+<li><a href="http://pandas.pydata.org/pandas-docs/stable/index.html">pandas Documentation</a></li>
+<li><a href="http://pandas.pydata.org/pandas-docs/stable/10min.html">pandas in 10 minutes</a></li>
+</ul>
+</div>
+
 ## Importing the libraries that we'll use
 
 ```python
@@ -74,9 +82,7 @@ What we obtained through this process is a table is a table of data that represe
 
 Generally, a DataFrame consists of three components: a table of data, column labels, and row labels. Typically, columns are variables and the column labels give us their names. In our example, the second column has the name Sepal_Length and its values follow below it. The rows are then observations, and the row labels give us their names. This type of tabular organization is quite typical for the data that we'll be seeing, however occasionally we'll come across data in some other form. When we do, we'll use Python to reorganize it so that it's in a form we're more used to.
 
-The *read_csv()* function provides an enormous amount of functionality and it's worthwhile to take a look at the [documentation](pandas_doc).
-
-While we're talking about the creation of DataFrames, it's worthwhile to note that we can create them directly from data as well. In other words, we don't always have to begin with a file (although for data analysis that's the more typical starting point). As an example, we can use a Python dictionary to create a DataFrame.
+While we're talking about the creation of DataFrames, you should know that we can create them directly from data as well. In other words, we don't always have to begin with a file (although for data analysis that's a pretty typical starting point). As an example, we can use a Python dictionary to create a DataFrame.
 
 ```python
 >>> # A representative extract of our iris data
@@ -157,15 +163,17 @@ pandas primarily uses the value np.nan to represent missing data. By default any
 
 If you're in a situation where you are **not** reading your data from a csv file, that's ok too. pandas offers a number of other functions for creating DataFrames, including *read_excel()* which does pretty much you might expect it to do.
 
-### Exercises
-
+<div class="alert alert-success">
 **Exercise.** Use this notebook cell (or go back and edit one of the ones we've already used) so that you are trying to obtain a file at "iris/broken_link.data.csv". What happened?
+</div>
 
 ```python
 >>> # create your answer to the exercise here
 ```
 
+<div class="alert alert-success">
 **Exercise:** What happens if you add the argument *index_col=0* to the *read_csv()* statement? How does *iris_dataframe* change?
+</div>
 
 ```python
 >>> # create your answer to the exercise here
@@ -268,17 +276,17 @@ As it turns out, we can use vectorized operations to create new variables within
 ...
 >>> print df
          Class  ID  Petal_Length  Petal_Width  Sepal_Length  Sepal_Width  \
-0  Iris-setosa   1           1.4          0.2           5.1          3.5   
-1  Iris-setosa   2           1.4          0.2           4.9          3.0   
-2  Iris-setosa   3           1.3          0.2           4.7          3.2   
-3  Iris-setosa   4           1.5          0.2           4.6          3.1   
-4  Iris-setosa   5           1.4          0.2           5.0          3.6   
+0  Iris-setosa   1           1.4          0.2           5.1          3.5
+1  Iris-setosa   2           1.4          0.2           4.9          3.0
+2  Iris-setosa   3           1.3          0.2           4.7          3.2
+3  Iris-setosa   4           1.5          0.2           4.6          3.1
+4  Iris-setosa   5           1.4          0.2           5.0          3.6
 
-   New_variable  
-0      1.457143  
-1      1.633333  
-2      1.468750  
-3      1.483871  
+   New_variable
+0      1.457143
+1      1.633333
+2      1.468750
+3      1.483871
 4      1.388889
 ```
 
@@ -300,9 +308,18 @@ One thing to note here. Remember the shorthand notion for referencing a variable
 4  Iris-setosa   5           1.4          0.2           5.0          3.6
 ```
 
+<div class="alert alert-success">
+**Exercise.** Use this notebook cell (or go back and edit one of the ones we've already used) to create a new variable in the *iris_dataframe* DataFrame which computes and approximation to the petal area and sepal area by multiplying the length and width of the petal and sepal, respectively. 
+</div>
+
+```python
+>>> # create your answer to the exercise here
+```
+
+
 #### Simple Exploratory Analysis on DataFrames
 
-Although reading data from a file is useful, it's (hopefully) not the most exciting thing that we'll ever do with our data. pandas offers are fairly broad array of methods on DataFrames which we can use to extract descriptive statistics. Notice that the statistics are run across all of the variables. 
+Although reading data from a file is useful, it's (hopefully) not the most exciting thing that we'll ever do with our data. pandas offers are fairly broad array of methods on DataFrames which we can use to extract descriptive statistics. Notice that the statistics are run across all of the variables.
 
 A complete list of the DataFrame statistical functions can be found in the pythons documentaton, but some of the more interesting functions include:
 
@@ -346,7 +363,7 @@ Some examples of applying these functions are provided in the next few cells:
 4   5           5.0          3.6           1.4          0.2  Iris-setosa
 
 
-The mean: 
+The mean:
 
 ID              75.500000
 Sepal_Length     5.843333
@@ -356,7 +373,7 @@ Petal_Width      1.198667
 dtype: float64
 
 
-The std: 
+The std:
 
 ID              43.445368
 Sepal_Length     0.828066
@@ -366,7 +383,7 @@ Petal_Width      0.763161
 dtype: float64
 
 
-A summary level description: 
+A summary level description:
 
                ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width
 count  150.000000    150.000000   150.000000    150.000000   150.000000
@@ -379,7 +396,7 @@ min      1.000000      4.300000     2.000000      1.000000     0.100000
 max    150.000000      7.900000     4.400000      6.900000     2.500000
 
 
-The Petal_Width mean: 
+The Petal_Width mean:
 
 1.19866666667
 ```
@@ -430,7 +447,7 @@ Since the columns names are available to us as a list, we can also use list comp
 
 Alternatively, you can rename the variables one by one using the *rename()* function. Here, the argument to the *rename()* function is a dictionary that maps the old name (the "key" Petal_Width) with the new name (the "value" Johns_Column). If we want to change more than one variable name, we simply add more items to the dictionary.
 
-In some ways I find this approach to renaming variable to be safer than the previous approach since it avoids the  issue of needing to know the order of the variables, and I tend to use it even if I'm changing all of the variable names. 
+In some ways I find this approach to renaming variable to be safer than the previous approach since it avoids the  issue of needing to know the order of the variables, and I tend to use it even if I'm changing all of the variable names.
 
 One thing to note however, the default functionality of *rename()* may not be quite what you'd expect. To get what you;d expect, you'll either need to use the "inplace" argument for *rename()* or assign the results of *rename()* to a new variable.
 
@@ -452,7 +469,7 @@ One thing to note however, the default functionality of *rename()* may not be qu
 ... print "\n\nUSING A COPY \n\n",
 >>> df2 = df.rename(columns={'Petal_Width': 'Johns_Column'})
 >>> print df2
-WITHOUT A COPY OR USING inplace 
+WITHOUT A COPY OR USING inplace
 
          Class  ID  Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
 0  Iris-setosa   1           1.4          0.2           5.1          3.5
@@ -462,7 +479,7 @@ WITHOUT A COPY OR USING inplace
 4  Iris-setosa   5           1.4          0.2           5.0          3.6
 
 
-USING inplace = True 
+USING inplace = True
 
          Class  ID  Petal_Length  Johns_Column  Sepal_Length  Sepal_Width
 0  Iris-setosa   1           1.4           0.2           5.1          3.5
@@ -472,7 +489,7 @@ USING inplace = True
 4  Iris-setosa   5           1.4           0.2           5.0          3.6
 
 
-USING A COPY 
+USING A COPY
 
          Class  ID  Petal_Length  Johns_Column  Sepal_Length  Sepal_Width
 0  Iris-setosa   1           1.4           0.2           5.1          3.5
@@ -546,7 +563,7 @@ Often we'll receive a data file that has many more variables than we want to pro
 >>> print df
 
 
-A DATAFRAME CONTAINING THE EXTRACTED VARIABLES 
+A DATAFRAME CONTAINING THE EXTRACTED VARIABLES
 
    ID  Petal_Width  Petal_Length
 0   1          0.2           1.4
@@ -644,34 +661,28 @@ Let's imagine that we have a DataFrame called *df*. Some basic functions that we
 | df.to_excel(*filename_string*) | write the DataFrame to an excel file |
 
 
-### Exercises
+<div class="alert alert-success">
+**Exercise.** Please write a script to perform some simple operation on our iris data. I've repeated it here for convenience. In particular, I'd like you to write a script which does the following:
 
-**Exercise.** Please write a script to perform some simple operation on our sample GDP data. I've repeated it here for convenience. In particular, I'd like you to write a script which does the following:
+<ul>
+<li>determines the number of rows and columns in the data</li>
+<li>determine the data type contained in each column</li>
+<li>gets a list containing all of the row names </li>
+<li>gets a list containing all of the column names</li>
+<li>create a new DataFrame containing the transpose of our sample data set</li>
+</ul>
 
-* determines the number of rows and columns in the data
-* determine the data type contained in each column
-* gets a list containing all of the row names 
-* gets a list containing all of the column names
-* create a new DataFrame containing the transpose of our sample data set
+</div>
 
 ```python
->>> # Some population and gdp data for China and France, by year
-... data = {'countrycode': ['CHN', 'CHN', 'CHN', 'FRA', 'FRA', 'FRA'],
-...        'pop': [1124.8, 1246.8, 1318.2, 58.2, 60.8, 64.7],
-...        'rgdpe': [2.611, 4.951, 11.106, 1.294, 1.753, 2.032],
-...        'year': [1990, 2000, 2010, 1990, 2000, 2010]}
->>> df = pd.DataFrame(data)
-...
 >>> # create your answer to the exercise here
+>>>
 ```
 
----
+<div class="alert alert-success">
+**Exercise.** Let's string together some common functionality. Create a script which will compute the min, the max, the mean and the standard deviation for each variety of iris. Return the results as a single DataFrame.
+</div>
 
-## Documentation
-This notebook is intended only to provide an overview of the pandas package. More complete documentation can be found at
-
-* [pandas documentation][pandas_doc]: The complete documentation
-* [pandas in 10 minutes][pandas_tutorial]: A quick summary of key functionality
-
-[pandas_doc]: http://pandas.pydata.org/pandas-docs/stable/index.html
-[pandas_tutorial]: http://pandas.pydata.org/pandas-docs/stable/10min.html
+```python
+>>> # create your answer to the exercise here
+```
