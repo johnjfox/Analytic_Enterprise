@@ -78,10 +78,6 @@ The *read_csv()* function provides an enormous amount of functionality and it's 
 
 While we're talking about the creation of DataFrames, it's worthwhile to note that we can create them directly from data as well. In other words, we don't always have to begin with a file (although for data analysis that's the more typical starting point). As an example, we can use a Python dictionary to create a DataFrame.
 
----
-!!python/unicode 'scrolled': true
-...
-
 ```python
 >>> # A representative extract of our iris data
 ... # I'll actually create this as a function since I'll be using it several times in this notebook
