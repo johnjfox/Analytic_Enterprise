@@ -8,6 +8,40 @@ This notebook is intended only to provide an overview of the pandas package. Mor
 </ul>
 </div>
 
+<div class="alert alert-danger">
+You'll need to have an internet connection for portions of this notebook.
+</div>
+
+## Introduction
+
+Some of the leading packages for numerical ("scientific") computation in Python are
+
+* NumPy. Tools for numerical computing. In Excel the basic unit is a cell, a single number. In NumPy the basic unit is a vector (a column) or matrix (a table or worksheet), which allows us to do things with an entire column or table in one line. This facility carries over to Pandas since Pandas is built on NumPy.
+* Pandas. The leading package for managing data and our focus in this notebook.
+* Matplotlib. The leading graphics package.
+
+All of these packages come with the Anaconda distribution, which means we already have them installed and ready to use.
+
+Pandas is an essential part of data work in Python. Its authors describe it as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python." Suffice it to say that we can do pretty much everything in Pandas that we can do in Excel -- and more. We can compute sums of rows and columns, generate new rows or columns, construct pivot tables, and lots of other things. And we can do all this with much larger files than Excel can handle.
+
+### Overview. 
+In this notebook, we'll introduce Pandas, the Python package devoted to data management. We'll use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.
+
+We're ready to look at some data. You probably remember that our typical program consists of data input, data management, and graphics. In this notebook, our focus is on the data input, although we'll talk briefly about the data management as well. More concretely, we explain how to get text file data into Python.
+
+### Reminders
+
+**Objects and methods**. Recall that we apply the method *justdoit* to the object *x* with *x.justdoit*.
+
+**Help**. We can get help in the Jupyter console. For the hypothetical *x.justdoit*, we would type 
+*x.justdoit?* in the Jupyter console.
+
+**Data structures**. That's the term we use for specific organizations of data. Examples are lists, tuples, and dictionaries. Each has a specific structure and a set of methods that can be applied. Lists are (ordered) collections of objects between square brackets: *numberlist = [1, -5, 2]*. Dictionaries are (unordered) pairs of items between curly brackets: *namedict = {'Brady': 12, 'Gronk': 87}*. The first item in each pair is the "key," the second is the "value.""
+
+**Integers, floats, and strings.** Three common types of data.
+
+**Function returns** We refer to the output of a function as its return. We would say, for example, that the function type(x) returns the type of the input object x. We capture the return with an assignment: *xtype = type(x)*.
+
 ## Importing the libraries that we'll use
 
 ```python
@@ -315,7 +349,6 @@ One thing to note here. Remember the shorthand notion for referencing a variable
 ```python
 >>> # create your answer to the exercise here
 ```
-
 
 #### Simple Exploratory Analysis on DataFrames
 
@@ -676,7 +709,6 @@ Let's imagine that we have a DataFrame called *df*. Some basic functions that we
 
 ```python
 >>> # create your answer to the exercise here
->>>
 ```
 
 <div class="alert alert-success">
