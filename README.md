@@ -2,11 +2,13 @@
 
 This document:  https://github.com/johnjfox/Analytic_Enterprise/blob/master/README.md
 
-A brief overview of the tools and skills you'll learn in **[Data Bootcamp](https://github.com/johnjfox/Data_Bootcamp#data-bootcamp)**.  
+A brief overview of the tools and analysis skills you'll learn in **[The Analytic Enterprise](https://github.com/johnjfox/Analytic_Enterprise)**.  
 
-March XX and XX, 2-4pm, Questrom *RoomNumber*
-* Session 1:  Python fundamentals, examples    
-* Session 2:  data management (Pandas), graphics (Matplotlib), examples 
+March XX through April XX, 8 to 11 AM, Questrom *RoomNumber*
+* Session XX: Python fundamentals, examples    
+* Session XX: Pandas Overview
+* Session XX: Data Wranging
+* Session XX: 2D Graphics Using Matplotlib and Seaborn
 
 **Be sure to bring your computer to the sessions.**  We'll put it to work.  
 
@@ -15,12 +17,8 @@ March XX and XX, 2-4pm, Questrom *RoomNumber*
 
 The contents of this course were heavily influenced by the following:
 
-1. a similar series of mini-bootcamps course held at NYU Stern, including a fantastic book that they have published on GitBooks
-
----
-#### Announcements
-
-We'll post announcements here.  
+1. a series of Data-centric mini-bootcamp courses on Python held at NYU Stern, including a book that the instructors have published on GitBooks
+2. The tutorials embedded in the pandas, matplotlib and seaborn packages
 
 ---
 #### Things to do before the first session
@@ -35,16 +33,18 @@ We'll post announcements here.
 **Optional**
 1. Conda, which is one component of the Python distribution that you installed, is a very powerful package manager for installing and managing Python environments. If you plan to get serious about using Python, it's worthwhile to go through the [Conda 30-minutes test drive](http://conda.pydata.org/docs/test-drive.html)
 
-Download the code files below.  We'll use three:  one for the data package (Pandas), one for graphics (Matplotlib), and one for examples putting both to use.  Remember to click on the Raw button to get the right file.
+Download the code files below.  Remember to click on the Raw button to get the right file.
 
 **Notebooks for class.**  
 There are several ways to obtain the notebooks we'll be using throughout the class. The easiest way is probably to 
-#### Session 1:
-* [Jupyter Notebooks](http://nbviewer.jupyter.org/github/johnjfox/Data_Bootcamp/blob/master/notebooks/01a_jupyter_notebooks.ipynb) 
-* [Fundamentals](http://nbviewer.jupyter.org/github/johnjfox/Data_Bootcamp/blob/master/notebooks/01b_fundamentals.ipynb) 
+#### Data Tools in Python:
+* [Jupyter Notebooks](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/.ipynb) 
+* [Markdown](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Markdown_Essentials.ipynb) 
 
-#### Session 2:
-* [Dataframes](http://nbviewer.jupyter.org/github/johnjfox/Data_Bootcamp/blob/master/notebooks/02a_dataframes.ipynb) 
+#### Data Analysis in Python:
+* [Intro to Pandas and DataFrames](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
+* [Intro to Matplotlib, Seaborn and 2D Visualization](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
+* [Intro to Data Wrangling](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
 
 Click on the link, then click on the **Raw button** in the upper right, then save in a directory where you can find it.    
 
