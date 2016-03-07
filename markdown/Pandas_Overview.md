@@ -696,7 +696,6 @@ Let's imagine that we have a DataFrame called *df*. Some basic functions that we
 
 <div class="alert alert-success">
 **Exercise.** Please write a script to perform some simple operation on our iris data. I've repeated it here for convenience. In particular, I'd like you to write a script which does the following:
-
 <ul>
 <li>determines the number of rows and columns in the data</li>
 <li>determine the data type contained in each column</li>
@@ -704,7 +703,6 @@ Let's imagine that we have a DataFrame called *df*. Some basic functions that we
 <li>gets a list containing all of the column names</li>
 <li>create a new DataFrame containing the transpose of our sample data set</li>
 </ul>
-
 </div>
 
 ```python
