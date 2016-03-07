@@ -18,7 +18,7 @@ Rather than a length text description of the Jupyter interface, I've created a v
 ```python
 >>> from IPython.display import YouTubeVideo
 >>> YouTubeVideo('sjfsUzECqK0')
-<IPython.lib.display.YouTubeVideo at 0x1065e9128>
+<IPython.lib.display.YouTubeVideo at 0x1062b7990>
 ```
 
 ## Some Useful Keyboard Shortcuts for Jupyter Notebooks
@@ -55,7 +55,6 @@ Now, we can try some of the shortcuts. For example, in the cell below, please ty
 
 ```python
 
-100
 ```
 
 Now, please type in "sample" and then hit the TAB key. You should see both sampleVariable and sampleList as options. Choose one using your keyboard and then evaluate the cell.
