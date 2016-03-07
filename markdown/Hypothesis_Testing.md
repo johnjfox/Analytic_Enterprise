@@ -2,7 +2,17 @@
 
 ```python
 >>> # We're going to plot all of the figures within the notebook, so let's set up that option
+... # Our standard set of imports for pandas, numpy and matplotlib
+... import pandas as pd
+>>> import numpy as np
+>>> import matplotlib as mpl
+>>> import matplotlib.pyplot as plt
+>>> from ipywidgets import interact
+...
+>>> # in addition, it will be useful in general if we keep our plots "inline" within the notebook
 ... %matplotlib inline
+...
+>>> mpl.style.use('ggplot')
 ```
 
 ### Probability Distributions
@@ -17,20 +27,37 @@ I'm sure that this is entirely review for everyone, but let's take a moment to t
 >>> import matplotlib.mlab as mlab
 >>> import math
 ...
->>> mean = 0
+>>> from ipywidgets import interact
+...
+>>> # set up the pdf for the standard distribution
+... mean = 0
 >>> variance = 1
 >>> sigma = math.sqrt(variance)
->>> x = np.linspace(-3,3,100)
+>>> x = np.linspace(-4,4,100);
 ...
->>> y = mlab.normpdf(x,mean,sigma)
->>> yCum = y.cumsum()
->>> yCum /= yCum[-1]
+>>> # compute the CDF
+... y = mlab.normpdf(x,mean,sigma);
+>>> yCum = y.cumsum();
+>>> yCum /= yCum[-1];
 ...
->>> plt.plot(x, y, 'b', linewidth=1.5)
->>> plt.plot(x, yCum, 'r--', linewidth=1.5)
->>> plt.ylim(0, 1.05)
->>> plt.grid(True)
->>> plt.show()
+>>> def fillGaussian(t):
+...     section = np.linspace(-4, t, 40)
+...     yFill = mlab.normpdf(section,mean,sigma)
+...
+...     # determine the area that will be filled
+...     # and now draw everything
+...     fig, ax1 = plt.subplots(1, 1, sharex=True)
+...     fig.set_size_inches(15,10)
+...     ax1.plot(x, y, 'b', linewidth=1.5)
+...     ax1.plot(x, yCum, 'r--', linewidth=1.5)
+...     ax1.fill_between(section,0.0, yFill, color='Green', alpha=0.5)
+...     plt.ylim(0, 1.05)
+...     plt.grid(True)
+...     plt.show()
+...
+...     return
+...
+>>> interact(fillGaussian, t=(-4.0,4.0));
 ```
 
 ### Empirical Distributions
@@ -65,6 +92,55 @@ Before we talk about anything else, let's stop for a moment and consider probabi
 >>> plt.show()
 ```
 
+```python
+
+```
+
 ### Empirical Distributions
 
 ### The Normal Approximation
+
+## Visualizing this process
+
+```python
+>>> import numpy as np
+>>> import matplotlib.pyplot as plt
+>>> import matplotlib.mlab as mlab
+>>> import math
+...
+>>> from ipywidgets import interact
+...
+>>> # set up the pdf for the standard distribution
+... mean = 0
+>>> variance = 1
+>>> sigma = math.sqrt(variance)
+>>> x = np.linspace(-4,4,100);
+...
+>>> # compute the CDF
+... y = mlab.normpdf(x,mean,sigma);
+>>> yCum = y.cumsum();
+>>> yCum /= yCum[-1];
+...
+>>> def fillGaussian(t):
+...     section = np.linspace(t, 4, 20)
+...     yFill = mlab.normpdf(section,mean,sigma)
+...
+...     # determine the area that will be filled
+...     # and now draw everything
+...     fig, ax1 = plt.subplots(1, 1, sharex=True)
+...     fig.set_size_inches(15,10)
+...     ax1.plot(x, y, 'b', linewidth=1.5)
+...     ax1.plot(x, yCum, 'r--', linewidth=1.5)
+...     ax1.fill_between(section,0.0, yFill, color='Green', alpha=0.5)
+...     plt.ylim(0, 1.05)
+...     plt.grid(True)
+...     plt.show()
+...
+...     return
+...
+>>> interact(fillGaussian, t=(0.0,4.0));
+```
+
+```python
+
+```
