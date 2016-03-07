@@ -52,8 +52,6 @@ In this notebook, we'll introduce matplotlib, the Python package devoted to 2D v
 ...
 >>> # in addition, it will be useful in general if we keep our plots "inline" within the notebook
 ... %matplotlib inline
-...
->>> mpl.style.use('ggplot')
 ```
 
 ## Creating Our Sample DataFrame
