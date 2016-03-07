@@ -5,8 +5,8 @@ This document:  https://github.com/johnjfox/Analytic_Enterprise/blob/master/READ
 A brief overview of the tools and skills you'll learn in **[Data Bootcamp](https://github.com/johnjfox/Data_Bootcamp#data-bootcamp)**.  
 
 March XX through April XX, 8 to 11 AM, Questrom *RoomNumber*
-* Session 1: Python fundamentals, examples    
-* Session 2: Pandas Overview
+* Session XX: Python fundamentals, examples    
+* Session XX: Pandas Overview
 * Session XX: Data Wranging
 * Session XX: 2D Graphics Using Matplotlib and Seaborn
 
