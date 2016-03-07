@@ -38,13 +38,13 @@ Download the code files below.  Remember to click on the Raw button to get the r
 **Notebooks for class.**  
 There are several ways to obtain the notebooks we'll be using throughout the class. The easiest way is probably to 
 #### Data Tools in Python:
-* [Jupyter Notebooks](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Jupyter_Notebooks.ipynb) 
-* [Markdown](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Markdown_Essentials.ipynb) 
+* [Jupyter Notebooks](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Jupyter_Notebooks.ipynb) 
+* [Markdown](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Markdown_Essentials.ipynb) 
 
 #### Data Analysis in Python:
-* [Intro to Pandas and DataFrames](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
-* [Intro to Matplotlib, Seaborn and 2D Visualization](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
-* [Intro to Data Wrangling](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Data_Wrangling.ipynb) 
+* [Intro to Pandas and DataFrames](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
+* [Intro to Matplotlib, Seaborn and 2D Visualization](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
+* [Intro to Data Wrangling](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Data_Wrangling.ipynb) 
 
 Click on the link, then click on the **Raw button** in the upper right, then save in a directory where you can find it.    
 
