@@ -28,23 +28,26 @@ The contents of this course were heavily influenced by the following:
 1. Download Python for your operating system. We'll use the 2.7 version of Python. By far the easiest way to obtain Python and all of the packages and tools that you'll need is to download it and install the [Anaconda Distribution from Continuum][anaconda]  The instructions for installing the software are on the download page. **Be sure to grab Python 2.7, since there are significant differences between the versions.** 
 2. Set up an Analytic_Enterprise directory on your computer so that you can keep all of the materials in one place. 
 3. Grab the Jupyter notebooks that we'll be using in class.
-4. Famliarize yourself a bit with Jupyter notebooks by 
+4. Famliarize yourself a bit with Jupyter notebooks by looking at the Jupyter Notebook notebook I constructed or workgin your way through the [quickstart materials](https://jupyter-notebook-beginner-guide.readthedocs.org/en/latest/).
 
 **Optional**
 1. Conda, which is one component of the Python distribution that you installed, is a very powerful package manager for installing and managing Python environments. If you plan to get serious about using Python, it's worthwhile to go through the [Conda 30-minutes test drive](http://conda.pydata.org/docs/test-drive.html)
 
 Download the code files below.  Remember to click on the Raw button to get the right file.
 
-**Notebooks for class.**  
-There are several ways to obtain the notebooks we'll be using throughout the class. The easiest way is probably to 
+**Obtaining the Notebooks**  
+There are several ways to obtain the notebooks we'll be using throughout the class. If you simply want to view the notebooks, then you should be all set if you just click on the links provided below. The downside of this approach is that the notebooks are not interactive at all, so you can't work in any of the cells, modify any of the code, etc. 
+
+If you'd like to actually interact with the notebooks, then the easiest way is probably to grab the entire github repository and copy it to your local machine. There are several ways to do this, depending on your level of familarity with github, but the simplest approach is probably to download the entire repository. Alternatively, the next easiest approach is to click the individual notebook that you're interested in, go to the "raw" version and save it to a directory that your Jupyter Notebook system can access. 
+
 #### Data Tools in Python:
-* [Jupyter Notebooks](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Jupyter_Notebooks.ipynb) 
-* [Markdown](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Markdown_Essentials.ipynb) 
+* [Jupyter Notebooks](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Jupyter_Notebooks.ipynb) 
+* [Markdown](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Markdown_Essentials.ipynb) 
 
 #### Data Analysis in Python:
-* [Intro to Pandas and DataFrames](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
-* [Intro to Matplotlib, Seaborn and 2D Visualization](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
-* [Intro to Data Wrangling](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
+* [Intro to Pandas and DataFrames](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
+* [Intro to Matplotlib, Seaborn and 2D Visualization](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
+* [Intro to Data Wrangling](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Data_Wrangling.ipynb) 
 
 Click on the link, then click on the **Raw button** in the upper right, then save in a directory where you can find it.    
 
