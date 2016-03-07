@@ -37,11 +37,11 @@ Download the code files below.  We'll use three:  one for the data package (Pand
 
 **Notebooks for class.**  
 There are several ways to obtain the notebooks we'll be using throughout the class. The easiest way is probably to 
-#### Session 1:
+#### Data Tools in Python:
 * [Jupyter Notebooks](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/.ipynb) 
 * [Markdown](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Markdown_Essentials.ipynb) 
 
-#### Session 2:
+#### Data Analysis in Python:
 * [Dataframes](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
 * [2D Visualization](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
 * [Data Wrangling](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
