@@ -44,7 +44,7 @@ There are several ways to obtain the notebooks we'll be using throughout the cla
 #### Data Analysis in Python:
 * [Intro to Pandas and DataFrames](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
 * [Intro to Matplotlib, Seaborn and 2D Visualization](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
-* [Intro to Data Wrangling](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
+* [Intro to Data Wrangling](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Data_wrangling.ipynb) 
 
 Click on the link, then click on the **Raw button** in the upper right, then save in a directory where you can find it.    
 
