@@ -2,7 +2,7 @@
 
 This document:  https://github.com/johnjfox/Analytic_Enterprise/blob/master/README.md
 
-A brief overview of the tools and skills you'll learn in **[Data Bootcamp](https://github.com/johnjfox/Data_Bootcamp#data-bootcamp)**.  
+A brief overview of the tools and analysis skills you'll learn in **[The Analytic Enterprise](https://github.com/johnjfox/Analytic_Enterprise)**.  
 
 March XX through April XX, 8 to 11 AM, Questrom *RoomNumber*
 * Session XX: Python fundamentals, examples    
@@ -33,7 +33,7 @@ The contents of this course were heavily influenced by the following:
 **Optional**
 1. Conda, which is one component of the Python distribution that you installed, is a very powerful package manager for installing and managing Python environments. If you plan to get serious about using Python, it's worthwhile to go through the [Conda 30-minutes test drive](http://conda.pydata.org/docs/test-drive.html)
 
-Download the code files below.  We'll use three:  one for the data package (Pandas), one for graphics (Matplotlib), and one for examples putting both to use.  Remember to click on the Raw button to get the right file.
+Download the code files below.  Remember to click on the Raw button to get the right file.
 
 **Notebooks for class.**  
 There are several ways to obtain the notebooks we'll be using throughout the class. The easiest way is probably to 
