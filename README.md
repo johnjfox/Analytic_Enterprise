@@ -42,9 +42,9 @@ There are several ways to obtain the notebooks we'll be using throughout the cla
 * [Markdown](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Markdown_Essentials.ipynb) 
 
 #### Data Analysis in Python:
-* [Dataframes](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
-* [2D Visualization](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
-* [Data Wrangling](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
+* [Intro to Pandas and DataFrames](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
+* [Intro to Matplotlib, Seaborn and 2D Visualization](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
+* [Intro to Data Wrangling](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
 
 Click on the link, then click on the **Raw button** in the upper right, then save in a directory where you can find it.    
 
