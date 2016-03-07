@@ -28,7 +28,7 @@ The contents of this course were heavily influenced by the following:
 1. Download Python for your operating system. We'll use the 2.7 version of Python. By far the easiest way to obtain Python and all of the packages and tools that you'll need is to download it and install the [Anaconda Distribution from Continuum][anaconda]  The instructions for installing the software are on the download page. **Be sure to grab Python 2.7, since there are significant differences between the versions.** 
 2. Set up an Analytic_Enterprise directory on your computer so that you can keep all of the materials in one place. 
 3. Grab the Jupyter notebooks that we'll be using in class.
-4. Famliarize yourself a bit with Jupyter notebooks by 
+4. Famliarize yourself a bit with Jupyter notebooks by looking at the Jupyter Notebook notebook I constructed or workgin your way through the [quickstart materials](https://jupyter-notebook-beginner-guide.readthedocs.org/en/latest/).
 
 **Optional**
 1. Conda, which is one component of the Python distribution that you installed, is a very powerful package manager for installing and managing Python environments. If you plan to get serious about using Python, it's worthwhile to go through the [Conda 30-minutes test drive](http://conda.pydata.org/docs/test-drive.html)
