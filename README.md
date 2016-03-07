@@ -38,7 +38,7 @@ Download the code files below.  Remember to click on the Raw button to get the r
 **Notebooks for class.**  
 There are several ways to obtain the notebooks we'll be using throughout the class. The easiest way is probably to 
 #### Data Tools in Python:
-* [Jupyter Notebooks](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/.ipynb) 
+* [Jupyter Notebooks](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Jupyter_Notebooks.ipynb) 
 * [Markdown](http://nbviewer.jupyter.org/github/johnjfox/Analytic_Enterprise/blob/master/notebooks/Markdown_Essentials.ipynb) 
 
 #### Data Analysis in Python:
