@@ -5,9 +5,9 @@ This document:  https://github.com/johnjfox/Analytic_Enterprise/blob/master/READ
 A brief overview of the tools and analysis skills you'll learn in **[The Analytic Enterprise](https://github.com/johnjfox/Analytic_Enterprise)**.  
 
 March XX through April XX, 8 to 11 AM, Questrom *RoomNumber*
-* Session XX: Python fundamentals, examples    
+* Session XX: Python fundamentals, examples
 * Session XX: Pandas Overview
-* Session XX: Data Wranging
+* Session XX: Data Wrangling
 * Session XX: 2D Graphics Using Matplotlib and Seaborn
 
 **Be sure to bring your computer to the sessions.**  We'll put it to work.  
