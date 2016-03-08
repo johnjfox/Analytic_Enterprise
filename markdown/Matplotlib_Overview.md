@@ -17,12 +17,12 @@ You'll need to have an internet connection for portions of this notebook.
 Some of the leading packages for numerical ("scientific") computation in Python are
 
 * NumPy. Tools for numerical computing. In Excel the basic unit is a cell, a single number. In NumPy the basic unit is a vector (a column) or matrix (a table or worksheet), which allows us to do things with an entire column or table in one line. This facility carries over to Pandas since Pandas is built on NumPy.
-* Pandas. The leading package for managing data and our focus in this notebook.
-* Matplotlib. The leading graphics package.
+* Pandas. The leading package for managing data.
+* Matplotlib. The leading graphics package and our focus in this notebook.
 
 All of these packages come with the Anaconda distribution, which means we already have them installed and ready to use.
 
-matplotlib is a python 2D plotting library which, according to its developers, "produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms". You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc, with just a few lines of code. Perhaps the best way to get a sense for its capabilities is to look at the [screenshots](http://matplotlib.org/users/screenshots.html), [thumbnails](http://matplotlib.org/gallery.html), and [samples](http://matplotlib.org/examples/index.html) provided at the matplotlib website
+matplotlib is a python 2D plotting library which, according to its developers, "produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms". You can generate plots, histograms, power spectra, bar charts, error charts, scatterplots, etc, with just a few lines of code. Perhaps the best way to get a sense for its capabilities is to look at the [screenshots](http://matplotlib.org/users/screenshots.html), [thumbnails](http://matplotlib.org/gallery.html), and [samples](http://matplotlib.org/examples/index.html) provided at the matplotlib website
 
 ### Overview. 
 In this notebook, we'll introduce matplotlib, the Python package devoted to 2D visualizations. Typically, we'll use use Pandas to read spreadsheet data into Python, perform some form of processing, and then visualize the results in matplotlib.
@@ -237,7 +237,7 @@ Let's start off with the absolutely simplest possible plot
 ...     df.plot(kind='kde', subplots=True, figsize=(10,10));
 ```
 
-### Boxplots
+### Box Plots
 
 ```python
 >>> df.boxplot(return_type='axes');
@@ -255,6 +255,19 @@ Let's start off with the absolutely simplest possible plot
 
 ### Regression Plots Functions
 
+### An Alternative Approach
+
 ```python
 
+```
+
+```python
+>>> fig, ax = plt.subplots()
+...
+>>> us.plot(ax=ax)
+>>> ax.set_title('US GDP and Consumption', fontsize=14, loc='left')
+>>> ax.set_ylabel('Billions of 2013 USD')
+>>> ax.legend(['GDP', 'Consumption'])           # more descriptive variable names
+>>> ax.set_xlim(2002.5, 2013.5)                 # shrink x axis limits
+>>> ax.tick_params(labelcolor='red')            # change tick labels to red
 ```

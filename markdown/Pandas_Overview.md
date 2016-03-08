@@ -31,16 +31,16 @@ We're ready to look at some data. You probably remember that our typical program
 
 ### Reminders
 
-**Objects and methods**. Recall that we apply the method *justdoit* to the object *x* with *x.justdoit*.
+**Objects and methods**. Recall that we apply the method `justdoit` to the object `x` with `x.justdoit`.
 
-**Help**. We can get help in the Jupyter console. For the hypothetical *x.justdoit*, we would type 
-*x.justdoit?* in the Jupyter console.
+**Help**. We can get help in the Jupyter console. For the hypothetical `x.justdoit`, we would type 
+`x.justdoit?` in the Jupyter console.
 
-**Data structures**. That's the term we use for specific organizations of data. Examples are lists, tuples, and dictionaries. Each has a specific structure and a set of methods that can be applied. Lists are (ordered) collections of objects between square brackets: *numberlist = [1, -5, 2]*. Dictionaries are (unordered) pairs of items between curly brackets: *namedict = {'Brady': 12, 'Gronk': 87}*. The first item in each pair is the "key," the second is the "value.""
+**Data structures**. That's the term we use for specific organizations of data. Examples are lists, tuples, and dictionaries. Each has a specific structure and a set of methods that can be applied. Lists are (ordered) collections of objects between square brackets: `numberlist = [1, -5, 2]`. Dictionaries are (unordered) pairs of items between curly brackets: `namedict = {'Brady': 12, 'Gronk': 87}`. The first item in each pair is the "key," the second is the "value.""
 
 **Integers, floats, and strings.** Three common types of data.
 
-**Function returns** We refer to the output of a function as its return. We would say, for example, that the function type(x) returns the type of the input object x. We capture the return with an assignment: *xtype = type(x)*.
+**Function returns** We refer to the output of a function as its return. We would say, for example, that the function type(x) returns the type of the input object x. We capture the return with an assignment: `xtype = type(x)`.
 
 ## Importing the libraries that we'll use
 
@@ -106,13 +106,13 @@ Now, let's write a little python to read this file in and create a DataFrame:
 
 Let's take a look at what just happened there:
 
-1. First, we set up a URL to a data set which happens to be a csv, or "comma separated values", text file on my Github account. Github is an internet based revision control system which has a lot of great properties, such as being free :) In this case, we're using a rather famous data set which contains data on some samples of irises. 
-2. We created a new object called a DataFrame by reading in the contents of this URL using the *read_csv()* function. 
+1. First, we set up a URL to a data set which happens to be a CSV, or "comma separated values", text file on my Github account. Github is an internet based revision control system which has a lot of great properties, such as being free :) In this case, we're using a rather famous data set which contains data on some samples of irises. 
+2. We created a new object called a DataFrame by reading in the contents of this URL using the `read_csv()` function. 
 3. We assigned this newly formed DataFrame to a variable called iris_dataframe
 3. Finally, we printed the first 10 rows of the DataFrame.
 4. As always in Python, the data is "zero-referenced"
 
-What we obtained through this process is a table is a table of data that represents the contents of the file. The first column of the table is new, however the rest of it is essentially the same as what we saw in the file itself.  The data structure that we just created is called a DataFrame and, as I mentioned before, it's more or less equivalent to what you might rememeber as a worksheet in Excel.
+What we obtained through this process is a table is a table of data that represents the contents of the file. The first column of the table is new, however the rest of it is essentially the same as what we saw in the file itself.  The data structure that we just created is called a DataFrame and, as I mentioned before, it's more or less equivalent to what you might remember as a worksheet in Excel.
 
 Generally, a DataFrame consists of three components: a table of data, column labels, and row labels. Typically, columns are variables and the column labels give us their names. In our example, the second column has the name Sepal_Length and its values follow below it. The rows are then observations, and the row labels give us their names. This type of tabular organization is quite typical for the data that we'll be seeing, however occasionally we'll come across data in some other form. When we do, we'll use Python to reorganize it so that it's in a form we're more used to.
 
@@ -169,7 +169,7 @@ We'll come back to use this sample dataset in some of our later examples.
 
 **Example: Replacing values by NaN**
 
-pandas primarily uses the value np.nan to represent missing data. By default any variable which has the value NaN will not included in computations. As we'll see over time, that's a pretty useful capability. Comprehensively dealing with missing or dirty data is beyond the scope of what we're going to do in this lesson, but it's interesting to note that the *read_csv()* function offers up the ability to replace specific values with NaN as they are read in.
+pandas primarily uses the value `np.nan` to represent missing data. By default any variable which has the value NaN will not included in computations. As we'll see over time, that's a pretty useful capability. Comprehensively dealing with missing or dirty data is beyond the scope of what we're going to do in this lesson, but it's interesting to note that the `read_csv()` function offers up the ability to replace specific values with NaN as they are read in.
 
 ```python
 >>> import pandas as pd
@@ -195,7 +195,7 @@ pandas primarily uses the value np.nan to represent missing data. By default any
 9  10           4.9          3.1           1.5          0.1  Iris-setosa
 ```
 
-If you're in a situation where you are **not** reading your data from a csv file, that's ok too. pandas offers a number of other functions for creating DataFrames, including *read_excel()* which does pretty much you might expect it to do.
+If you're in a situation where you are **not** reading your data from a CSV file, that's ok too. pandas offers a number of other functions for creating DataFrames, including `read_excel()` which does pretty much you might expect it to do.
 
 <div class="alert alert-success">
 **Exercise.** Use this notebook cell (or go back and edit one of the ones we've already used) so that you are trying to obtain a file at "iris/broken_link.data.csv". What happened?
@@ -215,7 +215,7 @@ If you're in a situation where you are **not** reading your data from a csv file
 
 ### Working with DataFrames
 
-As I mentioned before, DataFrames consist of a table of data, column labels, and row labels. Typically, columns are used to represent variables and the column labels give us their names. In our original example, the second column has the name Sepal_Length and its values follow below it. In one representation of the data, the rows can be used to capture all of the variables associated with a single observation. In this case the row labels give us a way to label an observation with a name so that it can be easily refered to.  In Python, these row labels are typically refered to as the "index"
+As I mentioned before, DataFrames consist of a table of data, column labels, and row labels. Typically, columns are used to represent variables and the column labels give us their names. In our original example, the second column has the name Sepal_Length and its values follow below it. In one representation of the data, the rows can be used to capture all of the variables associated with a single observation. In this case the row labels give us a way to label an observation with a name so that it can be easily referred to.  In Python, these row labels are typically referred to as the "index".
 
 ``` 
 ID = 5
@@ -690,7 +690,7 @@ Let's imagine that we have a DataFrame called *df*. Some basic functions that we
 | df.dtypes | the types of data in each column | 
 | df.transpose | the transpose of the DataFrame | 
 | df.T | an abbreviation for the transpose |
-| df.to_csv(*filename_string*) | write the DataFrame to a csv file | 
+| df.to_csv(*filename_string*) | write the DataFrame to a CSV file | 
 | df.to_excel(*filename_string*) | write the DataFrame to an excel file |
 
 

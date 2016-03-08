@@ -13,7 +13,7 @@ You'll need to have an internet connection for portions of this notebook.
 
 ## Introduction
 
-Data wrangling is a loosely defined process for manually converting or mapping data from one "raw" form into another format. The purpose of this wrangling is to recast the data into a format which either simoplifies our processing chain or enables us to use tools which require a certain layout of the data. Typically data wrangling is one of the first steps in  the processing once we extract the data from the data source. 
+Data wrangling is a loosely defined process for manually converting or mapping data from one "raw" form into another format. The purpose of this wrangling is to recast the data into a format which either simplifies our processing chain or enables us to use tools which require a certain layout of the data. Typically data wrangling is one of the first steps in  the processing once we extract the data from the data source. 
 
 The process of wrangling can involve a broad variety of operations, such as sorting, filtering, or other operations. Many of these are covered elsewhere in our materials, so for the purposes of this chapter, we'll emphasize wrangling operations which involve reshaping data or combining multiple sets of data.
 

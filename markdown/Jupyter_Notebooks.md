@@ -1,6 +1,6 @@
 # Jupyter Notebooks
 
-There is no shortage of alternatives available for developing Python. The available tools range in complexity from the interactive interface you get by simply typing "python" at the commandline in your operating system up to the extremely complex integrated development environments, such as PyCharm or Eclipse.
+There is no shortage of alternatives available for developing Python. The available tools range in complexity from the interactive interface you get by simply typing "python" at the command line in your operating system up to the extremely complex integrated development environments, such as PyCharm or Eclipse.
 
 For this course, we'll be using a very popular "notebook" based interface called Jupyter. Before you ask, Jupyter admittedly has some significant limitations that mean that it's probably not the tool that you should be using if you're constructing a complex application. But, to be blunt about it, we're not building complex applications right now. Instead, we have basically two goals: (1) to learn enough basic Python to be dangerous and (2) to use Python to perform exploratory analysis. As it turns out, Jupyter is essentially ideal for these tasks:
 
@@ -33,7 +33,7 @@ Rather than a length text description of the Jupyter interface, I've created a v
 - TAB will attempt to "auto-complete" whatever you're doing. What happens is context dependent.
     - it may simply complete the variable name, the function name or whatever it is that you were typing if it's unambiguous
     - If there are multiple ways to complete the text, then it will show you several alternatives. It may show a popup of the various alternatives for completing the text you were typing. This may variable names, it may be methods on an object (we'll cover objects later), etc. You can choose between these alternatives using either your mouse or by moving around with your arrow keys
-- Shift+TAB will show help popup for docstring
+- Shift+TAB will show a small popup containing help information.
 
 ### Some examples to play with.
 
