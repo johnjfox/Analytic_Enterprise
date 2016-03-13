@@ -39,7 +39,7 @@ Download the code files below.  Remember to click on the Raw button to get the r
 **Obtaining the Notebooks**  
 There are several ways to obtain the notebooks we'll be using throughout the class. If you simply want to view the notebooks, then you should be all set if you just click on the links provided below. The downside of this approach is that the notebooks are not interactive at all, so you can't work in any of the cells, modify any of the code, etc. 
 
-If you'd like to actually interact with the notebooks, then the easiest way is probably to grab the entire Github repository and copy it to your local machine. There are several ways to do this, depending on your level of familiarity with Github, but the simplest approach is probably to download the entire repository. Alternatively, the next easiest approach is to click the individual notebook that you're interested in, go to the "raw" version and save it to a directory that your Jupyter Notebook system can access. 
+If you'd like to actually interact with the notebooks, then the easiest way is probably to grab the entire Github repository and copy it to your local machine. There are several ways to do this, depending on your level of familiarity with Github, but the simplest approach is to download the entire repository as a zip file using the "Download Zip" button on this page. Alternatively, the next easiest approach is to click the individual notebook that you're interested in, go to the "raw" version and save it to a directory that your Jupyter Notebook system can access. 
 
 #### Data Tools in Python:
 * [Jupyter Notebooks](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Jupyter_Notebooks.ipynb) 
