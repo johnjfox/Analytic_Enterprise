@@ -4,27 +4,16 @@ This document:  https://github.com/johnjfox/Analytic_Enterprise/blob/master/READ
 
 A brief overview of the tools and analysis skills you'll learn in **[The Analytic Enterprise](https://github.com/johnjfox/Analytic_Enterprise)**.  
 
-March XX through April XX, 8 to 11 AM, Questrom *RoomNumber*
+Dates: March 14 through April 28, 2016
+Time:  8 to 11 AM, 
+Location: Questrom Room 406.
 
-* Session XX: Python fundamentals, examples
-* Session XX: Pandas Overview
-* Session XX: Data Wrangling
-* Session XX: 2D Graphics Using Matplotlib and Seaborn
-
-**Be sure to bring your computer to the sessions.**  We'll put it to work.  
-
----
-#### Acknowledgements
-
-The contents of this course were heavily influenced by the following:
-
-1. a series of Data-centric mini-bootcamp courses on Python held at NYU Stern, including a book that the instructors have published on GitBooks
-2. The tutorials embedded in the pandas, matplotlib and seaborn packages
+**Be sure to bring your computer to the sessions.**  We'll put it to work.
 
 ---
 #### Things to do before the first session
 
-**Before the first session.** 
+**Before the first analytics session.** 
 
 1. Download Python for your operating system. We'll use the 2.7 version of Python. By far the easiest way to obtain Python and all of the packages and tools that you'll need is to download it and install the [Anaconda Distribution from Continuum][anaconda]  The instructions for installing the software are on the download page. **Be sure to grab Python 2.7, since there are significant differences between the versions.** 
 2. Set up an Analytic_Enterprise directory on your computer so that you can keep all of the materials in one place. 
@@ -39,7 +28,7 @@ Download the code files below.  Remember to click on the Raw button to get the r
 **Obtaining the Notebooks**  
 There are several ways to obtain the notebooks we'll be using throughout the class. If you simply want to view the notebooks, then you should be all set if you just click on the links provided below. The downside of this approach is that the notebooks are not interactive at all, so you can't work in any of the cells, modify any of the code, etc. 
 
-If you'd like to actually interact with the notebooks, then the easiest way is probably to grab the entire Github repository and copy it to your local machine. There are several ways to do this, depending on your level of familiarity with Github, but the simplest approach is to download the entire repository as a zip file using the "Download Zip" button on this page. Alternatively, the next easiest approach is to click the individual notebook that you're interested in, go to the "raw" version and save it to a directory that your Jupyter Notebook system can access. 
+If you'd like to actually interact with the notebooks, which will be essential for the class, then the easiest way is probably to grab the entire Github repository and copy it to your local machine. There are several ways to do this depending on your level of familiarity with Github, but the simplest approach is probably to download the entire repository as a zip file using the "Download Zip" button on this page. Alternatively, the next easiest approach is to click the individual notebook that you're interested in, go to the "raw" version and save it to a directory that your Jupyter Notebook system can access. 
 
 #### Data Tools in Python:
 * [Jupyter Notebooks](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Jupyter_Notebooks.ipynb) 
@@ -55,3 +44,10 @@ Click on the link, then click on the **Raw button** in the upper right, then sav
 [anaconda]: https://www.continuum.io/downloads
 [jupyter]: http://nbviewer.jupyter.org
 
+---
+#### Acknowledgements
+
+The contents of this course were heavily influenced by the following:
+
+1. a series of Data-centric mini-bootcamp courses on Python held at NYU Stern by Dave Backus and other, including a book that the instructors have published on GitBooks
+2. The tutorials embedded in the pandas, matplotlib and seaborn packages
