@@ -1,4 +1,4 @@
----
+<!--
 title: Hypothesis Testing and The Central Limit Theorem
 author: "John Fox"
 date: September 19, 2015
@@ -13,34 +13,35 @@ header-includes:
 - \fancyfoot[L]{\textcopyright\em 2015 John J. Fox}
 - \fancyfoot[R]{\thepage}
 - \fancypagestyle{plain}{\pagestyle{fancy}}
----
-## Background
-In this note, I introduce a fundamental building block for many of the concepts that we'll see throughout the rest of the semester: _the Central Limit Theorem_, which I'll abbreviate as _CLT_ from here on. In fact,  the CLT and the tools and concepts which follow are so ubiquitous in statistical analysis that after we get an understanding of what it is, what it means and how to use it, that we'll begin slowly to take it for granted. For now, though, since at least a few of us are not  comfortable with the CLT and with the related concept of statistical inferencing through hypothesis testing, we'll go through it somewhat meticulously.
+-->
 
-From there, well introduce a particularly important application: statistical hypothesis testing. In particular, well describe both the Z-test and the T-test and discuss when to use them. Finally, well introduce a variation on the T-test, called the pairwise T-test, which, when it can be applied, offers some additional statistical power.
+## Background
+In this note, I introduce a fundamental building block for many of the concepts that we'll see throughout the rest of the semester: _the Central Limit Theorem_, which I'll abbreviate as _CLT_ from here on. In fact,  the CLT and the tools and concepts which follow are so ubiquitous in statistical analysis that after we get an understanding of what it is, what it means and how to use it, that we'll begin slowly to take it for granted. For now, though, since at least a few of us are not  comfortable with the CLT and with the related concept of statistical inferencing through hypothesis testing, we'll go through it somewhat meticulously. 
+
+From there, we’ll introduce a particularly important application: statistical hypothesis testing. In particular, we’ll describe both the Z-test and the T-test and discuss when to use them. Finally, we’ll introduce a variation on the T-test, called the pairwise T-test, which, when it can be applied, offers some additional statistical power. 
 
 ## References
-This note draws heavily from several books and references, particularly Naked Statistics [@Whe2013] and Statistics in Plain English [@Urd2010a]. Naked Statistics, in particular, is a much better written book on making statistics understandable than I could ever hope to write.
+This note draws heavily from several books and references, particularly Naked Statistics [@Whe2013] and Statistics in Plain English [@Urd2010a]. Naked Statistics, in particular, is a much better written book on making statistics understandable than I could ever hope to write. 
 
 ## Why Do We Care About the Central Limit Theorem?
-The CLT is based upon a fairly straightforward idea, namely that a large, properly drawn sample will resemble the population from which it is drawn.  If you were to take samples of the population over and over, then youd see variation, but on the whole, the probability that the sample you drew would differ from the larger population isnt very high. Why do we care? In a nutshell, the CLT allows to make some very interesting and useful statements:
+The CLT is based upon a fairly straightforward idea, namely that a large, properly drawn sample will resemble the population from which it is drawn.  If you were to take samples of the population over and over, then you’d see variation, but on the whole, the probability that the sample you drew would differ from the larger population isn’t very high. Why do we care? In a nutshell, the CLT allows to make some very interesting and useful statements:
 
 1. If we know detailed information about the population, then we can make some powerful inferences about a properly drawn sample.
 2. If we have detailed information about a properly drawn sample, then we can infer information about the larger population. 
 3. If we have data describing a particular sample, and data about a particular population, then we can infer whether this sample is consistent with a sample drawn from the population.
 4. Finally, if we have the characteristics of two samples, then we can infer whether the samples were both drawn from the same population.
 
-Wheelan [@Whe2013] gives a series of great examples of applying the CLT to a situation Im sure that weve all found ourselves in at some point: searching for a missing bus of marathon runners.  Imagine that you live in a city which is hosting an internationally famous marathon. On the morning of the race, each of the runners will check in at a central location and will then be randomly assigned to a bus which will take them to the starting line. One of the buses goes missing and through pure bad luck has no GPS, no cell phones on board, and, as it turns out, nobody that speaks English very well. As someone who has trained their entire lives to perform search and rescue missions involving electronics-challenged, distance runners, youre called in to help with the search. On the way to your car, you notice that in front of your house there is a bus with a group of irate, international visitors parked at the curb with a man who appears to be the driver setting up a sextant, compass and map. Clearly youve found the bus! You radio in the good news to headquarters and then run over to inform the passengers of their rescue. As you get closer, you notice something that puts the first seeds of doubt in your mind: the passengers are enormous. Using your keen training as a distance runner search and rescue specialist, you estimate the average weight of the passengers at 250 pounds which in your professional experience would make them pretty large marathon runners. As a result, you call in to the race headquarters to let them know that its probably the wrong bus and that they should continue the search. Later, when translators arrive, they confirm your suspicions: its not the missing runners, but the New Zealand national rugby team .
+Wheelan [@Whe2013] gives a series of great examples of applying the CLT to a situation I’m sure that we’ve all found ourselves in at some point: searching for a missing bus of marathon runners.  Imagine that you live in a city which is hosting an internationally famous marathon. On the morning of the race, each of the runners will check in at a central location and will then be randomly assigned to a bus which will take them to the starting line. One of the buses goes missing and through pure bad luck has no GPS, no cell phones on board, and, as it turns out, nobody that speaks English very well. As someone who has trained their entire lives to perform search and rescue missions involving electronics-challenged, distance runners, you’re called in to help with the search. On the way to your car, you notice that in front of your house there is a bus with a group of irate, international visitors parked at the curb with a man who appears to be the driver setting up a sextant, compass and map. Clearly you’ve found the bus! You radio in the good news to headquarters and then run over to inform the passengers of their rescue. As you get closer, you notice something that puts the first seeds of doubt in your mind: the passengers are enormous. Using your keen training as a distance runner search and rescue specialist, you estimate the average weight of the passengers at 250 pounds which in your professional experience would make them pretty large marathon runners. As a result, you call in to the race headquarters to let them know that it’s probably the wrong bus and that they should continue the search. Later, when translators arrive, they confirm your suspicions: it’s not the missing runners, but the New Zealand national rugby team .
 
-The process that allowed you to look at the bus and make a snap judgment about the passengers is, essentially, the Central Limit Theorem. By comparing your estimate of a statistic of the sample (in this case, the average weight) and comparing it to what you knew about the population, you were able to make an informed guess that this might not be the bus of marathon runners. Certainly, in any given race you could imagine that there would be dozens of large runners. But the odds of a lot of them (say 60) being assigned to the same bus randomly wouldnt be very high. You absolutely could have been wrong, but more often than not, youd be right to say that this group was not drawn from the marathon running population.
+The process that allowed you to look at the bus and make a snap judgment about the passengers is, essentially, the Central Limit Theorem. By comparing your estimate of a statistic of the sample (in this case, the average weight) and comparing it to what you knew about the population, you were able to make an informed guess that this might not be the bus of marathon runners. Certainly, in any given race you could imagine that there would be dozens of large runners. But the odds of a lot of them (say 60) being assigned to the same bus randomly wouldn’t be very high. You absolutely could have been wrong, but more often than not, you’d be right to say that this group was not drawn from the marathon running population.
 
-Now, lets formalize this concept. According to the central limit theorem, the sample means for any population will be distributed roughly as a normal distribution around the population mean. Suppose we have a population, like our marathon field, and we are interested in the weights of its members. Any sample of runners, such as each bus of sixty runners, will have a mean.
+Now, let’s formalize this concept. According to the central limit theorem, the sample means for any population will be distributed roughly as a normal distribution around the population mean. Suppose we have a population, like our marathon field, and we are interested in the weights of its members. Any sample of runners, such as each bus of sixty runners, will have a mean. 
 
 1. If we take repeated samples, such as picking random groups of sixty runners from the field over and over, then each of those samples will have its own mean weight. These are the sample means. 
 2. Most of the sample means will be very close to the population mean. Some will be a little higher. Some will be a little lower. Just as a matter of chance, a very few will be significantly higher than the population mean, and a very few will be significantly lower. 
 3. The Central Limit Theorem tells us that the sample means will be distributed roughly as a Normal distribution around the population mean. 
 4. The Empirical Rule tells us that 68 percent of the observations from a Normal Distribution will lie within one standard deviation of the mean, 95 percent will lie within two standard deviations, and so on. 
-5. The results of the Central Limit Theorem will hold no matter what the distribution of the underlying population looks like.
+5. The results of the Central Limit Theorem will hold no matter what the distribution of the underlying population looks like. 
 
 As an aside, to summarize some of the terms that I just introduced before it gets too confusing:
 
@@ -48,7 +49,7 @@ As an aside, to summarize some of the terms that I just introduced before it get
 2. The standard error measures the dispersion of the sample means. 
 3. The standard error is the standard deviation of the sample means.
 
-As far as an intuitive understanding of hypothesis testing goes, thats about it. Knowing that the Central Limit dictates the distribution of sample means from a given population, we can create testable inferences on whether or not a sample is likely to have been drawn from a particular population. In the remainder of this note, I formalize this concept and develop a series of recipes that can be applied depending upon the particulars of the situation being examined.
+As far as an intuitive understanding of hypothesis testing goes, that’s about it. Knowing that the Central Limit dictates the distribution of sample means from a given population, we can create testable inferences on whether or not a sample is likely to have been drawn from a particular population. In the remainder of this note, I formalize this concept and develop a series of recipes that can be applied depending upon the particulars of the situation being examined. 
 
 ## A Recipe Book for Hypothesis Testing
 ### The Steps
@@ -57,7 +58,7 @@ If youve followed along this far, then the process of performing a hypothesis te
 a) **Create the null and alternative hypothesis**: Start with the null hypothesis H~0~, which is essentially a claim that there is no difference. The opposing hypothesis, or alternative hypothesis, H~1~ is a claim that there is a difference.
 b) **Construct a test statistic from the data**: There are multiple types of test statistics that can be plausibly used, depending on the information thats available to you. For the most part, well assume that we have at least 30 samples so that we can assume that the central limit theorem will hold. In cases where we know the population standard deviation, well use z-statistics. In cases where we dont know the population standard deviation, and need to estimate it from the data, well use t-statistics.
 c) **Convert the test statistic into a p-value**: Once we have our test statistic, we use an appropriate table to convert it into something called a P-value, which tells us the probability of observing data that is at least as extreme as the current sample set.
-d) **Draw your conclusion**: Compare the P-value to $\alpha$. If $P \le \alpha$ then we can reject the null hypothesis, otherwise.
+d) **Draw your conclusion**: Compare the P-value to $\alpha$. If $P \le \alpha$ then we can reject the null hypothesis, otherwise. 
 
 ### One Sample Z-Tests
 
@@ -85,7 +86,7 @@ Now, let's consider the other formulation of the alternate hypothesis, i.e. that
 	3. Compute the sample mean $\bar{x}$
 	4. Compute the standard error, $$SE = \frac{\sigma}{\sqrt{N}}$$
 	5. Compute the test statistic: $$z_{stat} = \frac{\bar{x} - \mu_0}{SE}$$
-	6. Convert the statistic to a P-value. In this case, well reject the null if the mean is either significantly greater *or* significantly less than $\mu_0$, so our P-value must include the probabilities from both of the tails on the Normal distribution. Again, we can find these areas using a Standard Normal Distribution. Mechanically, the easiest way to do so is to take advantage of the symmetry of the Normal distribution by computing the area under the curve to the right of the $z_{stat}$, and then just doubling it to obtain the two-sided P-value.
+	6. Convert the statistic to a P-value. In this case, well reject the null if the mean is either significantly greater *or* significantly less than $\mu_0$, so our P-value must include the probabilities from both of the tails on the Normal distribution. Again, we can find these areas using a Standard Normal Distribution. Mechanically, the easiest way to do so is to take advantage of the symmetry of the Normal distribution by computing the area under the curve to the right of the $z_{stat}$, and then just doubling it to obtain the two-sided P-value.  
 
 ### One Sample T-Tests
 
@@ -104,7 +105,7 @@ Let
 	4. Compute the standard error, $$SE = \frac{s}{\sqrt{N}}$$
 	5. Compute the test statistic: $$t_{stat} = \frac{\bar{x} - \mu_0}{SE}$$
 	6. We say that this statistic has $N-1$ degrees of freedom
-	6. Convert the statistic to a P-value by using the $t_{stat}$ on a Students T distribution with $N-1$ degrees of freedom.
+	6. Convert the statistic to a P-value by using the $t_{stat}$ on a Students T distribution with $N-1$ degrees of freedom. 
 
 ### Two Sample T-Tests Assuming Equal Population Variances
 
@@ -128,7 +129,7 @@ Let
 	5. Compute the test statistic: 
 	$$t_{stat} = \frac{\bar{X} - \bar{Y}}{S_p\sqrt{\frac{1}{N_1} + \frac{1}{N_2}}}$$
 	6. We say that this statistic has $dof = N_1 + N_2 - 2$ degrees of freedom
-	6. Convert the statistic to a P-value by using the $t_{stat}$ on a Students T distribution with $dof$ degrees of freedom.
+	6. Convert the statistic to a P-value by using the $t_{stat}$ on a Students T distribution with $dof$ degrees of freedom. 
 
 *Note:* There is another test, which we wont cover here, which handles the case when we assume that we have two unequal population variances. This test, called Welchs T-Test, can generally be applied to the equal variance case. The recipe for Welchs T-Test is essentially the similar in spirit to the one presented here, but it differs significantly in the computation of the number of degrees of freedom.
 
@@ -139,7 +140,7 @@ What happens if we want to compare two population means where you have two sampl
 - Before-and-after observations on the same subjects (e.g. students test results before and after a particular module or course).
 - A comparison of two different methods of measurement or two different treatments where the measurements/treatments are applied to the same subjects
 
-In this case, it feels like we should apply a Two Sample Test. However, the ability to pair the data allows us to recast the problem as a One Sample Test, which in this case will have considerably more power.
+In this case, it feels like we should apply a Two Sample Test. However, the ability to pair the data allows us to recast the problem as a One Sample Test, which in this case will have considerably more power. 
 
 **RECIPE**
 
