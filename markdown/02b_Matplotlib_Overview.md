@@ -64,7 +64,7 @@ Now, let's write a little python to read a file in and create a DataFrame. We'll
 >>> # Let's import the pandas library
 ... import pandas as pd
 ...
->>> # Let's set up a URL to the file, which in this case is hosted on github
+>>> # Let's set up a URL to the file, which in this case is hosted on Github
 ... base_url = 'https://raw.githubusercontent.com/johnjfox/Analytic_Enterprise/master/data/'
 >>> data_url = 'iris/iris.data.csv'
 >>> url = base_url + data_url
@@ -145,7 +145,7 @@ Let's start off with the absolutely simplest possible plot
 
 ```python
 >>> from pandas.tools.plotting import scatter_matrix
->>> scatter_matrix(df, alpha=0.2,s=100,figsize=(15,15), diagonal='kde');
+>>> scatter_matrix(df, alpha=0.2,s=100, figsize=(15,15), diagonal='kde');
 ```
 
 ```python

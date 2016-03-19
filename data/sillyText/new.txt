@@ -1,0 +1,3 @@
+The first line in a text file is always the best. Here's sentence tw on that same line. It's wonderfully written.
+The second line is generally a let down.
+Couldn't tell you about the third line. I never get that far.

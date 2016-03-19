@@ -81,7 +81,7 @@ Now, let's write a little python to read this file in and create a DataFrame:
 >>> # Let's import the pandas library
 ... import pandas as pd
 ...
->>> # Let's set up a URL to the file, which in this case is hosted on github
+>>> # Let's set up a URL to the file, which in this case is hosted on Github
 ... base_url = 'https://raw.githubusercontent.com/johnjfox/Analytic_Enterprise/master/data/'
 >>> data_url = 'iris/iris.data.csv'
 >>> url = base_url + data_url
@@ -354,7 +354,7 @@ One thing to note here. Remember the shorthand notion for referencing a variable
 
 Although reading data from a file is useful, it's (hopefully) not the most exciting thing that we'll ever do with our data. pandas offers are fairly broad array of methods on DataFrames which we can use to extract descriptive statistics. Notice that the statistics are run across all of the variables.
 
-A complete list of the DataFrame statistical functions can be found in the pythons documentaton, but some of the more interesting functions include:
+A complete list of the DataFrame statistical functions can be found in the Python documentation, but some of the more interesting functions include:
 
 |Method	| Description |
 | --- | --- |
