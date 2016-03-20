@@ -30,14 +30,16 @@ There are several ways to obtain the notebooks we'll be using throughout the cla
 
 If you'd like to actually interact with the notebooks, which will be essential for the class, then the easiest way is probably to grab the entire Github repository and copy it to your local machine. There are several ways to do this depending on your level of familiarity with Github, but the simplest approach is probably to download the entire repository as a zip file using the "Download Zip" button on this page. Alternatively, the next easiest approach is to click the individual notebook that you're interested in, go to the "raw" version and save it to a directory that your Jupyter Notebook system can access. 
 
-#### Data Tools in Python:
-* [Jupyter Notebooks](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Jupyter_Notebooks.ipynb) 
-* [Markdown](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Markdown_Essentials.ipynb) 
+#### Tools for Data Analysis in Python:
+* [Jupyter Notebooks](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/00a_Jupyter_Notebooks.ipynb) 
+* [Markdown](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/00b_Markdown_Essentials.ipynb) 
+
+#### Python Fundamentals
 
 #### Data Analysis in Python:
-* [Intro to Pandas and DataFrames](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Pandas_Overview.ipynb) 
-* [Intro to Matplotlib, Seaborn and 2D Visualization](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Matplotlib_Overview.ipynb) 
-* [Intro to Data Wrangling](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/Data_Wrangling.ipynb) 
+* [Intro to Pandas and DataFrames](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/02a_Pandas_Overview.ipynb) 
+* [Intro to Matplotlib, Seaborn and 2D Visualization](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/02b_Matplotlib_Overview.ipynb) 
+* [Intro to Data Wrangling](http://www.github.com/johnjfox/Analytic_Enterprise/blob/master/notebooks/02c_Data_Wrangling.ipynb) 
 
 Click on the link, then click on the **Raw button** in the upper right, then save in a directory where you can find it.    
 
