@@ -11,12 +11,24 @@ M: jjpowe13@bu.edu
 N: 
 D: There is a data set of reports of traffic jams provided by Waze. I wanted to look more into this data set to explore which intersections / streets had the highest reports of jams, and try to understand what is causing these traffic jams, and whether or not there is something that we can do to improve the traffic in that area. 
 E: https://data.cityofboston.gov/Transportation/Waze-Jam-Data/yqgx-2ktq
+T: How responsive is the Mayors office and Boston Departments
+U: aae0044@bu.edu
+M: aae0044@bu.edu
+N: 
+D: Analyze the mayors 24 hrs hotline, look a how long it took to close each case, by type, location and department. See what patterns emerge from the process. 
+E: https://data.cityofboston.gov/City-Services/Mayors-24-Hour-Hotline-Cases-created-last-90-days-/ciur-a7cc
 T: Alcohol Licenses
 U: nathan2@bu.edu
 M: nathan2@bu.edu
 N: 
 D: Are alcohol licenses concentrated in poor neighborhoods? There is a common perception in some cities that this is true and takes advantage of those is economically disadvantaged situations. Is this the case in Boston or are there others explanations for where licenses are granted?
 E: https://data.cityofboston.gov/Permitting/All-Section-12-Alcohol-Licenses/qr2t-2k7s https://data.cityofboston.gov/dataset/2010-Census-data-all-Boston-neighborhoods/rqmk-a7bu
+T: Light Up your Run!
+U: jrosen2@bu.edu
+M: jrosen2@bu.edu
+N: 
+D: Compare Boston Run Maps and street lighting retrofits to find out where we can light up the street better!
+E: https://data.cityofboston.gov/Health/Runkeeper/66et-a83p https://data.cityofboston.gov/Facilities/Street-Light-Retrofits-2014-/nk7w-bpnm
 T: Crosswalk Optimization
 U: mgoodrid@bu.edu
 M: mgoodrid@bu.edu
@@ -29,12 +41,60 @@ M: mgoodrid@bu.edu
 N: 
 D: Determine gentrifying neighborhoods in the city through building permit and crime data.
 E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6
+T: Does traffic jams influence bad driving behavior?
+U: zaraid@bu.edu
+M: zaraid@bu.edu
+N: 
+D: Is there a correlation between traffic jams and driving tickets? 
+E: https://data.cityofboston.gov/Transportation/Waze-Jam-Data/yqgx-2ktq https://data.cityofboston.gov/Transportation/Waze-Alert-Data/h8aq-6mw7 https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3s
+T: Pothole Recurrence
+U: archug@bu.edu
+M: archug@bu.edu
+N: 
+D: There is data available regarding closed potholes in Boston. A project idea might be to analyze recurrence of pothole incidents in a particular area depending on land usage.
+E: https://data.cityofboston.gov/City-Services/Closed-Pothole-Cases/wivc-syw7
+T: Do shorter names really get paid more?
+U: leishman@bu.edu
+M: leishman@bu.edu
+N: 
+D: We could examine a basic question, such as, which offices spend the most on salary? However, we could do something a little more interesting. A Forbes article from 2013 (see link below) said that shorter names get paid more. Is that true for the City of Boston? We could compare name length in characters against salary.
+E: https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8 http://www.forbes.com/sites/laurashin/2013/05/07/study-says-shorter-names-earn-more/#148b1f375a69
+T: Weather Related Crime
+U: mper376@bu.edu
+M: mper376@bu.edu
+N: 
+D: Does weather predict types of crime? I propose to take historical weather data and find correlations between temperature or weather, and types of crime throughout the course of 2012-2015. 
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Parking tickets data for incentivising parking lots
+U: akshaydp@bu.edu
+M: akshaydp@bu.edu
+N: 
+D: Parking tickets data can be analysed to incentive private and public paid parking lot owners to build multi level parking to accommodate the deficit in parking spaces that leads to tickets. Surge pricing can be used to fund the project.
+E: https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3s
+T: Finding and Funding Energy Efficiency
+U: luispg@bu.edu
+M: luispg@bu.edu
+N: 
+D: Project would analyze the energy usage of buildings throughout Boston to identify areas that would be the best targets for possible efficiency improvement programs.
+E: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b
 T: 311 vs age in neighborhood
 U: cmont@bu.edu
 M: cmont@bu.edu
 N: 
 D: 311 requests versus median age of neighborhood. Who is using 311, and from where?
 E: 311 Requests: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52 Neighborhood census data: https://data.cityofboston.gov/dataset/2010-Census-data-all-Boston-neighborhoods/rqmk-a7bu 
+T: Identify parking needs around Boston
+U: ajje@bu.edu
+M: ajje@bu.edu
+N: 
+D: We will take data from parking tickets around the city, along with data from traffic at different times during the day, divided by week days and weekends. With this data in a map, we will identify where parking needs are
+E: https://data.cityofboston.gov/
+T: Timeliness of 311 Service
+U: jfcarr@bu.edu
+M: jfcarr@bu.edu
+N: 
+D: The goal of this project is to look at how timely 311 requests are being serviced. Use the 311, Service Requests report to review the On-Time Status of requests broken down by location. Also compare the Open Date with the Closed Date to understand the total elapsed time, and compare the Target Date with the Closed Date to understand specifically how early or late requests are being finished. Also, we can filter by specific categories, such as Type of request, Source of request, and Closure Reason to better compare similar cases across locations. This analysis can be used to understand considerations including the following: are certain locations responsible for different types of requests, are certain locations receiving quicker service, and do the results point to any resource deployment opportunities.
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
 T: Liquor Licensing Limits
 U: meyerke@bu.edu
 M: meyerke@bu.edu
@@ -53,6 +113,18 @@ M: annai@bu.edu
 N: 
 D: This project will create a map that depicts 311 issues and how long they took to repair. It will then add on city councilor districts, in an attempt to find a trend. Do some city councilors have more power than others, and is this reflected in the city's responsiveness to issues in their districts?
 E: https://data.cityofboston.gov/d/wivc-syw7?category=City-Services&view_name=Closed-Pothole-Cases
+T: Parking tickets & public transportation 
+U: arvinds@bu.edu
+M: arvinds@bu.edu
+N: 
+D: Analyze the parking tickets and public transportation data and see whether there is a relationship between those two. For example, a lot of people drive to a place which is not accessible easily by public transportation. This means, lesser parking spots and hence parking tickets. 
+E: https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3s
+T: Zip Codes with the best food inspections scores
+U: ngentry@bu.edu
+M: ngentry@bu.edu
+N: 
+D: Which zip codes have the highest and lowest percentage of passed food inspections? Uses geocoded inspection results data.
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w
 T: Most Common Type of Crime by Neighborhood
 U: kauffman@bu.edu
 M: kauffman@bu.edu
@@ -65,12 +137,36 @@ M: bricc@bu.edu
 N: 
 D: Big belly alerts vs. average income in the surrounding area. Investigate whether areas that are more wealthy are more concerned with throwing away trash.
 E: https://data.cityofboston.gov/City-Services/Big-Belly-Alerts-2014/vwyk-mq9z
+T: Housing vacancy rates map of Boston
+U: jasondai@bu.edu
+M: jasondai@bu.edu
+N: 
+D: There are 250,000 college students in Boston. When students are out of city in summer vacation, Boston is nearly empty. So are houses. It would be very interesting to map out how housing vacancy rates change in different seasons in Boston. There are some data available below. But more data is needed to draw a map of housing vacancy rates.
+E: https://data.cityofboston.gov/dataset/2010-Census-data-all-Boston-neighborhoods/rqmk-a7bu
+T: Rodents and Pests
+U: mazdul@bu.edu
+M: mazdul@bu.edu
+N: 
+D: Create map of most complaints of rodent and pest infestation. Identify potential issues and steps that can be taken. Two databases can be used for this purpose. The service request map can be useful to identify areas from which most complaints came. Additionally the database of food establishment inspection would be helpful too. It is possible that in some areas infestation is much and expensive to control which might be the reason some outlets failed the inspection. Also, the food establishments might be creating problems for the locality and needs action. Analysis and recommendation can be provided.
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
 T: 911 Abandoned Calls vs. Crime Reports
 U: chinmayd@bu.edu
 M: chinmayd@bu.edu
 N: 
 D: In order to see what percent of abandoned calls are pranks and assess the importance of abandoned calls and what priority should be given to abandoned calls, we can compare the heatmap of 911 abandoned calls vs. Crime Reports
 E: 911 Calls - https://data.cityofboston.gov/Public-Safety/Boston-Police-Department-911/uea6-pfmm Crime incident reports - https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: New construction and housing prices in Boston
+U: mhazizaj@bu.edu
+M: mhazizaj@bu.edu
+N: 
+D: Housing prices in Boston keep rising and as the city becomes less affordable new constructions are popping like mushrooms all over Boston. As part of this idea I would like to look into new construction permits in various neighborhoods of Boston in conjunction with income level data as well as hosing prices in an attempt to understand how the city is developing, where most construction is happening, where will the next "hot" areas for buyers be, how is this related with the income level and so forth. 
+E: https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6 https://data.cityofboston.gov/Permitting/Property-Assessment-2015/yv8c-t43q 
+T: How zoning changes over time
+U: ajje@bu.edu
+M: ajje@bu.edu
+N: 
+D: Using data from building permits granted and denied over time, we will check how the zones of Boston have been changing over time, and maybe using other sources of data, verify best zones for business, buying homes for long-term, or buying homes for renting to students, given the zoning trends through each area
+E: https://data.cityofboston.gov/
 T: Pest Infestation
 U: swk@bu.edu
 M: swk@bu.edu
@@ -83,6 +179,24 @@ M: chrisld@bu.edu
 N: 
 D: There were many calls about plowing last year. I'm curious if those areas requesting plowing were spread out or close together, and if they were next to main roads that would have been plowed. 
 E: https://data.cityofboston.gov/City-Services/311-NEMO-Snow-Related-Calls-/r3qt-vrtj
+T: Analyse energy and water consumption data
+U: ronakr@bu.edu
+M: ronakr@bu.edu
+N: 
+D: Analyse Energy usage and emission data for buildings, identify the buildings with more consumption or emission. Data can be used for surge pricing or to audit the buildings to bring make them more efficient. 
+E: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b
+T: Efficiant Buildings
+U: jbohn@bu.edu
+M: jbohn@bu.edu
+N: 
+D: Examin age of building infrastructure along with energy/water usage. Do newer buildings use less energy? What types? Do certain types of businesses use utilities differently? 
+E: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b
+T: Property value prediction
+U: arvinds@bu.edu
+M: arvinds@bu.edu
+N: 
+D: Predicting the fluctuation in property value based on the property value assessment data and combining it with other data sets including crime rate, hospital location etc. It's also important to see the correlation with data sets like crime rate before using it as a variable.
+E: https://data.cityofboston.gov/dataset/Property-Assessment-2014/qz7u-kb7x
 T: Connecting Food Sanitation Issues and Crime
 U: astraley@bu.edu
 M: astraley@bu.edu
@@ -95,6 +209,24 @@ M: astraley@bu.edu
 N: 
 D: Do areas with more community building programs (urban orchards, community gardens, year around swimming pools) have less crime? By building more community are we able to decrease at least certain types of crime?
 E: https://data.cityofboston.gov/Health/Community-Gardens/cr3i-jj7v https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx https://data.cityofboston.gov/Health/Urban-Orchards/c7cz-29ak https://data.cityofboston.gov/Public-Property/Year-Round-Swimming-Pools/rtqb-8pht
+T: New Construction in Boston
+U: rok17@bu.edu
+M: rok17@bu.edu
+N: 
+D: New buildings require a special type of permit. Where is most of the new construction happening in Boston? New construction will be mapped by geographic location (provided in data set).
+E: https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6
+T: Parking Tickets
+U: zaraid@bu.edu
+M: zaraid@bu.edu
+N: 
+D: Determine which areas of Boston get more parking tickets, what time of the day are you more likely to get a parking ticket, type of cars/drivers that get the most parking tickets. 
+E: https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3s
+T: Property Tax Optimization
+U: cherella@bu.edu
+M: cherella@bu.edu
+N: 
+D: Use property sales data to optimize property tax rates. Using comps in a data set would allow the city to increase or decrease property tax rates so that property taxes are administered in the most fair manner possible.
+E: I don't know it
 T: Improving 911 Dispatch
 U: jjpowe13@bu.edu
 M: jjpowe13@bu.edu
@@ -107,6 +239,30 @@ M: chrisld@bu.edu
 N: 
 D: The police department lists where crimes occur. Is there a street or specific location that you should not park if you don't want your car broken into? Is there a surprising location where lots of break ins occur that does not seems to make any sense? Also, what day of the weeks do they occur the most? 
 E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: 311 Request Success
+U: jbohn@bu.edu
+M: jbohn@bu.edu
+N: 
+D: Use 311 service request data to identify areas of the city that have the quickest/slowest response rates. Use this location data and try to find significant correlation for why these discrepancies exist (i.e. ease of access, family income, etc...)
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
+T: Wine and Dine! Which neighborhood to visit?
+U: aayodeji@bu.edu
+M: aayodeji@bu.edu
+N: 
+D: This project entails analyzing the list of food establishments in the city of Boston with active food licenses based on their geography. It aims to provide information about where one could get options of various food sellers, and probably get the lower price of food based on the advantage of concentration (All things being equal, competition drives down prices). This could be taken further by getting additional data on the average amount it cost to eat in a neighborhood. This is definitely not on the city data site, however, this data gives a starting point of telling the above story.
+E: https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Licenses/gb6y-34cq
+T: Most reported types of crimes by day of week
+U: leishman@bu.edu
+M: leishman@bu.edu
+N: 
+D: What are the most common reported crimes on weekends vs. weekdays? Do geographic areas have the same number of crime reports on all days of the week, or are there “safer" days than others? Could this inform law enforcement to place more officers in one area on Mondays but in another area on Saturdays? This data could be combined in interesting ways with other data that has a day of week field.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Optimize snow removal work
+U: pcchen@bu.edu
+M: pcchen@bu.edu
+N: 
+D: According to the 311 service request, the number one 311 service complaint is about the snow. We can look into the data set and figure out which neighborhood have the highest amount of complaint, reasons why... etc, and cross analyze this data set with waze jam data under transportation and snow related call, to see if we can prioritize the snow removal work better.
+E: https://data.cityofboston.gov/Transportation/Waze-Jam-Data/yqgx-2ktq https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52 https://data.cityofboston.gov/City-Services/311-NEMO-Snow-Related-Calls-/r3qt-vrtj
 T: Moving Trucks and Street Shutdown
 U: wludlow@bu.edu
 M: wludlow@bu.edu
@@ -125,42 +281,162 @@ M: hsanders@bu.edu
 N: 
 D: Which streets are the worse for getting a parking ticket
 E: na
+T: Neighborhood with the highest parking tickets
+U: vryakala@bu.edu
+M: vryakala@bu.edu
+N: 
+D: Parking ticket data can be used to visualize areas with the highest number of parking tickets
+E: https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3s
+T: Taxi data: A story of Boston
+U: jasondai@bu.edu
+M: jasondai@bu.edu
+N: 
+D: Map taxi pickups and drop offs to tell a story of Boston. Where do people in Boston hang out on weekend nights? How is the rush hour traffic like in different places? It will be very interesting to extract stories and meanings from the taxi data to understand better about our city.
+E: https://data.cityofboston.gov/Transportation/Boston-Taxi-Data/ypqb-henq
+T: Specialized EMS Services
+U: vhegde@bu.edu
+M: vhegde@bu.edu
+N: 
+D: Start segregating the EMS 911 calls based upon the nature of calls (eg: cardiac arrest, seizures etc). After that the EMS ambulances at particular locations should be equipped with the required specialized medical services that address the more prevalent nature of calls.
+E: https://data.cityofboston.gov/Public-Safety/EMS-911-Dispatch/ak6k-a5up
+T: Police Patrol Optimization
+U: cherella@bu.edu
+M: cherella@bu.edu
+N: 
+D: Using data on the weather and amount of crime, the police department can utilize weather forecasts to optimize the number of police officers needed to patrol the streets during high risk weather times
+E: N/A
+T: Best Places to Live
+U: mazdul@bu.edu
+M: mazdul@bu.edu
+N: 
+D: Create a map of best places to live in terms of distance from parks and swimming pools open year round. This combined with grocery stores and supermarket options available in the area. For example, if an area has a park, year long swimming pool,grocery options and school within a 2 mile radius (or a suitable distance), can be described as a very good place to live.
+E: https://data.cityofboston.gov/Public-Property/Year-Round-Swimming-Pools/rtqb-8pht https://data.cityofboston.gov/Health/Community-Gardens/cr3i-jj7v 
+T: Are Landlords fixing their Properties?
+U: jrosen2@bu.edu
+M: jrosen2@bu.edu
+N: 
+D: Use Housing code inspection data and building permit applications to identify if landlords are fixing building code violations at their properties. 
+E: https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6 https://data.cityofboston.gov/Permitting/Code-Enforcement-Building-and-Property-Violations/8sq6-p7et
 T: 311: The Breakdown
 U: ayellis@bu.edu
 M: ayellis@bu.edu
 N: 
 D: Who uses 311? People obviously do, as reflected in the datasets with 311 requests. Some requests are illegitimate, some are overstated, and some are very real. Where are the calls coming from, are there specific areas where specific problems are reported more often? Is the system being used, as some think, just by a couple of '311 champions' whose use of the service revolves primarily around their homes/workplaces? By cleaning and mapping this data, 311 could be proven a success or reveal its weak spots and potential for improvement.
 E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
+T: Enhance Travel for people using public transport
+U: ebad@bu.edu
+M: ebad@bu.edu
+N: 
+D: Wholesale Trade Industries data can be used to find areas with higher number of employees. Then we can combine the data from the MBTA and see if there is sufficient public transportation in those areas to enhance travel for these employees. Also, we can combine with data from Hubway and try to encourage people to use bikes to commute to work. 
+E: https://data.cityofboston.gov/dataset/Industry-Highlight-Wholesale-Trade-Industry/uctm-zyk8 http://maps.cityofboston.gov/maps/hubway/
+T: Top things people complain about
+U: dbzhang@bu.edu
+M: dbzhang@bu.edu
+N: 
+D: Twitter is becoming the new call center, with citizens tweeting to the City to voice their complaints, comments and questions. Turns out people have some pretty high standards when it comes to Twitter response time. By analysing the dataset, the City could not only identify the most common complaints and how is the City supposed to get started to resolve these issues, but also establish the mechanism to respond to tweets in a timely manner.
+E: https://data.cityofboston.gov/City-Services/Tweets-sent-from-any-user-tagging-the-NotifyBoston/mjtg-hw8v
 T: Farmers Markets' Impact
 U: meyerke@bu.edu
 M: meyerke@bu.edu
 N: 
 D: Farmers markets provide fresh produce for residents. Where are farmers markets located, and what populations do they tend to most directly serve? Do these figures correlate with health statistics (obesity rates, etc.) within specific neighborhoods?
 E: https://data.cityofboston.gov/Health/Farmers-Markets-With-Benefits/udwx-qxp4
+T: 911 Call by Type and Area, Time
+U: kmb1@bu.edu
+M: kmb1@bu.edu
+N: 
+D: Look at which areas of the city are most likely to call 911 and for which crimes/incidences they are most likely to call. Could combine with Crime incident report and see if those areas calling 911 the most are also the areas where the most crimes are occurring.
+E: https://data.cityofboston.gov/Public-Safety/Boston-Police-Department-911/uea6-pfmm https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Moving Permit Enforcement
+U: cherella@bu.edu
+M: cherella@bu.edu
+N: 
+D: Use data on moving permits issued do dispatch BTD parking enforcement officials to areas that have many permits issued.
+E: https://data.cityofboston.gov/Permitting/Issued-Moving-Truck-Permits/bzif-fkwd
 T: Building permits vs income
 U: cmont@bu.edu
 M: cmont@bu.edu
 N: 
 D: 1.	Building permits by quarter for the past 5 years vs median income for past 5 years. What effect does new building have on incomes, and is it gentrification? 
 E: Income: https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2013/54s2-yxpg Neighborhood census data: https://data.cityofboston.gov/dataset/2010-Census-data-all-Boston-neighborhoods/rqmk-a7bu Building permits: https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6
+T: Building Permits
+U: kmb1@bu.edu
+M: kmb1@bu.edu
+N: 
+D: Look at which parts of the city are doing more renovations versus new construction versus demolitions. This could show patterns regarding which parts of the city are growing fastest and which neighborhoods are being updated/gentrified most quickly.
+E: https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6
+T: Pedestrian Awareness
+U: ebad@bu.edu
+M: ebad@bu.edu
+N: 
+D: Street Light Location data provides us with street light location in Boston. We can use this data to make people more informed decision about the safe locations (well lit) in the city. General population can avoid those areas while travelling during late night hours. Also, the police can have more patrolling in those areas to ensure that people remain safe.
+E: https://data.cityofboston.gov/Facilities/Streetlight-Locations/7hu5-gg2y
+T: Farmer's market vs. health
+U: zaraid@bu.edu
+M: zaraid@bu.edu
+N: 
+D: Farmer's markets sell fruits and vegetables that are supposedly fresher and healthier than supermarkets. I wonder if there is a correlation between the farmer's markets around Boston and the lifestyle or health of the people that live around them. 
+E: https://data.cityofboston.gov/Health/Farmers-Markets-With-Benefits/udwx-qxp4 https://data.cityofboston.gov/Health/Runkeeper/66et-a83p https://data.cityofboston.gov/Health/Healthy-Corner-Stores/ekiy-2qmz
 T: Zip Car Reservations
 U: wludlow@bu.edu
 M: wludlow@bu.edu
 N: 
 D: Understanding the pattern of zip car demands around the city versus the demand for parking around the city. Also looking to understand if there is seasonal demand that is higher in certain areas to see if zip car locations should be adjusted
 E: https://data.cityofboston.gov/Transportation/Zipcar-Boston-Reservations/863f-ps42
+T: Closed Pot Holes Time
+U: spnayak@bu.edu
+M: spnayak@bu.edu
+N: 
+D: Use the data to find average time in closing pot holes. Use the minimum and maximum time data to find the technique or process differences that lead to delay in closing of pot holes.
+E: https://data.cityofboston.gov/City-Services/Closed-Pothole-Cases/wivc-syw7
+T: Snow Removal
+U: archug@bu.edu
+M: archug@bu.edu
+N: 
+D: There is data available for snow related requests. A project idea would be to analyze these requests based on location and the duration it takes to close them. There is another data set for budget allocations with respect to snow removal that might help explain issues such as how money is being spent, the duration of some tickets, etc.
+E: https://data.cityofboston.gov/City-Services/311-NEMO-Snow-Related-Calls-/r3qt-vrtj https://data.cityofboston.gov/dataset/FY16-COB-Gen-Fund-Budget/ufst-buqf
 T: Investigating the correlation between parking tickets and street sweeping schedule
 U: bricc@bu.edu
 M: bricc@bu.edu
 N: 
 D: The density/location of parking tickets in the city and the street sweeping schedule. Looking to see if more parking tickets are issued in areas where they are street sweeping.
 E: https://data.cityofboston.gov/City-Services/Street-Sweeping-Schedules/755x-x44q
+T: Making Boston a Traditional Grid City
+U: wljones@bu.edu
+M: wljones@bu.edu
+N: 
+D: Ever had to navigate around Boston pre-Google Maps/Smartphone era? If so, you know the struggle of getting lost when your "street" suddenly transforms into a completely different "avenue." With so many same-name streets in Boston, the city can benefit by renaming some of the streets and construct a more navigable urban landscape.
+E: http://bostonopendata.boston.opendata.arcgis.com/datasets/de08c6fe69c942509089e6db98c716a3_10?geometry=-71.953%2C42.164%2C-70.218%2C42.468 Not sure if this is the most applicable.
 T: T stop traffic
 U: hsanders@bu.edu
 M: hsanders@bu.edu
 N: 
 D: map out t stops with the most traffic and what leads to that traffic
 E: na
+T: Factors driving Rent
+U: arvinds@bu.edu
+M: arvinds@bu.edu
+N: 
+D: Find the important factors that are driving the rent price in any given area. The data set that I looked at was Back-Bay_beacon hill
+E: https://data.cityofboston.gov/dataset/Back-Bay-Beacon-Hill-planning-district-data-Americ/fdcf-469p
+T: Street Sweeping Schedule and Parking Tickets/Towing
+U: mhazizaj@bu.edu
+M: mhazizaj@bu.edu
+N: 
+D: It always puzzled me, as I was walking to work, that on street sweeping days there was always at least one car being towed on Columbus Avenue in Boston. Signs were all accurate but cars were still being towed. Hence, I would like to look into street sweepings schedules and cars towed/parking tickets given during those times to see where and when do drivers get most tickets (City most revenue) and try to understand whether there is a specific reason to this occurrence or if something can be done to minimize this phenomenon. 
+E: https://data.cityofboston.gov/City-Services/Street-Sweeping-Schedules/755x-x44q
+T: Bostonian sentiments via twitter feedback, @notifyboston
+U: aae0044@bu.edu
+M: aae0044@bu.edu
+N: 
+D: Analyze more than 40k tweets sent to @notifyboston, based on sentiment and location map it, color code it and see what different neighborhood feel about the city. 
+E: https://data.cityofboston.gov/City-Services/Tweets-sent-from-any-user-tagging-the-NotifyBoston/mjtg-hw8v
+T: Boston taxi cab pick-up and drop-offs to resolve taxi shortage
+U: sidds@bu.edu
+M: sidds@bu.edu
+N: 
+D: Boston Taxi Data can be analyzed to find taxi demand trend i.e. locality, day of week and time wise. Based on it, we can do predictive analysis and make more private taxis available as per the trend. This data can also be shared with cab services like Uber and Lyft to abolish surge pricing to as much extent as we can.
+E: https://data.cityofboston.gov/Transportation/Boston-Taxi-Data/ypqb-henq
 T: #2 -The 5 ideas for City of Boston - JG Shin
 U: jgshin@bu.edu
 M: jgshin@bu.edu
@@ -173,6 +449,12 @@ M: annai@bu.edu
 N: 
 D: Is there a correlation between a neighborhood's affluence and the number of complaints its citizens make through 311? We'd use the recently-released BRA report on Boston’s workforce and the Closed Pothole Cases dataset.
 E: http://owd.boston.gov/wp-content/uploads/2016/03/2015-Office-of-Workforce-Development-Workforce-Report-Booklet_v1_r8_spreads.pdf https://data.cityofboston.gov/City-Services/Closed-Pothole-Cases/wivc-syw7
+T: Analyzing the Twitter mentions of @NotifyBoston
+U: leishman@bu.edu
+M: leishman@bu.edu
+N: 
+D: This data set shows a year’s worth of tweets mentioning @NotifyBoston on Twitter. Let’s examine how many unique users actually used this method to alert the city over the course of a year. What percentage of the total users are responsible for half of the complaints, for example? Are a lot of users consistent repeat tweeters or are most people one-time tweeters of the issues? What are the most popular words used in each month?
+E: https://data.cityofboston.gov/City-Services/Tweets-sent-from-any-user-tagging-the-NotifyBoston/mjtg-hw8v
 T: Buildings' Energy and Water Usage
 U: annai@bu.edu
 M: annai@bu.edu
@@ -191,6 +473,12 @@ M: wludlow@bu.edu
 N: 
 D: Analyze pinch points in traffic to create possible one way streets to reduce jams a lights
 E: https://data.cityofboston.gov/Transportation/Waze-Jam-Data/yqgx-2ktq
+T: Improving the MBTA
+U: wljones@bu.edu
+M: wljones@bu.edu
+N: 
+D: Improving the infrastructure, the technology (creating an accurate app), focus on optimizing the schedule, bring back the late night T, etc.
+E: http://boston.maps.arcgis.com/home/item.html?id=29707c9c6a7a46709fd2ca813a033759
 T: Location of Street Lights vs Crime reports
 U: chinmayd@bu.edu
 M: chinmayd@bu.edu
@@ -203,24 +491,48 @@ M: sidds@bu.edu
 N: 
 D: 311 Service request data analysis can be used to analyze which department is more responsive and quick in resolving residents complaints. Based on these results, Mayor's office can incentivize the departments that are more efficient. This way other city operations departments will have more motivation to be fast in resolving complaints of residents.
 E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52 https://data.cityofboston.gov/City-Services/311-Open-Service-Requests/rtbk-4hc4 https://data.cityofboston.gov/City-Services/311-Open-Service-Requests-Map/j2a7-cdyk
+T: Crime map of Boston
+U: jasondai@bu.edu
+M: jasondai@bu.edu
+N: 
+D: Trough the FIO data presented by Boston Police Department FIO, we can get a picture of draw crime rate maps based on FIO location, race, gender, crime time, crime type and so on. 
+E: https://data.cityofboston.gov/Public-Safety/Boston-Police-Department-FIO/xmmk-i78r
 T: Changes in Population due to gentrification and if specific Demographics causes this
 U: nkf531@bu.edu
 M: nkf531@bu.edu
 N: 
 D: This would be a comparison of multiple data sets. I want to take sample data of multiple areas over 10 years and break down the demographic data (NYC, Boston, chicago, LA). Compare it to data sets such as: Value of properties over time, income levels, business permits in the area, education, crime rates, age group, availability of transportation, and community involvement. More so a project to analyze gentrification in specific areas and how it occurs and why (inclusive of, policy changes by government, a list of questions would be used as dummy variables)
 E: https://data.cityofboston.gov/dataset/Chinatown-Neighborhood-2010-Census-Population/ff3a-vq2d
+T: Public Transport
+U: mazdul@bu.edu
+M: mazdul@bu.edu
+N: 
+D: Many don't use public transport because of distance to nearest stop. Create a map of T and Bus stops. Provide recommendations for new bus routes if the some areas are not covered. This would encourage many people to use public transport and probably help in reducing Boston's traffic pressure.
+E: Google Maps and other sources.
 T: Fresh Seafood Mission
 U: meyerke@bu.edu
 M: meyerke@bu.edu
 N: 
 D: Farmers markets provide fresh produce for residents. Where are farmers markets located, and what populations do they tend to most directly serve? Do these figures correlate with health statistics (obesity rates, etc.) within specific neighborhoods?
 E: https://data.cityofboston.gov/Health/Fresh-Seafood-Map/ug8k-defz
+T: Zipcar Reservations
+U: mper376@bu.edu
+M: mper376@bu.edu
+N: 
+D: It can be argued Zipcar was one of the first companies to bring the idea of a sharing economy to the forefront. Millennial are known for being more open to the idea of not outright owning anything. How has the trend of sharing a car changed in Boston? Which zip code shows the fastest growing Zipcar reservations year over year? 
+E: https://data.cityofboston.gov/Transportation/Zipcar-Boston-Reservations/863f-ps42
 T: Dead Animals
 U: swk@bu.edu
 M: swk@bu.edu
 N: 
 D: Using Boston's 311 citizen reports of dead animals (hopefully roadkill), try to figure out if their are clusters of reports, and then see if there is a reason for the animals demise that is possibly fixable.
 E: data.cityofboston.gov Filter for "Pick up dead animal"
+T: Opening a new Restaurant in Boston
+U: mhazizaj@bu.edu
+M: mhazizaj@bu.edu
+N: 
+D: Are you a new entrepreneur looking to open a new restaurant in Boston? This idea involves an analysis of licences given in Boston per area to understand where are the areas you would have most competition. What type of licences are found there? What about alcohol? Where are most licences issued and how does it relate to restaurants? What type of customers would you have? Take out? 
+E: https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Licenses/gb6y-34cq https://data.cityofboston.gov/dataset/Liquor-Licenses/hda6-fnsh 
 T: What make of car gets the most parking tickets
 U: chrisld@bu.edu
 M: chrisld@bu.edu
@@ -239,6 +551,24 @@ M: kauffman@bu.edu
 N: 
 D: It's no secret that the Seaport's Innovation District has been home to much of the construction in the city recently, but where else is money being spent building and improving property?
 E: https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6
+T: 911 data analysis for targeted first-Aid
+U: ronakr@bu.edu
+M: ronakr@bu.edu
+N: 
+D: 911 call data can be analysed to look for areas with more complaints on life-threatening conditions like Cardiac arrest. There can be more ambulances on alert or more AED (Automated external defibrillator) to handle these cases. 
+E: https://data.cityofboston.gov/Public-Safety/EMS-911-Dispatch/ak6k-a5up
+T: What the Mayor's 24 Hours Hotline confirms about the City of Boston
+U: aayodeji@bu.edu
+M: aayodeji@bu.edu
+N: 
+D: Every single day, residents of the city of Boston make calls to the Mayor's office through the 24-hrs open hot-line. The City publishes a 90 days data on the neighborhoods the calls are from, the purpose of calls, the response department among others. This data could help tell a story around the City. For example, Dorchester the largest city, Sanitation and Street light the pressing concern, e.t.c This project will entail digging into the 90-day data, refining it, and look for patterns of calls to identify confirm current facts about the city, and perhaps, it is possible to identify new non obvious things. 
+E: https://data.cityofboston.gov/City-Services/Mayors-24-Hour-Hotline-Cases-created-last-90-days-/ciur-a7cc
+T: Boston's Park Place
+U: rok17@bu.edu
+M: rok17@bu.edu
+N: 
+D: Let's find Monopoly's Park Place of Boston. Which block pays the most in property tax to the city? Property taxes will be mapped by geographic location (provided in data set) to understand how much owners are paying for property tax around the city of Boston.
+E: https://data.cityofboston.gov/Permitting/Property-Assessment-2015/yv8c-t43q
 T: #1 -The 5 ideas for City of Boston - JG Shin
 U: jgshin@bu.edu
 M: jgshin@bu.edu
@@ -263,24 +593,108 @@ M: wludlow@bu.edu
 N: 
 D: Understanding the highest transaction locations for parking. City of Boston can use this information to understand pedestrian traffic as well as parking demand in the city and help identify ways to shift parking in the city
 E: https://data.cityofboston.gov/Transportation/Park-Boston-Monthly-Transactions-By-Zone-2015/ixcw-899n
+T: Boston NIghtlife
+U: vryakala@bu.edu
+M: vryakala@bu.edu
+N: 
+D: Popular locations (neighborhoods) for night life in Boston can be visualised by looking at taxi pickup and drops between 11pm and 4am everynight.
+E: https://data.cityofboston.gov/Transportation/Boston-Taxi-Data/ypqb-henq
 T: Property Valuations and Distance to Transit
 U: kauffman@bu.edu
 M: kauffman@bu.edu
 N: 
 D: As the city continues to emphasize Transit Oriented Development, it would be interesting to see how proximity to existing transit lines affects assessed property values.
 E: https://data.cityofboston.gov/dataset/Property-Assessment-2014/qz7u-kb7x
+T: 911 Dispatch
+U: mefree@bu.edu
+M: mefree@bu.edu
+N: 
+D: November 2010 to April 2014 911 dispatch of Boston Police Department, Boston Firs Department, and Emergency Medical Services (EMS). This information could be useful to predict staffing needs or determine causes of calls in the first place. Unfortunately, this is only a count of agency dispatch (addresses or reasons would have been interesting), so another dataset may be useful such as crime reports. I have listed a number of potentially useful datasets in the URL section (BPD 911, BFD 911 Medical, BFD 911 Non Medical, and EMS 911). That said, there may be a story for the city in how much the city's agencies are being used.
+E: https://data.cityofboston.gov/Public-Safety/911-Daily-Dispatch-Count-By-Agency/9rag-2mng and Crime Reports: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx Boston PD 911: https://data.cityofboston.gov/Public-Safety/Boston-Police-Department-911/uea6-pfmm Boston FD 911 (medical): https://data.cityofboston.gov/Public-Safety/Boston-Fire-Department-911-Medical-Calls-Only-/mjm4-b6qy Boston FD 911 (non-medical): https://data.cityofboston.gov/dataset/Boston-Fire-Department-911-Non-Medical-Calls-/x67n-nzcu EMS 911: https://data.cityofboston.gov/Public-Safety/EMS-911-Dispatch/ak6k-a5up 
+T: Snow Related Issues
+U: spnayak@bu.edu
+M: spnayak@bu.edu
+N: 
+D: Use the data to find which areas make requests for snow plowing frequently and allocate resources proactively to avoid further complains and accidents caused due to rain
+E: https://data.cityofboston.gov/City-Services/311-NEMO-Snow-Related-Calls-/r3qt-vrtj
+T: Installation of precautionary measures for avoiding road mishaps
+U: akshaydp@bu.edu
+M: akshaydp@bu.edu
+N: 
+D: Based on the data for injury for bicyclist, motorist or pedestrians, added signals and signs can be added to roadways where the occurrence is higher 
+E: http://app01.cityofboston.gov/visionzero/
+T: Energy Savings Project
+U: nchanda@bu.edu
+M: nchanda@bu.edu
+N: 
+D: A comparison of On-Site solar energy systems in Boston Buildings suggest that older buildings do not have significant solar energy systems which can help reduce GHG emissions.
+E: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b
 T: alcohol lic vs nail salon lic
 U: hsanders@bu.edu
 M: hsanders@bu.edu
 N: 
 D: which of these services are more important to which areas?
 E: na
+T: Safe Neighborhood
+U: mazdul@bu.edu
+M: mazdul@bu.edu
+N: 
+D: Create map of areas with most robbery and residential burglary. Raise awareness and find areas improvement.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Restaurants Grading System
+U: vryakala@bu.edu
+M: vryakala@bu.edu
+N: 
+D: The data from food inspection results can be used to evaluate the system to grade restaurants. Distribution of scores rewarded to all restaurants can be visualized; a Normal distribution would validate the system. Additionally, neighborhoods can be mapped by median food inspection scores.
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w
+T: Sustainable energy use in buildings
+U: dbzhang@bu.edu
+M: dbzhang@bu.edu
+N: 
+D: Boston is home to thousands of large buildings, including commercial buildings, industrial facilities, university and hospital campuses, cultural institutions, and civic facilities. A large percentage of Boston’s total building square footage and carbon emissions is concentrated in a relatively small number of buildings. In recent years, many buildings in Boston have switched from fuel oil to cheaper, lower-carbon natural gas. Natural gas has served as a temporary “bridge” toward longterm carbon neutrality; however the City must work on transitioning toward renewable energy, such as solar power.
+E: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b
+T: Encouraging institutions to be more energy efficient
+U: ebad@bu.edu
+M: ebad@bu.edu
+N: 
+D: Data from Building Energy and Water Use Metrics can be used to identify the buildings which are not energy efficient and thus take actions to ensure that these buildings take efforts to reduce the usage of energy. We can also channelize the steam emissions from these buildings to be put to better use. 
+E: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b
+T: Snow Removal
+U: mkartuso@bu.edu
+M: mkartuso@bu.edu
+N: 
+D: Using data from Boston 311 service requests and tweets @NotifyBoston regarding the need for snow removal to see if there is a pattern in streets that are often neglected or if there are neighborhoods where residents are more vocal about the slow snow removal. With this information the city and its contractors could create an optimized snow removal route to cover often neglected routes.
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52 https://data.cityofboston.gov/City-Services/Mayors-24-Hour-Hotline-Cases-created-last-90-days-/ciur-a7cc?q=snow%20plowing
 T: Clean Boston
 U: swk@bu.edu
 M: swk@bu.edu
 N: 
 D: Map of missed trash pickups by district. Look into which districts are most likely to miss trash pickup and try to figure out why. Trash smells, especially in the summer. Improve quality of life by improving trash removal. We can also look at overflowing dumpster data.
 E: data.cityofboston.go 
+T: Potholes
+U: mkartuso@bu.edu
+M: mkartuso@bu.edu
+N: 
+D: Using data from Boston 311 service requests, tweets @NotifyBoston, as well as calls to the Mayor’s 24-hour hotline you could identify where potholes most often occur. This could identify roads that could benefit from being paved with purer asphalt that has fewer cheap additives and modifiers, which creates stronger roads.
+E: https://data.cityofboston.gov/City-Services/Closed-Pothole-Cases/wivc-syw7 https://data.cityofboston.gov/City-Services/Mayors-24-Hour-Hotline-Cases-created-last-90-days-/ciur-a7cc?q=pothole
+T: Real Estate: What Asbestos Permits tell you about home 'lemon' purchase in the City of Boston
+U: aayodeji@bu.edu
+M: aayodeji@bu.edu
+N: 
+D: The use of Asbestos is becoming obsolete, modern houses no longer use Asbestos in the construction. The presence of Asbestos in a house points to the age of the house. All you care, there are also other features in the construction of the houses. Knowing where the permits are requested could help determine the probability of getting an old apartment in new covering. This project requires the analysis of the data on Asbestos removal permit in the city of Boston.
+E: https://data.cityofboston.gov/Health/Asbestos-Removal-Permits/e5mc-wrrq
+T: SOP - Sentiment of People
+U: mazdul@bu.edu
+M: mazdul@bu.edu
+N: 
+D: Analyze tweets, observe common issues and provide recommendations on improvement areas for city of boston.
+E: https://data.cityofboston.gov/City-Services/Tweets-sent-from-any-user-tagging-the-NotifyBoston/mjtg-hw8v
+T: Creating School Equality
+U: wljones@bu.edu
+M: wljones@bu.edu
+N: 
+D: Boston public schools represent some of the largest gaps in equality in the country. What can we do from a budget and social standpoint to improve this situation. 
+E: https://data.cityofboston.gov/agency-summary?fy=2016&department=Boston%20Public%20School%20Dept
 T: Longitudinal Vendor Shifts
 U: ayellis@bu.edu
 M: ayellis@bu.edu
@@ -293,6 +707,18 @@ M: xiaoy@bu.edu
 N: 
 D: The project would use the data set of "Waze Alert Data" to show the congest level of each street of Boston on the map during a given time period. 
 E: https://data.cityofboston.gov/Transportation/Waze-Alert-Data/h8aq-6mw7
+T: Budget allocation and priority in City of Boston
+U: jasondai@bu.edu
+M: jasondai@bu.edu
+N: 
+D: By visualizing the budget data (maps and graphs), the public in Boston are able to see budget priority (e.g. education, public transportation or technology), how government allocate those budget and how they fund those projects. 
+E: Boston Operating Budget: https://data.cityofboston.gov/dataset/Boston-Open-Budget-Operating-Budget/83wv-akpx Boston Capital Budget: https://data.cityofboston.gov/dataset/Boston-Open-Budget-Capital-Budget/gb2s-qbsg 
+T: Correlation between street lights and crime incident
+U: pcchen@bu.edu
+M: pcchen@bu.edu
+N: 
+D: Cross analyze street lights location and crime report in the night, to see if there is a positive correlation. If yes, the City of Boston can conduct a pilot program of increasing street lights in the bigger neighborhood to increase safety.
+E: https://data.cityofboston.gov/Facilities/Streetlight-Locations/7hu5-gg2y https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
 T: How quickly the police and the City of Boston respond to any cases of vandalism?
 U: busatrio@bu.edu
 M: busatrio@bu.edu
@@ -305,24 +731,66 @@ M: jgshin@bu.edu
 N: 
 D: City of Boston may use data of vacancy of public parking lot so that they can utilize their parking space effectively. To be a bit more specific, like Uber's pricing system, try to find a point where demand and supply balances so that they can offer reasonable parking fee.
 E: https://data.cityofboston.gov (Wicked Free Wi-Fi Daily Connections, Criminal incident report, Entertainment license data)
+T: Green Thumbs Take Notice
+U: rok17@bu.edu
+M: rok17@bu.edu
+N: 
+D: Did you know that there are 184 community gardens in Boston? Ever wanted to try your hand in gardening? This project help the green thumb enthusiasts looking for the nearest community garden to their place of residence.
+E: https://data.cityofboston.gov/Health/Community-Gardens/cr3i-jj7v
 T: Correlation between liquor licenses and average age of surrounding area
 U: bricc@bu.edu
 M: bricc@bu.edu
 N: 
 D: Liquor licenses vs. average age of surrounding area. Investigating if areas that have bars have younger residents that live nearby.
 E: https://data.cityofboston.gov/dataset/Liquor-Licenses/hda6-fnsh
+T: Pothole Repair Times By Neighborhood
+U: ngentry@bu.edu
+M: ngentry@bu.edu
+N: 
+D: How long is the average pothole repair time in each Boston neighborhood, from when requests are made to the case being closed by the city.
+E: https://data.cityofboston.gov/City-Services/Closed-Pothole-Cases/wivc-syw7
+T: Energy and recycling
+U: zaraid@bu.edu
+M: zaraid@bu.edu
+N: 
+D: Does people that recycle more also spends less energy? 
+E: https://data.cityofboston.gov/City-Services/Monthly-Residential-Recycling-Waste-Tonnage/rg8v-sgig https://data.cityofboston.gov/dataset/Municipal-Energy-Data/bcnb-bux2
 T: Alcohol Related Arrests vs Liquor License Locations
 U: mgoodrid@bu.edu
 M: mgoodrid@bu.edu
 N: 
 D: What liquor licenses have the most nearby arrests for public intoxication, drinking under 21, and DUIs?
 E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx 
+T: Happiness in Boston
+U: zaraid@bu.edu
+M: zaraid@bu.edu
+N: 
+D: Which area in Boston complaints the most/least? What the the happiest are in Boston? What time of the day do people complain more/less?
+E: https://data.cityofboston.gov/City-Services/Tweets-sent-from-NotifyBoston-from-March-2014-Marc/7biv-vu3q
+T: What gives a property value?
+U: ngentry@bu.edu
+M: ngentry@bu.edu
+N: 
+D: Using 2015 property assessment data to determine the relevant contributing factors to property value. Potential questions include: is location more important than size? For each neighborhood which characteristic is most important for value? What characteristic is of highest value outside of size and location?
+E: https://data.cityofboston.gov/Permitting/Property-Assessment-2015/yv8c-t43q
+T: Street light outage
+U: spnayak@bu.edu
+M: spnayak@bu.edu
+N: 
+D: Using the 311 service call overdue data, the city of boston can find the common causes for street light outage. Then the data could be used to find if these causes are repeating or not and if there exists a long term solution for these problems.
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
 T: Most Common Type of Building Permit by Neighborhood
 U: kauffman@bu.edu
 M: kauffman@bu.edu
 N: 
 D: New construction vs renovations and rehabs, what's the most frequently permitted type of construction in each Bostonian neighborhood?
 E: https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6
+T: Pick up the Trash
+U: jrosen2@bu.edu
+M: jrosen2@bu.edu
+N: 
+D: Look at Big Belly Trash Can alerts, 311 reports, residential trash pickup schedules, and Street sweeping schedules to see if any areas of the cities are not having their trash picked up in a timely way.
+E: https://data.cityofboston.gov/City-Services/Street-Sweeping-Schedules/755x-x44q https://data.cityofboston.gov/City-Services/Big-Belly-Alerts-2014/vwyk-mq9z https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
 T: Frequency of Bicycle/Pedestrian/Vehicle Accidents as a Function of Speed Limit
 U: kauffman@bu.edu
 M: kauffman@bu.edu
@@ -335,12 +803,84 @@ M: nathan2@bu.edu
 N: 
 D: What types of requests are being made and can they be correlated with other data to give a picture of where and why certain requests are being made? This information would be helpful to focus resources.
 E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52 
+T: How ethnicity influences income levels 
+U: ajje@bu.edu
+M: ajje@bu.edu
+N: 
+D: We will gather data from census, the department of Labor and community surveys, and controlling for other factors we will verify how ethnicity influences income levels in the city of Boston. This is a statement I read in an article I would like to verify.
+E: https://data.cityofboston.gov/
+T: 311 Trends Over Time and Staffing
+U: jfcarr@bu.edu
+M: jfcarr@bu.edu
+N: 
+D: The goal of this project idea is to look at 311 request trends over time and compare it to staffing. First, we can use the 311, Service Requests to track the amount and type of requests over time. The City of Boston website has data going back until midway through 2011. By comparing year over year data, we can look at how these requests are increasing or decreasing over time. We can then incorporate the Employee Earnings Reports (for the same years) and look at how the number of individuals by Title, and align the titles with 311 request categories. In this way, we can see if staffing seems to be responding appropriately to changes in requests. We can also use this to look at request open and close times to see if there is a correlation.
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52 https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8
+T: Liquor Licenses and Crime Data
+U: kmb1@bu.edu
+M: kmb1@bu.edu
+N: 
+D: See if there is a relationship between areas where crimes are committed and areas where there are establishments that hold liquor licenses. Could indicate if there is a correlation between areas that have a larger number of alcohol-serving establishments and higher crime rates. 
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx https://data.cityofboston.gov/dataset/Liquor-Licenses/hda6-fnsh 
+T: Analyse "Open Service Requests" data to identify unresolved issues.
+U: ronakr@bu.edu
+M: ronakr@bu.edu
+N: 
+D: "Open Service Requests" data can be analysed to identify which areas, compared to other areas, have what type of more unresolved issues. This can be meaningful to see if that particular department is inefficient or that area is facing some issue that is causing more complaints on a particular problem. 
+E: https://data.cityofboston.gov/City-Services/311-Open-Service-Requests/rtbk-4hc4
+T: How well is the City Winning the snow battle?
+U: aayodeji@bu.edu
+M: aayodeji@bu.edu
+N: 
+D: This project requires analyzing the Mayor of the city of Boston 24-hr hotline cases created in the last 90 days. Sieve out the cases of snow removal, and where they occur!
+E: https://data.cityofboston.gov/City-Services/Mayors-24-Hour-Hotline-Cases-created-last-90-days-/ciur-a7cc
+T: Does complaining pay?
+U: jasonpm@bu.edu
+M: jasonpm@bu.edu
+N: 
+D: Compare the geographic outlay of the city's capital budget to the graphical outlay of 311 complaints to determine whether there seems to be a correlation.
+E: https://data.cityofboston.gov/dataset/Boston-Open-Budget-Capital-Project-List/386k-vkr8 https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
+T: "Night Runner" App
+U: dbzhang@bu.edu
+M: dbzhang@bu.edu
+N: 
+D: Running is part of the fabric of this city. Boston is the home of the world’s oldest annual Marathon, and its population routinely ranks among the nation's fittest. However, most accidents involving runners occur at night when they are wearing dark clothing. Choosing a well lit route can help them be seen by motorists much sooner. It might not be the sexiest route to run on, but the most well-lit route will be the safest bet. The "Night Runner" App would provide night runners with properly planned routes, allowing them to get their workout in with minimal risk.
+E: https://data.cityofboston.gov/Facilities/Street-Light-Control-Box-Electric-Power-Cost-Usage/h77g-ijgn https://data.cityofboston.gov/Facilities/Streetlight-Locations/7hu5-gg2y
+T: Robbery for Retailers
+U: mefree@bu.edu
+M: mefree@bu.edu
+N: 
+D: It may seem obvious that robbery and other crime statistics can be used in finding a new apartment or residence, but is there a good story to be told for the retailer who owns a shop or is considering opening a storefront? Mapping robbery and larceny may be a first step. And additionally, residential robbery (also a category in Boston crime) could be analyzed for any interesting correlations.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Zipcar Data in Boston
+U: mefree@bu.edu
+M: mefree@bu.edu
+N: 
+D: In a city where parking tickets and being towed are serious concerns, as is affording or finding parking at all, Zipcar has a great consumer market. Are there more areas (zip codes?) that use Zipcar more? Why would car sharing be more useful than ride sharing or public transportation? What are the implications on where you decide to live or where you decide to work (where might a store open business).
+E: https://data.cityofboston.gov/Transportation/Zipcar-Boston-Reservations/863f-ps42 and https://data.cityofboston.gov/Transportation/Zipcar-Boston-Membership-by-zipcode/g4pc-28b5
+T: Where NOT To Eat
+U: luispg@bu.edu
+M: luispg@bu.edu
+N: 
+D: Using data on food establishment inspections, this project would create a map of the City with the greatest incidence of failed food inspections. Additionally, this would help gauge the effectiveness of Boston's food inspection system by assessing how effectively establishments improve on issues they failed. Future options may include comparing customer feedback to public safety data for a better understanding of the limitations of the inspection system.
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w
 T: Property Assessment Value to Crime Rate and Transportation Availability
 U: nkf531@bu.edu
 M: nkf531@bu.edu
 N: 
 D: I want to compare property assessment value over time in comparison to a combination of Crime Rate, Education, Transportation availability, and age of building. And to see which one has the most weight on the actual value on a building and to see if one really matters if the others out weigh it.
 E: https://data.cityofboston.gov/dataset/Property-Assessment-2014/qz7u-kb7x
+T: Free WiFi for Marketing
+U: ronakr@bu.edu
+M: ronakr@bu.edu
+N: 
+D: Free Wifi, based upon area, can be used for local marketing by the local shops at places where there are more connections.
+E: https://data.cityofboston.gov/City-Services/Wicked-Free-Wi-Fi-Daily-Connections/aq4x-jcqf
+T: Firefighting with data
+U: jasondai@bu.edu
+M: jasondai@bu.edu
+N: 
+D: By creating lists of buildings or areas that are most vulnerable to fire and identifying when it used to fire, we can help optimize locations of fire department and calculate the fire risk time. 
+E: Boston Fire Department 911 (Non-Medical call) : https://data.cityofboston.gov/dataset/Boston-Fire-Department-911-Non-Medical-Calls-/x67n-nzcu 
 T: City Contracts for Minorities
 U: annai@bu.edu
 M: annai@bu.edu
@@ -353,6 +893,24 @@ M: astraley@bu.edu
 N: 
 D: I want to see if areas with more day camps may see reductions in specific 311 calls. For instance, less graffiti and sign repair requests since kids would be busier. However, I'm not sure if the ages would match up here. I do think that day camps being linked to certain kinds of actions would be pretty interesting regardless. Help on this would be greatly appreciated.
 E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52 https://data.cityofboston.gov/dataset/Day-Camps/sgf2-btru
+T: Pothole Prediction
+U: jbohn@bu.edu
+M: jbohn@bu.edu
+N: 
+D: Use historical data on locations of traffic jam alerts generated by Waze along with data for closed pothole repair requests to create a predictive model for streets likely to to need repairs. 
+E: https://data.cityofboston.gov/City-Services/Closed-Pothole-Cases/wivc-syw7 https://data.cityofboston.gov/Transportation/Waze-Jam-Data/yqgx-2ktq
+T: Secure Boston Events
+U: archug@bu.edu
+M: archug@bu.edu
+N: 
+D: There are a number of events that happen in Boston (see links below). A project idea would be to analyze the correlation between these events and crime incidents in Boston. Do crimes increase in areas where events take place? What kinds of weapons are used? With this information, events can be better planned. The right amount of security can be allocated in these areas. 
+E: http://www.thebostoncalendar.com/ http://www.bostonusa.com/visit/bostoneveryday/events/ https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Criminality in Boston
+U: mhazizaj@bu.edu
+M: mhazizaj@bu.edu
+N: 
+D: Look into the breakdown of criminality in the City of Boston by type of crime, timing, type of weapon, neighborhood, specific location in order to identify any suspicious frequency and further understand the reasons behind that frequency. For instance, we might find a suspicious frequency of sexual harassment happening in one location and after investigating we could understand that the specific road doesn't have enough lighting or needs security cameras. In addition, I would like to look if there is any correlation the location of the police departments and the high/low concentration of criminality. 
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx https://data.cityofboston.gov/Public-Safety/Boston-Police-Department-911/uea6-pfmm http://bostonopendata.boston.opendata.arcgis.com/datasets/e5a0066d38ac4e2abbc7918197a4f6af_6?uiTab=table
 T: Women in Boston
 U: ayellis@bu.edu
 M: ayellis@bu.edu
@@ -365,6 +923,42 @@ M: jjpowe13@bu.edu
 N: 
 D: There is data available on where potholes are being closed across the city. I would like to explore if there are any patterns on where these potholes are being fixed. Do wealthier neighborhoods get pot holes closed more frequently? Are there areas that seem more prone to potholes than other? If so, why? 
 E: https://data.cityofboston.gov/City-Services/Closed-Pothole-Cases/wivc-syw7
+T: Polling Locations
+U: nathan2@bu.edu
+M: nathan2@bu.edu
+N: 
+D: Are more polling places located in affluent neighborhoods? Can an algorithm be identified that could make sure everybody has equal access to a voting location based on income level, mode of transportation, and other demographics?
+E: http://bostonopendata.boston.opendata.arcgis.com/datasets/f7c6dc9eb6b14463a3dd87451beba13f_9
+T: Health and fitness centers
+U: arvinds@bu.edu
+M: arvinds@bu.edu
+N: 
+D: MA is a state with one of the lowest obesity levels(Top 3 among lowest obesity rates).Analyse the health data by neighborhood and see whether the number of fitness centers in that neighborhood has any influence on that, if not what are the factors driving it. We could also compare it with the city of NY data for benchmarking.
+E: http://wellnesstrail.tuftsctsi.org/neighborhoods/ http://www.healthdata.gov/dataset?f%5B0%5D=type%3Adataset http://www.city-data.com/city/New-York-New-York.html
+T: Most Dangerous Time of Day in Every Neighborhood
+U: ngentry@bu.edu
+M: ngentry@bu.edu
+N: 
+D: Using geolocated crime report data to determine the time interval at which violent crimes most often occur in each Boston neighborhood.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Inefficient Buildings
+U: jasonpm@bu.edu
+M: jasonpm@bu.edu
+N: 
+D: Use the energy and water use metrics report to determine what buildings are operating inefficiently from a water and electricity usage perspective.
+E: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b
+T: Property Assessment Analysis
+U: jfcarr@bu.edu
+M: jfcarr@bu.edu
+N: 
+D: The goal of this project idea is to understand factors contributing to property assessment value and how this is related to property sale values. We can use the Property Assessment 2015 report and run a correlation between assessed value and factors such as land area, age of building, number of floors, and location. We can separate the data by neighborhoods to understand how they compare. Then, we can ompare the property assessed values with recent property sale values (where applicable) to understand the relationship between the values.
+E: https://data.cityofboston.gov/Permitting/Property-Assessment-2015/yv8c-t43q
+T: A Gun in the Hand is Worth Two in The .... 
+U: luispg@bu.edu
+M: luispg@bu.edu
+N: 
+D: By combining data on the effectiveness of Boston PD's Firearms Recovery and the incidence of gun violence based on police reports, this project aims to gain an idea of the impact of the program, as where it may be better targeted. 
+E: https://data.cityofboston.gov/Public-Safety/Boston-Police-Department-Firearms-Recovery-Counts/vb7h-wnyg https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
 T: #4 -The 5 ideas for City of Boston - JG Shin
 U: jgshin@bu.edu
 M: jgshin@bu.edu
@@ -383,12 +977,36 @@ M: cmont@bu.edu
 N: 
 D: 1.	Increase in average price of residential square foot versus crime rates. Does the price have an input on crime, or vice versa? Is there a correlation? 
 E: Crime rates: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx Property Assessment: https://data.cityofboston.gov/dataset/Property-Assessment-2014/qz7u-kb7x
+T: Bed Bugs Beware
+U: luispg@bu.edu
+M: luispg@bu.edu
+N: 
+D: Utilizing 311 reports, the project would track the incidence and severity of bed-bug outbreaks throughout Boston to identify problem areas and places likely to face an outbreak within the next year.
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
+T: Employee Earnings Analysis
+U: jfcarr@bu.edu
+M: jfcarr@bu.edu
+N: 
+D: The goal of this project idea is to understand the components of employee compensation. Use the the Employee Earnings Report to determine the percent of total salary that is going towards regular pay, overtime pay, and injury compensation. This can be separated by department for greater insight. Benchmark this against previous years' reports to understand how this is evolving. Similarly, benchmark it against other cities' data to understand how Boston compares to other cities. This would be useful to consider topics such as resource deployment and how compensation is being allocated.
+E: https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8
 T: Food Establishment Health Violations by Neighborhood
 U: mgoodrid@bu.edu
 M: mgoodrid@bu.edu
 N: 
 D: Are some neighborhood likely to have more or less health violations in their restaurants? Are older restaurants more likely to have health violations than newer ones?
 E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Map/3a6m-dwve
+T: Moving Truck Permits in September
+U: mkartuso@bu.edu
+M: mkartuso@bu.edu
+N: 
+D: Using moving truck permit data in the month of September to see when and where most permits are issued. This information could be used to scheduling move-in day for students at Boston schools around this pattern to reduce traffic and congestion. 
+E: https://data.cityofboston.gov/Permitting/Moving-Truck-Permits-September-2015/6gaz-xyfm
+T: Big Belly Alerts
+U: mper376@bu.edu
+M: mper376@bu.edu
+N: 
+D: Using the Big Belly Alerts data I propose we tell a story about how much time is spent checking on "Full" reading and checking whether it makes sense to install a new Big Belly or to have frequent trips to collect the garbage. This will be using 2014 data. 
+E: https://data.cityofboston.gov/City-Services/Big-Belly-Alerts-2014/vwyk-mq9z
 T: September Moving Truck Permits
 U: jjpowe13@bu.edu
 M: jjpowe13@bu.edu
@@ -401,12 +1019,72 @@ M: xiaoy@bu.edu
 N: 
 D: The project aims at drawing a graph of the distribution of Boston public schools and and every school district. From the graph, we can tell whether some neighborhoods have many schools and some others don't have. Such information can help to improve the school distribution.
 E: https://data.cityofboston.gov/dataset/Boston-Public-Schools-School-Year-2012-2013-/e29s-ympv
+T: Ticket Avoidance App
+U: jbohn@bu.edu
+M: jbohn@bu.edu
+N: 
+D: Use geo-located information for parking tickets and integrate into car navigation app to alert driver if they are parking in a highly ticketed area.
+E: https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3s
+T: Auto Theft
+U: spnayak@bu.edu
+M: spnayak@bu.edu
+N: 
+D: Use the Auto theft data to locate areas with high auto theft incidences.These streets could be kept under further surveillance by installing cameras and sensors to track the criminals.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Parking Ticket Enforcement Optimization
+U: cherella@bu.edu
+M: cherella@bu.edu
+N: 
+D: Utilize the dataset with all of the parking tickets issued in order to deploy parking enforcement officers to areas where more cars will be parked illegally. The data could also be used to change the legal parking rules for some spots
+E: N/A
+T: Bulk Item Pick Ups
+U: vhegde@bu.edu
+M: vhegde@bu.edu
+N: 
+D: Collect the location data for scheduled bulk items pick-ups from Public Works Department. From the extracted data, particular patterns should be observed that can lead to insights such as which localities have called for the service during the particular time/day of the week. Through this, efficiency of the system can be increased by letting the trucks to be in and around the locality throughout the day. 
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
+T: Weekend Crime Reduction
+U: nchanda@bu.edu
+M: nchanda@bu.edu
+N: 
+D: A spike in crimes is observed in the Last Shift of Friday, Saturday, and Sunday. While crimes on other days are fairly stable. Maybe night patrolling could be improved or other actions may be taken.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Analysis of inefficiencies in public works
+U: akshaydp@bu.edu
+M: akshaydp@bu.edu
+N: 
+D: Based on Public work zone data, it can be analysed which areas have similar nature if recurring problems and find a better fix to the issues
+E: https://data.cityofboston.gov/Permitting/Public-Works-Active-Work-Zones/4xn9-dedu
+T: Food Violations Analysis
+U: jfcarr@bu.edu
+M: jfcarr@bu.edu
+N: 
+D: The goal of this project idea is to understand trends in violations from food establishment inspections. First, we can use the Food Establishments report to find relationships between the likelihood of one violation and other violations. The data category "ViolDesc" can be used to group violation types. The goal is to determine if certain violations tend to co-occur with others, and what that means about the establishments with multiple violations. Could they benefit from more frequent check-ins? Or a mandatory training program?
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w
+T: Increased patrolling in certain neighborhoods to decrease drug charges
+U: vhegde@bu.edu
+M: vhegde@bu.edu
+N: 
+D: Certain locations (eg: Washington St) in Boston have high rates of drug charges. Patrolling can be increased in such areas to decrease drug related offences and also to deter repeat offenders after looking more into during which days of the week are the offences committed and in and around which specific street junctions.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
 T: Open 311 Service requests vs. Employee Earning Reports 2014
 U: chinmayd@bu.edu
 M: chinmayd@bu.edu
 N: 
 D: In order to assess whether city of Boston is more responsive and effective in solving 311 requests at the rich/influential neighborhoods as compared to the poor neighborhoods, we can draw 2 heat maps and see whether there is any correlation between the 2.
 E: Open 311 Requests - https://data.cityofboston.gov/City-Services/311-Open-Service-Requests-Map/j2a7-cdyk Employee Earnings report 2014 - https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8
+T: Health inspections of licensed food establishments
+U: sidds@bu.edu
+M: sidds@bu.edu
+N: 
+D: Use Food Establishment Inspections data to evaluate establishments that default more often. This way inspectors can prioritize inspecting the ones that are red flagged more often and this way it will save their time wasted inspecting establishments that maintain high standards. It can also be used to rate various restaurants on basis of their pass/fail status on inspection.
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w
+T: Improve Social Media Presence
+U: nchanda@bu.edu
+M: nchanda@bu.edu
+N: 
+D: Retweets and Replies to twitter posts of Boston is very rare. City's social media venture at creating awareness is failing badly it seems. It can be improved.
+E: https://data.cityofboston.gov/dataset/2010-Census-data-all-Boston-neighborhoods/rqmk-a7bu
 T: How far do seafood restaurants have to go for their food?
 U: bricc@bu.edu
 M: bricc@bu.edu
@@ -431,12 +1109,30 @@ M: nkf531@bu.edu
 N: 
 D: I want to see if success in public schools is reflective of the amount of money that is put into the program, along with how the family demographic plays into part of the children's success. I want to see if crime, parental education, ease of transportation, and money... and how much weight it plays into a childs education in different areas around Boston. Looking at Newton north high school and newton south, they have an exorbitant amount of money placed into those programs, but is it the parents focus on education or the amount of money that leads to success. Of course I'd like to pull from a lot of other data sources.
 E: https://data.cityofboston.gov/dataset/Boston-Public-Schools-School-Year-2012-2013-/e29s-ympv
+T: The Dirtiest Food in Town
+U: rok17@bu.edu
+M: rok17@bu.edu
+N: 
+D: Boston loves that dirty water, but let's keep the muck in the Charles and out of our food. This project will look for the neighborhoods with the most food inspection violations. Users consuming these data may use this information to choose where (or where not) to spend their money while eating out.
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w
+T: Setting up a "Neighborhood Watch" 
+U: bazil@bu.edu
+M: bazil@bu.edu
+N: 
+D: Using Crime Data about burglaries, we could recommend the city either improve officer patrol in the neighborhood and i think they probably will have done that.So I would recommend this data be used to set up a " Neighborhood watch" in areas that require it most.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
 T: What's Around Police Stations?
 U: ayellis@bu.edu
 M: ayellis@bu.edu
 N: 
 D: What happens around police stations? Stay with me - we have access to the locations of all police stations in Boston, and then access to citations issued for myriad different law issues, such as code enforcement and crime incidents linked to below. Where do certain citation types occur, are any specific types clustered near or far away from police stations? When a new police station opens, what happens throughout Boston? This information can inform real estate concerns, public safety optimization, general awareness, and maybe find a new insight that changed policies could impact.
 E: Police Stations - http://bostonopendata.boston.opendata.arcgis.com/datasets/e5a0066d38ac4e2abbc7918197a4f6af_6?uiTab=table Code Enforcement - https://data.cityofboston.gov/Permitting/Code-Enforcement-Building-and-Property-Violations-/vysh-bkep Crime - https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Drugs and School Performance
+U: mefree@bu.edu
+M: mefree@bu.edu
+N: 
+D: While sadly there is no database on every drug user or dealer in Boston, reported drug use might be observed to see and correlations to public high school performance. College and university performance could also be interesting. I know there are plenty of "good" schools in "bad" areas, but this is interesting particularly for Boston because of the drug use rate here in eastern Mass. I did not find performance data on schools, so this information might need to be accessed outside of the Open Government databases.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx and https://data.cityofboston.gov/dataset/Boston-Public-Schools-School-Year-2012-2013-/e29s-ympv
 T: Crime and Police Stations
 U: swk@bu.edu
 M: swk@bu.edu
@@ -449,12 +1145,54 @@ M: busatrio@bu.edu
 N: 
 D: When using the bus, having a delay in your route is an unpleasant thing. However, we can overcome it by predicting the delay before it happens. We can make a hypothesis of how long the delay occurs due to congestion or public works by using the following data: The traffic jam location from Waze; The data of constructions that has been built in that site; and the data of bus delay that passed through that place. Meanwhile, we can use MBTA API to get information about the expected arrival time of bus and the real arrival time of bus. Thus, we can combine the hypothesis, the result from MBTA API, and the data of ongoing constructions to measure where the delay starts and how long is the overdue. I am sure it will help Bostonian!
 E: The traffic locations: https://data.cityofboston.gov/Transportation/Waze-Alert-Data/h8aq-6mw7?q=traffic The bus data (taken from https://data.cityofboston.gov/Transportation/MBTA-Bus-Location-Data/y4kc-jxaa): https://drive.google.com/folderview?id=0B52ve5FteDl3cVhGbjU4Ty1MUDg&usp=sharing#list The public works/constructions: https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6 Real time API to get the bus delay: http://realtime.mbta.com/portal Active public works/constructions: https://data.cityofboston.gov/Permitting/Public-Works-Active-Work-Zones/4xn9-dedu
+T: Street Cleaning : Dead Animals
+U: bazil@bu.edu
+M: bazil@bu.edu
+N: 
+D: I would use Service Request Data to map the areas where dead animals are found and try to see if dead animals on the street are frequent in a certain area and further get to the bottom of why that is happening.
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52#column-menu
+T: "No-Tow" App
+U: dbzhang@bu.edu
+M: dbzhang@bu.edu
+N: 
+D: Vehicles could be towed for several reasons in Boston: Street sweeping, illegal parking, overdue parking violations, abandonment, trespass, etc. Street sweeping schedules and parking tickets datasets allow us to locate the towings and to categorize the reasons, on the basis of which the "No-Tow" App would be developed in order to sent alarms to drivers, reminding them of the possible towing cases in the vicinity of various parking locations.
+E: https://data.cityofboston.gov/City-Services/Street-Sweeping-Schedules/755x-x44q https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3s
+T: City Employment Positions With Largest Range of Base Salary
+U: ngentry@bu.edu
+M: ngentry@bu.edu
+N: 
+D: Using city employee data to determine which employee types have the largest range of salaries and the most deviation from mean salary.
+E: https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8
+T: Improvement in 311 Service Calls
+U: nchanda@bu.edu
+M: nchanda@bu.edu
+N: 
+D: Latest data of 311 service call suggests that INFO Dept. has most number of unsolved complaints. Although PWDx dept. received most number of complaints it still managed to solve more in terms of percentage than INFO Dept.
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
 T: #5 -The 5 ideas for City of Boston - JG Shin
 U: jgshin@bu.edu
 M: jgshin@bu.edu
 N: 
 D: Get reports from mobile phone users that claims where people are out of wireless network so that wireless carriers can improve their coverage and also increase accessibility to wireless network for people in Boston. 
 E: https://data.cityofboston.gov (Wicked Free Wi-Fi Daily Connections) 
+T: Building Up in Boston
+U: wljones@bu.edu
+M: wljones@bu.edu
+N: 
+D: The city's population is growing and there is no way that we can build outwardly. As a result, there are new high-rises being built everywhere in the city. What is the effective price point for an average one bedroom to ensure the city is not alienating, isolating, or overtly gentrifying communities? These are questions are could answer.
+E: http://boston.maps.arcgis.com/home/item.html?id=8a3620a9d31e45309d4cc4471f5a5cdb http://boston.maps.arcgis.com/home/item.html?id=7286ab89f2424300abdba0fe6920cb58 http://boston.maps.arcgis.com/home/item.html?id=0bfc60aec23e44238d9d584f98f9d670
+T: Crime Impact Education
+U: archug@bu.edu
+M: archug@bu.edu
+N: 
+D: An idea would be to analyze areas where crime incidents are high and compare that to the performance of public schools. 
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx http://www.bostonmagazine.com/best-schools-boston-2015-chart/
+T: Home Value Growth 
+U: mper376@bu.edu
+M: mper376@bu.edu
+N: 
+D: Identify which residential areas of Boston are growing by examining the amount of building permits in a particular zip code using the Approved Building Permit data set. 
+E: https://data.cityofboston.gov/Permitting/Approved-Building-Permits/msk6-43c6
 T: biker hits in intersections
 U: hsanders@bu.edu
 M: hsanders@bu.edu
@@ -473,6 +1211,24 @@ M: meyerke@bu.edu
 N: 
 D: Food accessibility is highly tied to poverty. What opportunities for healthy corner stores exist within neighborhoods? How disparate are these restaurants for residents (particularly families)?
 E: https://data.cityofboston.gov/Health/Healthy-Corner-Stores/ekiy-2qmz https://data.cityofboston.gov/dataset/Local-Food-Distribution/skbx-9thi
+T: street light power usage across boston
+U: aae0044@bu.edu
+M: aae0044@bu.edu
+N: 
+D: See if we can figure why in some cases the cost of electricity doubles in Jun-August where other locations only 50% increase. Is there a correlation to locations or some other variable? Cross reference the usage data with the retrofit data from the second data base. Is there a correlation or causation? 
+E: https://data.cityofboston.gov/Facilities/Street-Light-Control-Box-Electric-Power-Cost-Usage/h77g-ijgn
+T: 21st Century: Boston's neighborhood with Asbestos
+U: aayodeji@bu.edu
+M: aayodeji@bu.edu
+N: 
+D: This project requires the analysis of the data on Asbestos removal permit in the city of Boston.
+E: See attached
+T: 9/11 calls, types by date, time and location
+U: aae0044@bu.edu
+M: aae0044@bu.edu
+N: 
+D: crunch all the data, see what patterns emerge, can we predict what types of 9/11 call we should expect at 8:40 am from Hydepark? 
+E: https://data.cityofboston.gov/Public-Safety/Boston-Police-Department-911/uea6-pfmm
 T: Correlation between Yelp Ratings vs Health Inspections
 U: kauffman@bu.edu
 M: kauffman@bu.edu
@@ -485,30 +1241,126 @@ M: sidds@bu.edu
 N: 
 D: By mapping and analyzing waze point and jam data we can pick traffic red zones and see what is causing bad traffic situation in these areas. This way we can also time the red lights well in lieu of traffic density at a particular time in these zones to improve traffic situations for residents.
 E: https://data.cityofboston.gov/Transportation/Waze-Jam-Data/yqgx-2ktq https://data.cityofboston.gov/Transportation/Waze-Alert-Data/h8aq-6mw7
+T: Street Light Control Box, Electric Power Cost & Usage Details
+U: ronakr@bu.edu
+M: ronakr@bu.edu
+N: 
+D: The data can be analysed to look for Street light Boxes that consume more power, the ones with high usage can be solar powered. 
+E: https://data.cityofboston.gov/Facilities/Street-Light-Control-Box-Electric-Power-Cost-Usage/h77g-ijgn
+T: Trash Cans
+U: mkartuso@bu.edu
+M: mkartuso@bu.edu
+N: 
+D: Using data from Boston 311 service requests and tweets @NotifyBoston regarding trash cans to see patterns of locations where trash can emptying is often neglected. With this information you could determine a more data-based trash pick-up routine or, perhaps, where to place more trash cans so as to prevent overflow of city-owned trash cans.
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc5 https://data.cityofboston.gov/City-Services/Tweets-sent-from-any-user-tagging-the-NotifyBoston/mjtg-hw8v
+T: Better Traffic Management
+U: ebad@bu.edu
+M: ebad@bu.edu
+N: 
+D: Moving Truck Permits and Waze Alert Data can be combined to give a better correlation between the traffic and the trucks moving in those areas. If causation is established, the city can ensure that the Trucks are only allowed at times when the traffic is lean therefore reduce traffic.
+E: https://data.cityofboston.gov/Transportation/Waze-Alert-Data/h8aq-6mw7 https://data.cityofboston.gov/Permitting/Moving-Truck-Permits-September-2015-Heat-Map/kj6j-ifhq
+T: Snow Hotline
+U: mper376@bu.edu
+M: mper376@bu.edu
+N: 
+D: Similar to the “cross button” on crosswalks, does calling the 311 hotline for snow removal only there to give an illusion of control? Does calling the hotline enough times actually result in prioritization of your snow removal issues or are will the city get to you when they get to you?
+E: https://data.cityofboston.gov/City-Services/311-NEMO-Snow-Related-Calls-/r3qt-vrtj
 T: Urban Farming, Healthy Corner Stores, Liquor, and Crime
 U: astraley@bu.edu
 M: astraley@bu.edu
 N: 
 D: Looking at different areas that have urban farms, healthy corner stores, areas with liquor licenses and crime (by type) to see if certain types of establishments might suggest different types of crime or be correlated with a reduction in crime.
 E: https://data.cityofboston.gov/Health/Healthy-Corner-Stores/ekiy-2qmz https://data.cityofboston.gov/dataset/Urban-Farms/byxy-288e https://data.cityofboston.gov/dataset/Liquor-Licenses/hda6-fnsh https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Safe City
+U: mazdul@bu.edu
+M: mazdul@bu.edu
+N: 
+D: Produce a map of the areas of auto theft cases. Identify areas worse effected so that action can be taken. Also raise awareness so that citizens are more careful.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Where not to drive?
+U: jasonpm@bu.edu
+M: jasonpm@bu.edu
+N: 
+D: Use Tableau to geographically display Waze traffic jam report data. Create heat maps of the worst traffic during different times of day/different days of the week.
+E: https://data.cityofboston.gov/Transportation/Waze-Jam-Data/yqgx-2ktq
+T: Street Sweeping: To Tow or Not To Tow
+U: luispg@bu.edu
+M: luispg@bu.edu
+N: 
+D: The project would use data on Towings (based on Crime Incidence database) and Street Sweeping schedules to find the areas with the highest incidence of towings due to vehicles parked on a zone scheduled for sweeping. In doing so, the City can push for better awareness in these areas.
+E: https://data.cityofboston.gov/City-Services/Street-Sweeping-Schedules/755x-x44q https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Food Deserts: Supermarket locations and income brackets 
+U: jrosen2@bu.edu
+M: jrosen2@bu.edu
+N: 
+D: Use the location of supermarkets and other food shopping establishments and income brackets or average household income in those areas to look for food deserts and areas that my be prime for development of a supermarket or farmers market. 
+E: https://data.cityofboston.gov/dataset/Local-Food-Distribution/skbx-9thi
+T: Street Sweeping and Parking Tickets
+U: kmb1@bu.edu
+M: kmb1@bu.edu
+N: 
+D: See if there is a relationship between street sweeping schedules and parking tickets. This could show if there are any neighborhoods that are particularly bad about moving their cars on street sweeping days. Would also show which neighborhoods generate the most revenue via tickets for the city on street sweeping days. Can also look at whether it is Mass plates or out of state plates who are the biggest offenders of not moving their cars for street cleaning.
+E: https://data.cityofboston.gov/City-Services/Street-Sweeping-Schedules/755x-x44q https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3s
+T: Liquor Licenses 
+U: mkartuso@bu.edu
+M: mkartuso@bu.edu
+N: 
+D: Using Liquor License data and crime incident reports involving liquor to see if there are certain bars and restaurants where there is more alcohol related violence, as well as common times of these events. This could tell the city where to station more police officers or, perhaps, indicate if they need to modify liquor license policies in some locations.
+E: https://data.cityofboston.gov/dataset/Liquor-Licenses/hda6-fnsh https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Can u Trash?
+U: vryakala@bu.edu
+M: vryakala@bu.edu
+N: 
+D: An app that alerts users about trash days and street cleaning days. The app thus allows them to be model citizens and also avoid parking tickets for failing to move cars on street cleaning days.
+E: https://data.cityofboston.gov/City-Services/Street-Sweeping-Schedules/755x-x44q https://data.cityofboston.gov/City-Services/Trash-Schedules-by-Address/cich-iivi
 T: Quality of Roads vs. Earning of people in that neighborhood
 U: chinmayd@bu.edu
 M: chinmayd@bu.edu
 N: 
 D: In order to assess whether the potholes are fixed quickly or given preference in high income neighborhoods, we can make a heatmap of neighborhoods average income and compare it to closed cases of potholes. 
 E: Closed potholes cases - https://data.cityofboston.gov/City-Services/Closed-Pothole-Cases/wivc-syw7 Employee Earnings report 2015 - https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2015/ah28-sywy
+T: Warning for incoming students
+U: pcchen@bu.edu
+M: pcchen@bu.edu
+N: 
+D: Analyze the crime-incident-reports to see the most dangerous area in Boston. Use this data to warn the incoming students via all the schools, especially colleges and universities.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: What external factors influence ourdoor exercise
+U: ajje@bu.edu
+M: ajje@bu.edu
+N: 
+D: We will take data from green areas around Boston, the location of seasonal swimming pools, and even location of sites with pull up bars (google.com), along with information from running gps apps, such as Runkeeper to check the correlation between how the closeness of external factors motivate people to exercise
+E: www.google.com https://data.cityofboston.gov/
+T: map City of Boston and color them based on energy efficiency and age
+U: aae0044@bu.edu
+M: aae0044@bu.edu
+N: 
+D: map out all the city of boston buildings, give them a color grade for energy efficiency and see what patterns show up
+E: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b
 T: Street Light Electric Power Cost Map @ Boston
 U: xiaoy@bu.edu
 M: xiaoy@bu.edu
 N: 
 D: This project will analysis the street light electric power cost of every street at Boston. The outcome of the project would be a map demonstrating the result of the analysis. From the map, we can easily figure out which streets cost the most electric power. Such information may guide the government to better manage the street lights. 
 E: https://data.cityofboston.gov/Facilities/Street-Light-Control-Box-Electric-Power-Cost-Usage/h77g-ijgn
+T: Bar Fight Boston
+U: jasonpm@bu.edu
+M: jasonpm@bu.edu
+N: 
+D: Try to find out which bars/areas have the highest number of bar fights using the BPD 911 report and heat map of bar revenue around the city.
+E: https://data.cityofboston.gov/Public-Safety/Boston-Police-Department-911/uea6-pfmm
 T: Quant Parking
 U: bazil@bu.edu
 M: bazil@bu.edu
 N: 
 D: Using Park Boston Data to determine the ideal shifts,number and placement of parking enforcement officers For consumers to ideally use the data to determine whether taking the bus to that zone would be a better idea. Maybe bus routes could be coordinated with parking data. Higher Frequency of buses to zones and times with higher parking demand
 E: https://data.cityofboston.gov/Transportation/Park-Boston-Monthly-Transactions-By-Zone-2015/ixcw-899n
+T: Optimize power consumption from street light usage
+U: akshaydp@bu.edu
+M: akshaydp@bu.edu
+N: 
+D: Street light data can be used to identify areas of lower traffic volume with proportionately higher consumption. This can be used to install motion sensor based lighting in roads with lower traffic.
+E: https://data.cityofboston.gov/Facilities/Street-Light-Control-Box-Electric-Power-Cost-Usage/h77g-ijgn
 T: Energy Efficient Buildings @ Boston
 U: xiaoy@bu.edu
 M: xiaoy@bu.edu
@@ -527,30 +1379,84 @@ M: ayellis@bu.edu
 N: 
 D: Who are the energy 'heroes' in Boston? Which major buildings are using less energy, in actuality rather than with mathematical tricks, and of these buildings what is the turning point where they started to become more efficient? Can this be attributed to anything? If there is a group, what characteristics does this group share? Along with this, city budget spending on efficiency and energy usage in schools and other public buildings could likely reveal if that spending is effective.
 E: One year - need several others: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b
+T: Improve Food Establishment Inspections
+U: pcchen@bu.edu
+M: pcchen@bu.edu
+N: 
+D: Analyze the Food Establishment Inspections data set, especially by location, to see if there are areas that restaurants prompt to fail their inspections. The city of Boston can invest more resources in those area.
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w
+T: Fire Related reports
+U: spnayak@bu.edu
+M: spnayak@bu.edu
+N: 
+D: Use the crime data to find fire related reports. These reports can be used to find common issues such as old wiring, or lack of water hydrants to encounter such issues.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
 T: Zipcar Usage
 U: jjpowe13@bu.edu
 M: jjpowe13@bu.edu
 N: 
 D: There are two Zipcar data sets that I was looking at, and would like to explore further. One of these data sets had Boston Zipcar memberships by zip code, and the other keeps track of actual Zipcar reservations in Boston. I wanted to try to look at these data sets to see if their is a correlation between the memberships and the reservations. I would also like to explore actual locations of where Zipcars are located. We could also compare this data to other things like T stop locations or Hubway bike locations, to see if these make a difference in Zipcar usage. We might be able to help Zipcar identify the best areas to advertise and better locations for car availability. 
 E: https://data.cityofboston.gov/Transportation/Zipcar-Boston-Reservations/863f-ps42 https://data.cityofboston.gov/Transportation/Zipcar-Boston-Membership-by-zipcode/g4pc-28b5
+T: Are you going to be late to school? Schools, Bus routes, & Traffic 
+U: jrosen2@bu.edu
+M: jrosen2@bu.edu
+N: 
+D: Use Boston School locations, MBTA bus routs and Waze traffic data to get a better idea of when it may be difficult for students to get to school on time and if alternative routs for students might be helpful. 
+E: https://data.cityofboston.gov/dataset/Boston-Public-Schools-School-Year-2012-2013-/e29s-ympv https://data.cityofboston.gov/Transportation/MBTA-Bus-Location-Data/y4kc-jxaa https://data.cityofboston.gov/Transportation/Waze-Jam-Data/yqgx-2ktq 
 T: Food Pantry Distribution
 U: meyerke@bu.edu
 M: meyerke@bu.edu
 N: 
 D: There is a need for quality and access to food pantries within various Boston neighborhoods; how is Boston meeting these needs? Is there higher concentration of food pantries in some areas than others? Does this distribution align with the needs of the population?
 E: https://data.cityofboston.gov/Health/Food-Pantries/vjvb-2kg6
+T: WiFi Rollout Valuable
+U: cherella@bu.edu
+M: cherella@bu.edu
+N: 
+D: Utilize the current data on Wicked Wifi connections to determine if it would be worthwhle to rollout wifi throughout the entire city
+E: N/A
+T: Reduce Food Wastage 
+U: ebad@bu.edu
+M: ebad@bu.edu
+N: 
+D: We can use the food pantries data to identify the areas where there are food shelters. We can then use this information to reduce wastage of food in restaurants. Restaurants located around these areas can send the extra food to these food shelters so that we can reduce the food wastage as well as provide some relief to these food shelters. We can also map this data to the restaurant location data to smoothen the process.
+E: https://data.cityofboston.gov/Permitting/Active-Food-Establishment-Map/3a6m-dwve https://data.cityofboston.gov/Health/Food-Pantries/vjvb-2kg6
+T: Happy Hour in Boston
+U: wljones@bu.edu
+M: wljones@bu.edu
+N: 
+D: The Blue Laws, implemented in 1984, halted some of the traditional metropolis imbibing options within the Boston area. Perhaps data can tell us if those laws are actually working, by actually preventing drinking and driving throughout the city considering the increased prevalence of alternative transportation options.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx Not sure if this is the most applicable
+T: Safe running lanes
+U: vryakala@bu.edu
+M: vryakala@bu.edu
+N: 
+D: Running in areas with low traffic is not only safer but also healthier due to cleaner air. Data from MAssDot and other sources can be used find such areas at a particular hour.
+E: http://mhd.ms2soft.com/tcds/tsearch.asp?loc=Mhd 
 T: Towards Exposing Wrongful Evictions
 U: annai@bu.edu
 M: annai@bu.edu
 N: 
 D: Rising rents are pushing out Boston residents, and activists are calling for a "just-cause" eviction ordinance, but the movement lacks data on evictions. This project would begin resolving this problem by mapping rental properties (OWN_OCC = "N" in Property Assessment dataset).
 E: https://data.cityofboston.gov/d/yv8c-t43q?category=Permitting&view_name=Property-Assessment-2015
+T: Food Network
+U: archug@bu.edu
+M: archug@bu.edu
+N: 
+D: There is data available on food banks, pantries, farmers' markets, and restaurants. An idea would be to analyze this data by location and see if there is an internal network among these. 
+E: multiple data sets through: https://data.cityofboston.gov/browse?sortBy=relevance&utf8=%E2%9C%93&q=FOOD
 T: Nail Salons
 U: nathan2@bu.edu
 M: nathan2@bu.edu
 N: 
 D: Nail salons were recently in the news for possible mistreatment of its workers. While the initial New York Times article has been questioned, it would still be interesting to look at where nail salons in Boston are distributed and see if there is a correlation between their location and income level or demographics of the neighborhood. This could help the government determine if there are commonalities among nail salons or if they are differentiated so that they need to be treated using different criteria.
 E: https://data.cityofboston.gov/Health/Nail-Salon-Permits/ptc8-utq7 https://data.cityofboston.gov/dataset/2010-Census-data-all-Boston-neighborhoods/rqmk-a7bu
+T: Don't Feel Inferior! Know the car types that fits your dream Boston neighbourhood
+U: aayodeji@bu.edu
+M: aayodeji@bu.edu
+N: 
+D: This project entails digging into the data containing the vehicle tax bills for Boston residents in 2014. The data in addition to tax shows the car make and year. This I felt is interesting, perhaps one could identify patterns in car make and year distribution in different neighborhoods (using Zip Codes). This may help advise ego driven people choose where to live and conversely what car to purchase. That apart, its also nice to know for information purpose. 
+E: https://data.cityofboston.gov/Permitting/Vehicle-Excise-Tax-2014/ytub-etic
 T: Use Code Enforcement - Building and Property Violations data to rate buildings and localities 
 U: sidds@bu.edu
 M: sidds@bu.edu
@@ -563,12 +1469,54 @@ M: hsanders@bu.edu
 N: 
 D: is healthy lifestyle a function of wealth?
 E: https://data.cityofboston.gov/Health/Healthy-Corner-Stores/ekiy-2qmz
+T: Reviewing Departmental Staffing Policies
+U: nchanda@bu.edu
+M: nchanda@bu.edu
+N: 
+D: City of Boston can try to estimate the shortage of employees. It can use the overtime payment it commits to its employees as a measure of employee shortage. it can then restructure its hiring policies accordingly.From the data available it can identified that the Police Department has the highest average overtime payment.
+E: https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8
+T: Billboards/notice boards to raise awareness of Larceny from Motor Vehicles
+U: vhegde@bu.edu
+M: vhegde@bu.edu
+N: 
+D: Certain streets in Boston have high rates of larceny from motor vehicles. Billboards/noticeboards can be put up in these areas to raise awareness of larceny so that people are on the lookout.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Checks for rodent activity
+U: vhegde@bu.edu
+M: vhegde@bu.edu
+N: 
+D: The idea is to get the data from 311 services to check which areas in which rodent activities are rampant. Then try to correlate that with whether it is due to different issues such as unsatisfactory conditions of establishments and unsanitary living or utilities condition. After this the authorities can take preventive measures such as inspections.
+E: https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
 T: Taxi Dropoff Data vs Bus Locations
 U: mgoodrid@bu.edu
 M: mgoodrid@bu.edu
 N: 
 D: What locations could be better served by more bus service? Are taxi dropoffs a indicator of an underserved population.
 E: https://data.cityofboston.gov/Transportation/Boston-Taxi-Data/ypqb-henq https://data.cityofboston.gov/Transportation/MBTA-Bus-Location-Data/y4kc-jxaa
+T: Police effectiveness combating crime
+U: ajje@bu.edu
+M: ajje@bu.edu
+N: 
+D: We will use data coming from city of Boston regarding police station locations with also crime incident report. We will map this data to say how good is police location in preventing crime
+E: https://data.cityofboston.gov/
+T: Most Popular Car Manufacturer by Zipcode
+U: rok17@bu.edu
+M: rok17@bu.edu
+N: 
+D: The City of Boston records the excise tax of vehicles registered by zipcode. What is the most popular make of car in each zip code?
+E: https://data.cityofboston.gov/Permitting/Vehicle-Excise-Tax-2014/ytub-etic
+T: Most popular restaurant violations, mapped
+U: leishman@bu.edu
+M: leishman@bu.edu
+N: 
+D: It would be interesting to see what areas of Boston have the most restaurant inspection violations, and what the most popular violations are. How often do violations happen? Who are the top 25 violators and do their Yelp ratings correlate? 
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w
+T: Quant Crime may save your life and belongings
+U: bazil@bu.edu
+M: bazil@bu.edu
+N: 
+D: We'll there's a lot that can be done with crime data. I'm sure my idea has already been thought of by other class mates or may be better used as an additional in an overarching crime idea. We can use robbery data and location map it, with a filter for time. Based on this we could recommend streets to avoid and what time we would recommend avoiding them. This data could also be used to recommend officer patrolling schedules and areas. 
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
 T: Closed Potholes vs. median income
 U: cmont@bu.edu
 M: cmont@bu.edu
@@ -587,15 +1535,81 @@ M: busatrio@bu.edu
 N: 
 D: We can combine the streetlight locations with accident data from Waze to determine whether lighting shortages in some locations is the cause of road accidents. If there is correlation, we can suggest to City of Boston to add the streetlight on those places.
 E: The streetlight locations: https://data.cityofboston.gov/Facilities/Streetlight-Locations/7hu5-gg2y The accident data: https://data.cityofboston.gov/Transportation/Waze-Alert-Data/h8aq-6mw7?q=accident
+T: Big Belly Trash alerts and Rodent Activity
+U: kmb1@bu.edu
+M: kmb1@bu.edu
+N: 
+D: See if there is a relationship between overfilled (red alert) Big Belly trash cans and increased reports of rodent activity. Would be able to see areas of of high rodent activity as well as the areas with higher concentrations of Big Belly trash cans and see if there is a relationship. 
+E: https://data.cityofboston.gov/City-Services/Big-Belly-Alerts-2014/vwyk-mq9z https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
+T: Traffic optimization
+U: arvinds@bu.edu
+M: arvinds@bu.edu
+N: 
+D: Based on Waze Jam data and alert data, analyse the root cause of the jams and how city of Boston can help. For example, potholes are something which they can look into and work on.In addition, we could also look at patterns and seasonality ( could be day of the week, time of day or specific events in a year) and be better prepared.
+E: https://data.cityofboston.gov/browse?limitTo=datasets&tags=traffic&utf8=%E2%9C%93
+T: Community solar panels location 
+U: pcchen@bu.edu
+M: pcchen@bu.edu
+N: 
+D: Look at the building energy and water use metrics and find out the most energy consumed or GHG emissioned neighborhoods. Cross analyze the data set with Buildings and space owned by the City of Boston, School Garden, or other existing data set that includes public land, so we can come up with the suggestion of possible location for install community solar panels. Therefore, reduce the GHG emission.
+E: https://data.cityofboston.gov/Facilities/Building-Energy-and-Water-Use-Metrics/n9us-mq2b https://data.cityofboston.gov/Facilities/City-of-Boston-Owned-Property/rsyv-u23m https://data.cityofboston.gov/Facilities/School-Gardens/cxb7-aa9j
+T: Who really owns the land?
+U: jasonpm@bu.edu
+M: jasonpm@bu.edu
+N: 
+D: Analyze Boston zoning restrictions to determine how free property owners here really are when it comes to doing what they want with their property.
+E: https://data.cityofboston.gov/Permitting/Zoning-Clearances/6xhk-ifjg
+T: Issued moving truck permits (2012 / 2015) comparison
+U: leishman@bu.edu
+M: leishman@bu.edu
+N: 
+D: Is there anything to learn about Boston by comparing two years of data about moving truck permits?
+E: https://data.cityofboston.gov/Permitting/Issued-Moving-Truck-Permits/bzif-fkwd https://data.cityofboston.gov/Permitting/Moving-Truck-Permits-September-2015/6gaz-xyfm https://data.cityofboston.gov/Permitting/Moving-Truck-Permits-September-2015-Heat-Map/kj6j-ifhq
+T: Installation of traffic cameras
+U: akshaydp@bu.edu
+M: akshaydp@bu.edu
+N: 
+D: Based on the safety data map, traffic cameras can be installed at crossings with higher incidents of violation of rules
+E: http://app01.cityofboston.gov/vzsafety/
 T: Cars Owned and Rented: Impact on Traffic
 U: astraley@bu.edu
 M: astraley@bu.edu
 N: 
 D: If we analyze waze hazard data, zipcar membership by area and parking ticket data we may be able to get a sense of how an increase in rented cars (i.e. zipcars) will increase or decrease other issues. The hypothesis would be that with fewer people owning cars in that area you'll see lower traffic rates, which would correlate with some lower hazards, but other hazards might be increased (i.e. crashes) because people don't drive as much. You could probably also see this with higher rates of parking tickets in areas where people don't drive as much.
 E: https://data.cityofboston.gov/Transportation/Waze-Alert-Data/h8aq-6mw7 https://data.cityofboston.gov/City-Services/Parking-Tickets-Portal-Web-Statistics/8v6g-kcn8 https://data.cityofboston.gov/Transportation/Zipcar-Boston-Membership-by-zipcode/g4pc-28b5
+T: Video surveillance in high-crime neighborhoods
+U: dbzhang@bu.edu
+M: dbzhang@bu.edu
+N: 
+D: A growing number of cities across the United States and abroad have installed networks of closed-circuit television (CCTV) cameras. Police monitor the video in an effort to prevent crime and catch lawbreakers in the act. CCTV aims to increase the perceived risk of capture, a factor which will de-motivate the potential offender. A number of other benefits, beyond a reduction in crime, may be accrued from a CCTV system, including:Reduced fear of crime, aid to police investigations, provision of medical assistance, place management, information gathering, etc.
+E: https://data.cityofboston.gov/Public-Safety/Crime-Incident-Reports/7cdf-6fgx
+T: Failed Food Inspections in the City of Boston
+U: mhazizaj@bu.edu
+M: mhazizaj@bu.edu
+N: 
+D: An analysis of the biggest reasons various food locations pass or fail during inspections in the City of Boston. Is there any specific reason prevalent in some neighborhoods? What places have had the most failures? What should you avoid? Is there anything that can be done do address this failures? 
+E: https://data.cityofboston.gov/Health/Food-Establishment-Inspections/qndu-wx8w
+T: @NotifyBoston Tweets
+U: mefree@bu.edu
+M: mefree@bu.edu
+N: 
+D: I don't have a readily available "question" for this dataset, but I think it would be interesting to see what the most common words or concerns that are noted using this handle. The data included is for one full calendar year from March 2014-2015. More work can be done using available data online with the @NotifyBoston tag, but this dataset offers more information about the user. Also provided in a separate dataset are the tweets from @NotifyBoston. Is @NotifyBoston effective in putting concerns at bay?
+E: https://data.cityofboston.gov/City-Services/Tweets-sent-from-any-user-tagging-the-NotifyBoston/mjtg-hw8v https://data.cityofboston.gov/City-Services/Tweets-sent-from-NotifyBoston-from-March-2014-Marc/7biv-vu3q
+T: Boston Public Schools and Performance
+U: archug@bu.edu
+M: archug@bu.edu
+N: 
+D: Boston public school rankings are publicly available (see bostonmagazine.com link below). Analyzing this information along with employee earnings data (based on location) and real estate/rent data can provide insights on performance of students based on standard of living.
+E: http://www.bostonmagazine.com/best-schools-boston-2015-chart/ https://data.cityofboston.gov/dataset/Industry-Highlight-Real-Estate-Rental-and-Leasing-/mity-rchz https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2015/ah28-sywy
+T: Beyond Zipcar
+U: jbohn@bu.edu
+M: jbohn@bu.edu
+N: 
+D: Use Zipcar usage data to identify high uses area and implement individual p2p car sharing (e.g. airbnb)
+E: https://data.cityofboston.gov/Transportation/Zipcar-Boston-Reservations/863f-ps42
 T: Parking Tickets (app) Changes in Revenue and consumer perceived happiness
 U: nkf531@bu.edu
 M: nkf531@bu.edu
 N: 
 D: I was hoping to see the change in the number of tickets given in Boston due to the new Parking App along with the cost savings of labor on patrolling police officers who would issue tickets as i see it to be a much faster process. I would like to compare this to the supposed increase in captured parking meters along with the flow of traffic as people can no longer park their cars in specific spots for longer than the allowed time. So I want to gauge if this actually increased the happiness of the citizens of boston residents along with is it costing the city more or saving them money. 
-E: https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3s
+E: https://data.cityofboston.gov/dataset/Parking-Tickets/qbxx-ev3si
