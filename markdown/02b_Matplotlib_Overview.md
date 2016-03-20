@@ -95,22 +95,28 @@ Now, let's write a little python to read a file in and create a DataFrame. We'll
 Let's start off with the absolutely simplest possible plot
 
 ```python
->>> ax = df.plot();
->>> ax.set_title('TITLE')
->>> ax.set_xlabel('XLABEL')
->>> ax.set_ylabel('YLABEL')
+>>> # apply the `plot()` method to a data frame to plot all of the variables against
+... # the index.
+... # The legend will provide the name of the variables
+...
+... df.plot();
 ```
 
 ### Plotting a Single Line
 
 ```python
->>> df['Petal_Width'].plot();
+>>> # Remember that we can create a new dataframe by extracting out the variables we're interested in
+... # Here we use that approach to choose the Petal_Width variable and then plot it.
+...
+... df['Petal_Width'].plot();
 ```
 
 ### Plotting Multiple Lines
 
 ```python
->>> df[['Petal_Width', 'Petal_Length']].plot();
+>>> # Choose the variables you wish to plot using a list of variable names, and
+... # then just perform the normal `plot()`
+... df[['Petal_Width', 'Petal_Length']].plot();
 ```
 
 ### Plotting Other Types of Graphs
@@ -118,11 +124,13 @@ Let's start off with the absolutely simplest possible plot
 **Bar Plots**
 
 ```python
->>> df['Petal_Length'].plot.bar();
+>>> # Choose the first 20 samples of Petal_Length and then plot a bar plot
+... df['Petal_Length'].head(20).plot.bar();
 ```
 
 ```python
->>> df['Petal_Length'].plot(kind='bar');
+>>> # An alternative approach to achieve the same objective
+... df['Petal_Length'].head(20).plot(kind='bar');
 ```
 
 **Scatter Plots**
@@ -132,13 +140,19 @@ Let's start off with the absolutely simplest possible plot
 ```
 
 ```python
->>> df.plot(kind='area', subplots=True, sharey='True', figsize=(10,10), xlim=(0,80));
+>>> df.plot(kind='area',
+...         subplots=True,
+...         sharey='True',
+...         figsize=(10,10),
+...         xlim=(0,80));
 ```
 
 ### Using the pyplot module
 
 ```python
->>> df.plot(kind='scatter', x='Sepal_Length', y='Sepal_Width');
+>>> df.plot(kind='scatter',
+...         x='Sepal_Length',
+...         y='Sepal_Width');
 ```
 
 **Scatter Matrix Plot**
@@ -249,25 +263,31 @@ Let's start off with the absolutely simplest possible plot
 ...            figsize=(10,10));
 ```
 
-```python
-
-```
-
-### Regression Plots Functions
-
 ### An Alternative Approach
 
-```python
-
-```
+An alternative aproach to plotting uses the subplots() method to create a figure and a set of axes which can be manipulated directly. In many ways, this turns out to be the option which provides the most control over the appearance of the plot
 
 ```python
 >>> fig, ax = plt.subplots()
 ...
->>> us.plot(ax=ax)
->>> ax.set_title('US GDP and Consumption', fontsize=14, loc='left')
->>> ax.set_ylabel('Billions of 2013 USD')
->>> ax.legend(['GDP', 'Consumption'])           # more descriptive variable names
->>> ax.set_xlim(2002.5, 2013.5)                 # shrink x axis limits
->>> ax.tick_params(labelcolor='red')            # change tick labels to red
+>>> df.plot(ax=ax)
+...
+>>> # set the title, change the fontsizeof the title and locate in the upper left corner
+... ax.set_title('Iris Data Collection', fontsize=14, loc='left')
+...
+>>> # set the label on the y axis
+... ax.set_ylabel('Length in mm')
+...
+>>> # more descriptive variable names
+... ax.legend(['Sepal Length', 'Sepal Width', 'Petal Length', 'Petal Width'])
+...
+>>> # shrink x axis limits
+... ax.set_xlim(40,60)
+...
+>>> # change tick labels to red
+... ax.tick_params(labelcolor='red')
+```
+
+```python
+
 ```

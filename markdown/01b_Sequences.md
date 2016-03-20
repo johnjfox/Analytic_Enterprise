@@ -32,94 +32,116 @@
 ===============================
 ## Strings
 
-* Double quotes or single quotes
-* Index from 0
-* Slicing
-* Does not include the right index "up to but not including"
-* Include everything
-* Negative indexing
-* frequency / step size / reversing a sting using a -1 step size
+A string is basically a collection of characters with some special methods that perform operations which we tend to expect, like capitalization.
 
-Strings are immutable, i.e. once they are created, they can't be changed or replaced.
-Concatenation using +
-Duplication using *
+**String Creation**
 
 ```python
->>> s = 'Hello world'
+>>> # We can create a string using single quotes
+... s = 'Hello world'
 >>> print s
 Hello world
 ```
 
 ```python
->>> s = "Hello world"
+>>> # We can create a string using double quotes
+... s = "Hello world"
 >>> print s
 Hello world
 ```
 
 ```python
->>> s = "This is John's world"
+>>> # This is convenient for instances where we might want to mix the two
+... s = "This is John's world"
 >>> print s
 This is John's world
 ```
 
+**String Concatenation**
+
 ```python
->>> print s + ' there'
+>>> # We can concatenate two strings using the `+` operator
+... print s + ' there'
 This is John's world there
 ```
 
+**String Duplication**
+
 ```python
->>> print s*2
+>>> # We can duplicate a string using the `*` operator
+... print s*2
 This is John's worldThis is John's world
 ```
 
 **Indexing**
 
-We can access the contents of a string by directly refering to the location of a character within a string
+We can access the contents of a string by directly refering to the location of a character within a string uing indices. Take some time to understand what we can do with indices, since Python is consistent in its use of indexing across all of the objects that can be indexed and, by extension, many of the libraries we'll be using. In general, indexing is used as follows:
+
+    string[lowerIndex : upperIndex]
+
+    
+will return all of the characters from `lowerIndex` up to but not including `upperIndex`. Optionally, we can add a third indexing argument which determines the step size
+
+    string[lowerIndex : upperIndex : step]
 
 ```python
+>>> # First thing to note is that the index of the first character in the string is considered to have index `0`
+... s = "This is John's world"
 >>> s[0]
 'T'
 ```
 
 ```python
->>> s[0:3]
-'Thi'
+>>> # We can use a colon `:` to create a range of indices.
+... # In this example, we'll get all of the characters beginning with the lower index up to, but not including, the
+... # higher index
+... s[0:7]
+'This is'
 ```
 
 ```python
->>> s[-3:]
+>>> # We can use the optional step size, which by default is 1
+... s[0:7:1]
+'This is'
+```
+
+```python
+>>> # We can use the optional step size, which by default is 1
+... s[0:7:2]
+'Ti s'
+```
+
+```python
+>>> # By using a negative index, we count from the end of the string
+... s[-3:]
 'rld'
 ```
 
 ```python
->>> s[::2]
-"Ti sJh' ol"
-```
-
-```python
->>> s[::-1]
+>>> # finally, we can use a negative step size to iterate backwards through the string
+... s[::-1]
 "dlrow s'nhoJ si sihT"
 ```
 
 ### Methods and Recipes
 There are far too many methods available for manipulating strings to capture them all here. I strongly suggest that you ook at the Python documentation to get a quick sense for everything that you can do. In the meantime, here are some methods and recipes that you'll run into frequently.
 
+**Determine The Length Of A String**
+
 ```python
 >>> len('Hello world!')
 12
 ```
 
-```python
->>> s = 'hello'
-```
+**Manipulate the String**
 
 ```python
->>> s.upper()
+>>> 'hello'.upper()
 'HELLO'
 ```
 
 ```python
->>> s.capitalize()
+>>> 'hello'.capitalize()
 'Hello'
 ```
 
@@ -229,6 +251,8 @@ The general form we will be
 
 As we'll see, in a lot of important ways, lists and strings are actually quite similar although strings are limited to containing characters whereas lists can contain any type of Python object.
 
+**Creation**
+
 ```python
 >>> my_list = [1,2,3]
 ```
@@ -242,60 +266,45 @@ As we'll see, in a lot of important ways, lists and strings are actually quite s
 >>> my_list = ['string', 23, 1.234, '0']
 ```
 
+**Creating a List Using `range()`**
+
+Python 2 has a convenience function which will create list for us consisting of a range of numbers. The form of this function is
+    
+    range(start, stop, step)
+    
+and they work pretty much the same way that indices work. This particular function will prove to be quite useful later on when we talk about iteration.
+
 ```python
->>> len(my_list)
-4
+>>> # the default configuration will create a list of numbers ranging from 0 to the 'stop'
+... # with a step size of 1
+... print range(10)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### Methods and Recipes
+```python
+>>> print range(3,10)
+[3, 4, 5, 6, 7, 8, 9]
+```
 
 ```python
+>>> print range(3,10,2)
+[3, 5, 7, 9]
+```
+
+**Concatenate**
+
+Concatenation of lists is performed in the same way as concatenation of strings.
+
+```python
+>>> # Concatenate lists
+... list_one = [1,2,3]
+>>> list_two = ['a', 'b', 'c']
 ...
->>> l = [1,2,3]
->>> l.append('append me')
->>> print l
-[1, 2, 3, 'append me']
+>>> list_concatenated = list_one + list_two
+...
+>>> print list_concatenated
+[1, 2, 3, 'a', 'b', 'c']
 ```
-
-```python
->>> # The `pop()` method will return the value with the highest index. It has the side effect of
-... l.pop()
-'append me'
-```
-
-```python
->>> l + 1
-```
-
-```python
->>> l.pop(0)
-1
-```
-
-```python
->>> l
-[2, 3]
-```
-
-```python
->>> x = l.pop(0)
-```
-
-```python
->>> x
-2
-```
-
-```python
->>> l
-[1, 2, 3]
-```
-
-**Using a list as a stack**
-
-- What is a stack
-- Push down
-- last in first out
 
 ```python
 >>> stack = []
@@ -303,22 +312,95 @@ As we'll see, in a lot of important ways, lists and strings are actually quite s
 ['a']
 ```
 
+**Duplicate**
+
+List duplication is performed the same way as duplication of strings
+
 ```python
->>> new_list = ['a', 'e', 'x', 'b', 'c']
->>> print new_list
-['a', 'e', 'x', 'b', 'c']
+>>> # List duplication
+... my_list = ['string', 23, 1.234, '0']
+>>> print my_list*2
+['string', 23, 1.234, '0', 'string', 23, 1.234, '0']
+```
+
+**Indexing**
+
+Indexing on lists is performed the same way as indexing on strings and it won't be repeated here.
+
+### Methods and Recipes
+
+**Determine The Length Of A List**
+
+```python
+>>> my_list = [1, 2, 3, 4, 5, 6]
+>>> len(my_list)
+6
+```
+
+**Append An Item To The End Of A List**
+
+```python
+>>> # Lists also have a method called `append()` which allows us to append a single value onto the end of the list
+... # Append single item onto a list
+... l = [1,2,3]
+>>> l.append('append me')
+>>> print l
+[1, 2, 3, 'append me']
+```
+
+**Pop An Item Off Of A List**
+
+```python
+>>> # The `pop()` method will return the value with the highest index.
+... # It has the side effect of removing this same item from the list
+... my_list = [1, 2, 3, 4, 5, 6]
+>>> x = my_list.pop()
+>>> print 'The item popped = ', x
+>>> print 'The list afterwards = ', my_list
+The item popped =  6
+The list afterwards =  [1, 2, 3, 4, 5]
 ```
 
 ```python
+>>> # Optionally, the `pop()` method takes an integer argument which specifies the index
+... # of the element to "pop" off of the list
+... my_list = [1, 2, 3, 4, 5, 6]
+>>> x = my_list.pop(2)
+...
+>>> print 'The item popped = ', x
+>>> print 'The list afterwards = ', my_list
+The item popped =  3
+The list afterwards =  [1, 2, 4, 5, 6]
+```
+
+```python
+>>> l.pop()
+'append me'
+```
+
+```python
+>>> print l
+[1, 2, 3]
+```
+
+**Reverse a List**
+
+```python
 >>> # reverse the list in place
-... new_list.reverse()
+... new_list = ['a', 'e', 'x', 'b', 'c']
+...
+>>> new_list.reverse()
 >>> print new_list
 ['c', 'b', 'x', 'e', 'a']
 ```
 
+**Sort a List**
+
 ```python
 >>> # sort the list in place
-... new_list.sort()
+... new_list = ['a', 'e', 'x', 'b', 'c']
+...
+>>> new_list.sort()
 >>> print new_list
 ['a', 'b', 'c', 'e', 'x']
 ```
@@ -354,18 +436,8 @@ There are several ways to do this in Python, but let's say that we are limiting 
 By creating a "list of lists" we have created a representation of an array.
 
 <div class="alert alert-success">
-Exercise: how would you use only the bracket notation to retrieve the '6' from the array we just created?
+Question: how would you use only the bracket notation to retrieve the '6' from the array we just created?
 </div>
-
-### List Comprehensions
-
-One thing that we can do to lists which will prove to be convenient is to perform a "list comprehension". A list comprehension is....
-
-```python
->>> first_column = [row[0] for row in matrix]
->>> print first_column
-[1, 4, 7]
-```
 
 ## Tuples
 
@@ -394,46 +466,79 @@ Tuples have many of the same methods and we can do many of the same operations o
 >>> # tuples can contain arbitrary objects and the objects need not be unique
 ... t = ([1,2,3], 'one', 2, 'one')
 >>> print t
+([1, 2, 3], 'one', 2, 'one')
 ```
 
 ```python
 >>> # Access an element of a tuple. Like lists, the indexing is zero-referenced
 ... t = ([1,2,3], 'one', 2, 'one')
 >>> print t[0]
+[1, 2, 3]
 ```
 
 ```python
 >>> # We can do all of the same indexing as we did with lists
 ... t = ([1,2,3], 'one', 2, 'one')
 >>> print t[1:3]
+('one', 2)
 ```
 
 ```python
 >>> # We can also index them from from the last element backswards by using negative numbers
 ... t = ([1,2,3], 'one', 2, 'one')
 >>> t[-1]
+'one'
 ```
 
 ```python
 >>> # Determine the length of the tuple
 ... len(t)
+4
 ```
 
 ```python
 >>> # we can determine the first index of a value
 ... t = ([1,2,3], 'one', 2, 'one')
 >>> t.index('one')
+1
 ```
 
 ```python
 >>> # we can count the number of instances of a value
 ... t.count('one')
+2
+```
+
+## Exercises
+
+<div class="alert alert-success">
+<b>QUESTION:</b> What do `Strings`, `Lists` and `Tuples` all have in common?
+</div>
+
+<div class="alert alert-success">
+<b>EXERCISE:</b>
+<p>Take the following Python code that stores a string:</p>
+<p></p>
+<center>str = 'X-DSPAM-Confidence:  0.8475'</center>
+<p></p>
+<p>Use find and string slicing to extract the portion of the string after the colon character and then use the float function to convert the extracted string into a floating point number. </p>
+</div>
+
+```python
+>>> # build your solution here
+... str = 'X-DSPAM-Confidence: 0.8475'
 ```
 
 <div class="alert alert-success">
-INSERT EXERCISE HERE
+<b>EXERCISE:</b>
+<p>Take the following comma delimited string:</p>
+<p></p>
+<center>str = 'John, Doe, 123 Main Street, New York City, NY, 01234'</center>
+<p></p>
+<p>Use string methods to decompose the string into distinct fields corresponding to the text between the commas. After you have this decomposition, create a Tuple containing all of the data</p>
 </div>
 
-<div class="alert alert-success">
-What do `Strings`, `Lists` and `Tuples` all have in common?
-</div>
+```python
+>>> # build your solution here
+... str = 'John, Doe, 123 Main Street, New York City, NY, 01234'
+```
