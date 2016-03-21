@@ -33,13 +33,13 @@
 
 * Input and Output
 
-===============================
+~~~~~~~~~~
 
 ## Booleans and Comparison Operators
 
 **Booleans**
 
-An important class of objects in Python is used to represent the notion of a "Boolean", i.e. something which can take on the value `True`, `False`, or `None`. A few things to note here: 
+An important class of objects in Python is used to represent the notion of a "Boolean", i.e. something which can take on the value `True`, `False`, or `None`. A few things to note here:
 
 * First, each of the Boolean values are case sensitive, i.e. `True` is not the same as `TRUE`. 
 * As it turns out, `True` is exactly equal to `1` and `False` is exactly equal to `0`. You might find this useful at some point in your programs.
@@ -62,22 +62,22 @@ We can also combine some of these in interesting ways, for instance, the compoun
 
 Let's put together a few examples to see how some of this works.
 
-``` python
+```python
 >>> # a very simple comparison
->>> print 10 == 10
+... print 10 == 10
 True
 ```
 
-``` python
+```python
 >>> # a compound expression testing that a variable is within an interval
->>> x = 15
+... x = 15
 >>> print 10 <= x <= 20
 True
 ```
 
 ```python
 >>> # an example of using the membership test
->>> list = ['a', 'b' ,'c']
+... list = ['a', 'b' ,'c']
 >>> print 'a' in list
 True
 ```
@@ -154,9 +154,85 @@ Before: x =  10
 After:  x =  20
 ```
 
+### For Loops
+
+It's pretty typical that our analysis will force us to perform some block of code repeatedly. For instance, we may need to some function to every element in a list. At a high, pseudo-code level, you could imagine that this might look like the following:
+
+	for every item in a list 
+		Execute This Block of Code
+
+And, not surprisingly at this point, it turns out once again that actually implementing this in Python is not terribly different from the way we'd imagine it shoudl work. We've already seen how to handle setting up the notion of "Execute This Block of Code" when we learned conditional statements. Now, we just need to figure out how to control the iteration. As it turns out, we already have most of the pieces that we need:
+
+* We'll create a list that we will use to determine how many times we'll perform the iteration
+* We'll use a new function called `for` to control the iteration. When we construct the `for` we'll create a new variable that we'll use to represent the next item in the list that we'll be processing
+* We'll separate the block of code to be performed through a colon and indentation
+* Once we complete the execution of the block of code, we'll jump back to the top of the `for` loop, move to the next item on the list and continue along
+
+As usual, easier done than said:
+
+```python
+>>> # let's create a list
+... fruits = ['apple', 'bananas', 'pears', 'grapes']
+...
+>>> # now, let's iterate over each element in that list, perform some processing and print the results
+... for f in fruits:
+...     print 'ORIGINAL: ' + f + ' -> NEW: ' + f.upper()
+ORIGINAL: apple -> NEW: APPLE
+ORIGINAL: bananas -> NEW: BANANAS
+ORIGINAL: pears -> NEW: PEARS
+ORIGINAL: grapes -> NEW: GRAPES
+```
+
+Of course, the question may be "What do I do if I don't have some list to use?" In that case, we'll control the iteration by creating a list which has the correct number of values and then iterate through each of these values. In some cases you might imagine this new list to be a container for "dummy" variable that have no purpose other than to ensure we can iterate the correct number of times. In other cases, these made up values may actually be useful. For instance, if we create this dummy list so that it holds a list of integers, then at any given time the element that we're working on will represent the number of times that we've passed through the list. 
+
+To create this list, we can use the `range()` function that we introduced earlier.
+
+```python
+>>> for i in range(0,10):
+...     print i
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+		
+### While Loops
+
+As an alternative to looping over a predetermined set of information or a predetermined number of iterations, we can loop over a block of code for as long as some condition is true. Again using our high level "pseudo-code" to understand what we mean by this:
+
+	While Some Condition is True 
+		Execute This Block of Code
+        
+If you've been working through this entire notebook, then this will be reminiscent of the for loop. Whereas before we iterated on a block of code until we exhausted all of a list, now, we iterate while some more general condition holds true. Be careful with this though. Unless something takes place to affect the condition that you're check for (usually in the block of code that you're looping over), you can get stuck in a situation called an "endless loop" which is pretty much what it sounds like: a situation where you get stuck for ever looping over this block of code. If that happens, then the easiest solution is to restart the Jupyter server kernel (under the Kernel menu).
+
+Having seen how `for` loops work, you'll see what's going on here pretty easily.
+
+```python
+>>> # let's set an initial condition
+... x = 0
+>>> while x < 5:
+...     print x
+...     x += 1
+...
+>>> print "and we're done"
+0
+1
+2
+3
+4
+and we're done
+```
+
 ### Break Statements
 
-Sometimes we have reason to want to break out of a loop before we complete all of the iterations described in the `for` statement. The `break` statement allows us to do just that. Specifically, it will allow us to interrupt the execution of a loop, usually because some condition has been met. Once triggered, the script will continue execution immediately outside the loop which was just broken. 
+Sometimes we have reason to want to break out of a loop before we complete all of the iterations described in the `for` statement. The `break` statement allows us to do just that. Specifically, it will allow us to interrupt the execution of a loop, usually because some condition has been met. Once triggered, the script will continue execution immediately outside the loop which was just broken.
 
 ```python
 >>> # Create a variable so we can track the execution of the code
@@ -204,33 +280,6 @@ b
 before the continue
 d
 e
-and we're done
-```
-
-### While Statements
-
-And finally, we can loop over a block of code for as long as some condition is true. Again using our high level "pseudo-code" to understand what we mean by this:
-
-	While Some Condition is True 
-		Execute This Block of Code
-        
-If you've been working through this entire notebook, then this will be reminiscent of the for loop. Whereas before we iterated on a block of code until we exhausted all of a list, now, we iterate while some more general condition holds true. Be careful with this though. Unless something takes place to affect the condition that you're check for (usually in the block of code that you're looping over), you can get stuck in a situation called an "endless loop" which is pretty much what it sounds like: a situation where you get stuck for ever looping over this block of code. If that happens, then the easiest solution is to restart the Jupyter server kernel (under the Kernel menu).
-
-Having seen how `for` loops work, you'll see what's going on here pretty easily.
-
-```python
->>> # let's set an initial condition
-... x = 0
->>> while x < 5:
-...     print x
-...     x += 1
-...
->>> print "and we're done"
-0
-1
-2
-3
-4
 and we're done
 ```
 
