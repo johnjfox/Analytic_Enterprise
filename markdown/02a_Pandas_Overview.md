@@ -24,7 +24,7 @@ All of these packages come with the Anaconda distribution, which means we alread
 
 Pandas is an essential part of data work in Python. Its authors describe it as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python." Suffice it to say that we can do pretty much everything in Pandas that we can do in Excel -- and more. We can compute sums of rows and columns, generate new rows or columns, construct pivot tables, and lots of other things. And we can do all this with much larger files than Excel can handle.
 
-### Overview. 
+### Overview.
 In this notebook, we'll introduce Pandas, the Python package devoted to data management. We'll use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.
 
 We're ready to look at some data. You probably remember that our typical program consists of data input, data management, and graphics. In this notebook, our focus is on the data input, although we'll talk briefly about the data management as well. More concretely, we explain how to get text file data into Python.
@@ -33,7 +33,7 @@ We're ready to look at some data. You probably remember that our typical program
 
 **Objects and methods**. Recall that we apply the method `justdoit` to the object `x` with `x.justdoit`.
 
-**Help**. We can get help in the Jupyter console. For the hypothetical `x.justdoit`, we would type 
+**Help**. We can get help in the Jupyter console. For the hypothetical `x.justdoit`, we would type
 `x.justdoit?` in the Jupyter console.
 
 **Data structures**. That's the term we use for specific organizations of data. Examples are lists, tuples, and dictionaries. Each has a specific structure and a set of methods that can be applied. Lists are (ordered) collections of objects between square brackets: `numberlist = [1, -5, 2]`. Dictionaries are (unordered) pairs of items between curly brackets: `namedict = {'Brady': 12, 'Gronk': 87}`. The first item in each pair is the "key," the second is the "value.""
@@ -106,8 +106,8 @@ Now, let's write a little python to read this file in and create a DataFrame:
 
 Let's take a look at what just happened there:
 
-1. First, we set up a URL to a data set which happens to be a CSV, or "comma separated values", text file on my Github account. Github is an internet based revision control system which has a lot of great properties, such as being free :) In this case, we're using a rather famous data set which contains data on some samples of irises. 
-2. We created a new object called a DataFrame by reading in the contents of this URL using the `read_csv()` function. 
+1. First, we set up a URL to a data set which happens to be a CSV, or "comma separated values", text file on my Github account. Github is an internet based revision control system which has a lot of great properties, such as being free :) In this case, we're using a rather famous data set which contains data on some samples of irises.
+2. We created a new object called a DataFrame by reading in the contents of this URL using the `read_csv()` function.
 3. We assigned this newly formed DataFrame to a variable called iris_dataframe
 3. Finally, we printed the first 10 rows of the DataFrame.
 4. As always in Python, the data is "zero-referenced"
@@ -217,12 +217,12 @@ If you're in a situation where you are **not** reading your data from a CSV file
 
 As I mentioned before, DataFrames consist of a table of data, column labels, and row labels. Typically, columns are used to represent variables and the column labels give us their names. In our original example, the second column has the name Sepal_Length and its values follow below it. In one representation of the data, the rows can be used to capture all of the variables associated with a single observation. In this case the row labels give us a way to label an observation with a name so that it can be easily referred to.  In Python, these row labels are typically referred to as the "index".
 
-``` 
+```
 ID = 5
 Sepal_Length = 5.0
 Sepal_Width = 3.6
 Petal_Length = 1.4
-Petal_Width = 0.2 
+Petal_Width = 0.2
 Class = iris-setosa
 ```
 
@@ -306,22 +306,22 @@ As it turns out, we can use vectorized operations to create new variables within
 ... df = setupDF()
 ...
 >>> # Not only can we create a new variable, we can insert it directly into our existing DataFrame
-... df['New_variable'] = df['Sepal_Length'] / df['Sepal_Width']
+... df['ratio'] = df['Sepal_Length'] / df['Sepal_Width']
 ...
 >>> print df
          Class  ID  Petal_Length  Petal_Width  Sepal_Length  Sepal_Width  \
-0  Iris-setosa   1           1.4          0.2           5.1          3.5   
-1  Iris-setosa   2           1.4          0.2           4.9          3.0   
-2  Iris-setosa   3           1.3          0.2           4.7          3.2   
-3  Iris-setosa   4           1.5          0.2           4.6          3.1   
-4  Iris-setosa   5           1.4          0.2           5.0          3.6   
+0  Iris-setosa   1           1.4          0.2           5.1          3.5
+1  Iris-setosa   2           1.4          0.2           4.9          3.0
+2  Iris-setosa   3           1.3          0.2           4.7          3.2
+3  Iris-setosa   4           1.5          0.2           4.6          3.1
+4  Iris-setosa   5           1.4          0.2           5.0          3.6
 
-   New_variable  
-0      1.457143  
-1      1.633333  
-2      1.468750  
-3      1.483871  
-4      1.388889
+      ratio
+0  1.457143
+1  1.633333
+2  1.468750
+3  1.483871
+4  1.388889
 ```
 
 One thing to note here. Remember the shorthand notion for referencing a variable, such as df.Sepal_Length? it turns out that we can't use this syntax for assigning a new variable within the DataFrame.
@@ -343,7 +343,7 @@ One thing to note here. Remember the shorthand notion for referencing a variable
 ```
 
 <div class="alert alert-success">
-**Exercise.** Use this notebook cell (or go back and edit one of the ones we've already used) to create a new variable in the *iris_dataframe* DataFrame which computes and approximation to the petal area and sepal area by multiplying the length and width of the petal and sepal, respectively. 
+**Exercise.** Use this notebook cell (or go back and edit one of the ones we've already used) to create a new variable in the *iris_dataframe* DataFrame which computes and approximation to the petal area and sepal area by multiplying the length and width of the petal and sepal, respectively.
 </div>
 
 ```python
@@ -352,86 +352,12 @@ One thing to note here. Remember the shorthand notion for referencing a variable
 
 #### Simple Exploratory Analysis on DataFrames
 
-Although reading data from a file is useful, it's (hopefully) not the most exciting thing that we'll ever do with our data. pandas offers are fairly broad array of methods on DataFrames which we can use to extract descriptive statistics. Notice that the statistics are run across all of the variables.
-
-A complete list of the DataFrame statistical functions can be found in the Python documentation, but some of the more interesting functions include:
-
-|Method	| Description |
-| --- | --- |
-|count() | 	Number of non-null observations |
-|sum() | Sum of values | 
-|mean() | Mean of values | 
-|median() | Arithmetic median of values | 
-|min() | Minimum |
-|max() | Maximum |
-|std() | Bessel-corrected sample standard deviation |
-|var() | Unbiased variance |
-|skew() | Sample skewness (3rd moment) |
-|kurt()	| Sample kurtosis (4th moment) |
-|quantile() | Sample quantile (value at %) |
-|apply() | Generic apply |
-|cov() | Unbiased covariance (binary) |
-|corr() | Correlation (binary) |
-| describe() | multiple summary statistics |
-
-Some examples of applying these functions are provided in the next few cells:
+Although reading data from a file is useful, it's (hopefully) not the most exciting thing that we'll ever do with our data. pandas offers are fairly broad array of methods on DataFrames which we can use to extract descriptive statistics. We'll come back to these later when we talk explicitly about exploratory analysis, however as a simple example, we can easily compute the mean of a variable as follows:
 
 ```python
->>> # before we get started let's just remind ourselves of the data contents
-...
-... print iris_dataframe.head(5)
-...
->>> # Now, let's run through some simple statistics
-... print "\n\nThe mean: \n\n", iris_dataframe.mean()
->>> print "\n\nThe std: \n\n", iris_dataframe.std()
->>> print "\n\nA summary level description: \n\n", iris_dataframe.describe()
-...
->>> # How about descriptive stats for a single variable? We can get that by extracting the variable
-... print "\n\nThe Petal_Width mean: \n\n", iris_dataframe.Petal_Width.mean()
-   ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width        Class
-0   1           5.1          3.5           1.4          0.2  Iris-setosa
-1   2           4.9          3.0           1.4          0.2  Iris-setosa
-2   3           4.7          3.2           1.3          0.2  Iris-setosa
-3   4           4.6          3.1           1.5          0.2  Iris-setosa
-4   5           5.0          3.6           1.4          0.2  Iris-setosa
-
-
-The mean: 
-
-ID              75.500000
-Sepal_Length     5.843333
-Sepal_Width      3.054000
-Petal_Length     3.758667
-Petal_Width      1.198667
-dtype: float64
-
-
-The std: 
-
-ID              43.445368
-Sepal_Length     0.828066
-Sepal_Width      0.433594
-Petal_Length     1.764420
-Petal_Width      0.763161
-dtype: float64
-
-
-A summary level description: 
-
-               ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width
-count  150.000000    150.000000   150.000000    150.000000   150.000000
-mean    75.500000      5.843333     3.054000      3.758667     1.198667
-std     43.445368      0.828066     0.433594      1.764420     0.763161
-min      1.000000      4.300000     2.000000      1.000000     0.100000
-25%     38.250000      5.100000     2.800000      1.600000     0.300000
-50%     75.500000      5.800000     3.000000      4.350000     1.300000
-75%    112.750000      6.400000     3.300000      5.100000     1.800000
-max    150.000000      7.900000     4.400000      6.900000     2.500000
-
-
-The Petal_Width mean: 
-
-1.19866666667
+>>> df = setupDF()
+>>> df.Petal_Length.mean()
+1.3999999999999999
 ```
 
 #### Basic Patterns for Working with DataFrames
@@ -453,83 +379,6 @@ We can pretty print a dataframe simply by evaluating it in the notebook
 2  Iris-setosa   3           1.3          0.2           4.7          3.2
 3  Iris-setosa   4           1.5          0.2           4.6          3.1
 4  Iris-setosa   5           1.4          0.2           5.0          3.6
-```
-
-**Renaming all of the variables in a DataFrame**
-
-We can rename all of the variable names in place, but be careful that you know the specific order of the variables in the DataFrame.
-
-```python
->>> # Let's make sure we have a clean copy of our sample data
-... df = setupDF()
-...
->>> df.columns = ['X1', 'X2', 'X3', 'X4', 'X5', 'X6']
-...
->>> print df
-            X1  X2   X3   X4   X5   X6
-0  Iris-setosa   1  1.4  0.2  5.1  3.5
-1  Iris-setosa   2  1.4  0.2  4.9  3.0
-2  Iris-setosa   3  1.3  0.2  4.7  3.2
-3  Iris-setosa   4  1.5  0.2  4.6  3.1
-4  Iris-setosa   5  1.4  0.2  5.0  3.6
-```
-
-Since the columns names are available to us as a list, we can also use list comprehensions to perform various manipulations very succinctly.
-
-**Renaming a single variable in a DataFrame**
-
-Alternatively, you can rename the variables one by one using the *rename()* function. Here, the argument to the *rename()* function is a dictionary that maps the old name (the "key" Petal_Width) with the new name (the "value" Johns_Column). If we want to change more than one variable name, we simply add more items to the dictionary.
-
-In some ways I find this approach to renaming variable to be safer than the previous approach since it avoids the  issue of needing to know the order of the variables, and I tend to use it even if I'm changing all of the variable names.
-
-One thing to note however, the default functionality of *rename()* may not be quite what you'd expect. To get what you;d expect, you'll either need to use the "inplace" argument for *rename()* or assign the results of *rename()* to a new variable.
-
-```python
->>> # Let's make sure we have a clean copy of our sample data
-... df = setupDF()
-...
->>> # The approach that you may have thought would work
-... print "WITHOUT A COPY OR USING inplace \n\n",
->>> df.rename(columns={'Petal_Width': 'Johns_Column'})
->>> print df
-...
->>> # An approach that does the variable name change in place
-... print "\n\nUSING inplace = True \n\n",
->>> df.rename(columns={'Petal_Width': 'Johns_Column'}, inplace=True)
->>> print df
-...
->>> # One alternative approach, but which creates a new variable
-... print "\n\nUSING A COPY \n\n",
->>> df2 = df.rename(columns={'Petal_Width': 'Johns_Column'})
->>> print df2
-WITHOUT A COPY OR USING inplace 
-
-         Class  ID  Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
-0  Iris-setosa   1           1.4          0.2           5.1          3.5
-1  Iris-setosa   2           1.4          0.2           4.9          3.0
-2  Iris-setosa   3           1.3          0.2           4.7          3.2
-3  Iris-setosa   4           1.5          0.2           4.6          3.1
-4  Iris-setosa   5           1.4          0.2           5.0          3.6
-
-
-USING inplace = True 
-
-         Class  ID  Petal_Length  Johns_Column  Sepal_Length  Sepal_Width
-0  Iris-setosa   1           1.4           0.2           5.1          3.5
-1  Iris-setosa   2           1.4           0.2           4.9          3.0
-2  Iris-setosa   3           1.3           0.2           4.7          3.2
-3  Iris-setosa   4           1.5           0.2           4.6          3.1
-4  Iris-setosa   5           1.4           0.2           5.0          3.6
-
-
-USING A COPY 
-
-         Class  ID  Petal_Length  Johns_Column  Sepal_Length  Sepal_Width
-0  Iris-setosa   1           1.4           0.2           5.1          3.5
-1  Iris-setosa   2           1.4           0.2           4.9          3.0
-2  Iris-setosa   3           1.3           0.2           4.7          3.2
-3  Iris-setosa   4           1.5           0.2           4.6          3.1
-4  Iris-setosa   5           1.4           0.2           5.0          3.6
 ```
 
 **Using a single column's values to select data**
@@ -596,7 +445,7 @@ Often we'll receive a data file that has many more variables than we want to pro
 >>> print df
 
 
-A DATAFRAME CONTAINING THE EXTRACTED VARIABLES 
+A DATAFRAME CONTAINING THE EXTRACTED VARIABLES
 
    ID  Petal_Width  Petal_Length
 0   1          0.2           1.4
@@ -686,22 +535,98 @@ LAST 10 ROWS
 149  150           5.9          3.0           5.1          1.8  Iris-virginica
 ```
 
-#### Manipulating DataFrames
+#### Patterns for Manipulating DataFrames
 
 Let's imagine that we have a DataFrame called *df*. Some basic functions that we can apply to DataFrames include the following:
 
-| function | what it does | 
-| --- | --- | 
+| function | what it does |
+| --- | --- |
 | df.shape() |  determines the number of rows and columns in the DataFrame |
 | list(df) |  gives us a list containing all of the column names |
-| df.columns | gives us a much more verbose version of the same thing | 
-| df.index.tolist() | gives us a list containing the index | 
-| df.dtypes | the types of data in each column | 
-| df.transpose | the transpose of the DataFrame | 
+| df.columns | gives us a much more verbose version of the same thing |
+| df.index.tolist() | gives us a list containing the index |
+| df.dtypes | the types of data in each column |
+| df.transpose | the transpose of the DataFrame |
 | df.T | an abbreviation for the transpose |
-| df.to_csv(*filename_string*) | write the DataFrame to a CSV file | 
+| df.to_csv(*filename_string*) | write the DataFrame to a CSV file |
 | df.to_excel(*filename_string*) | write the DataFrame to an excel file |
 
+**Renaming all of the variables in a DataFrame**
+
+We can rename all of the variable names in place, but be careful that you know the specific order of the variables in the DataFrame.
+
+```python
+>>> # Let's make sure we have a clean copy of our sample data
+... df = setupDF()
+...
+>>> df.columns = ['X1', 'X2', 'X3', 'X4', 'X5', 'X6']
+...
+>>> print df
+            X1  X2   X3   X4   X5   X6
+0  Iris-setosa   1  1.4  0.2  5.1  3.5
+1  Iris-setosa   2  1.4  0.2  4.9  3.0
+2  Iris-setosa   3  1.3  0.2  4.7  3.2
+3  Iris-setosa   4  1.5  0.2  4.6  3.1
+4  Iris-setosa   5  1.4  0.2  5.0  3.6
+```
+
+Since the columns names are available to us as a list, we can also use list comprehensions to perform various manipulations very succinctly.
+
+**Renaming a single variable in a DataFrame**
+
+Alternatively, you can rename the variables one by one using the *rename()* function. Here, the argument to the *rename()* function is a dictionary that maps the old name (the "key" Petal_Width) with the new name (the "value" Johns_Column). If we want to change more than one variable name, we simply add more items to the dictionary.
+
+In some ways I find this approach to renaming variable to be safer than the previous approach since it avoids the  issue of needing to know the order of the variables, and I tend to use it even if I'm changing all of the variable names.
+
+One thing to note however, the default functionality of *rename()* may not be quite what you'd expect. To get what you;d expect, you'll either need to use the "inplace" argument for *rename()* or assign the results of *rename()* to a new variable.
+
+```python
+>>> # Let's make sure we have a clean copy of our sample data
+... df = setupDF()
+...
+>>> # The approach that you may have thought would work
+... print "WITHOUT A COPY OR USING inplace \n\n",
+>>> df.rename(columns={'Petal_Width': 'Johns_Column'})
+>>> print df
+...
+>>> # An approach that does the variable name change in place
+... print "\n\nUSING inplace = True \n\n",
+>>> df.rename(columns={'Petal_Width': 'Johns_Column'}, inplace=True)
+>>> print df
+...
+>>> # One alternative approach, but which creates a new variable
+... print "\n\nUSING A COPY \n\n",
+>>> df2 = df.rename(columns={'Petal_Width': 'Johns_Column'})
+>>> print df2
+WITHOUT A COPY OR USING inplace
+
+         Class  ID  Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
+0  Iris-setosa   1           1.4          0.2           5.1          3.5
+1  Iris-setosa   2           1.4          0.2           4.9          3.0
+2  Iris-setosa   3           1.3          0.2           4.7          3.2
+3  Iris-setosa   4           1.5          0.2           4.6          3.1
+4  Iris-setosa   5           1.4          0.2           5.0          3.6
+
+
+USING inplace = True
+
+         Class  ID  Petal_Length  Johns_Column  Sepal_Length  Sepal_Width
+0  Iris-setosa   1           1.4           0.2           5.1          3.5
+1  Iris-setosa   2           1.4           0.2           4.9          3.0
+2  Iris-setosa   3           1.3           0.2           4.7          3.2
+3  Iris-setosa   4           1.5           0.2           4.6          3.1
+4  Iris-setosa   5           1.4           0.2           5.0          3.6
+
+
+USING A COPY
+
+         Class  ID  Petal_Length  Johns_Column  Sepal_Length  Sepal_Width
+0  Iris-setosa   1           1.4           0.2           5.1          3.5
+1  Iris-setosa   2           1.4           0.2           4.9          3.0
+2  Iris-setosa   3           1.3           0.2           4.7          3.2
+3  Iris-setosa   4           1.5           0.2           4.6          3.1
+4  Iris-setosa   5           1.4           0.2           5.0          3.6
+```
 
 <div class="alert alert-success">
 **Exercise.** Please write a script to perform some simple operation on our iris data. I've repeated it here for convenience. In particular, I'd like you to write a script which does the following:

@@ -1,13 +1,5 @@
 # Exploratory Analysis
 
-<div class="alert alert-info">
-This notebook is intended only to provide an overview of the matplotlib package. More complete documentation can be found at
-<ul>
-<li><a href="http://matplotlib.org/contents.html">matplotlib Documentation</a></li>
-<li><a href="http://matplotlib.org/users/beginner.html">matplotlib beginners guide</a></li>
-</ul>
-</div>
-
 <div class="alert alert-danger">
 You'll need to have an internet connection for portions of this notebook. You can eliminate this dependency by modifying the cell in the "Creating Our Sample Dataframe" section to read a local copy of the iris data rather than pulling it from guthub.
 </div>
@@ -17,15 +9,16 @@ You'll need to have an internet connection for portions of this notebook. You ca
 Some of the leading packages for numerical ("scientific") computation in Python are
 
 * NumPy. Tools for numerical computing. In Excel the basic unit is a cell, a single number. In NumPy the basic unit is a vector (a column) or matrix (a table or worksheet), which allows us to do things with an entire column or table in one line. This facility carries over to Pandas since Pandas is built on NumPy.
-* Pandas. The leading package for managing data.
-* Matplotlib. The leading graphics package and our focus in this notebook.
+* Matplotlib. The graphics package which is essentially the basis for all other visualization packages we'll be using in Python
+* Pandas. The leading package for managing data, including tools for visualizing this data. Inherits the basic capabilities on NumPy and Matplotlib.
+* Seaborn. Yet another visualization package, again built on matplotlib, but in this case greatly simplifying plots that we'll find useful for statistical analysis.
 
 All of these packages come with the Anaconda distribution, which means we already have them installed and ready to use.
 
 matplotlib is a python 2D plotting library which, according to its developers, "produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms". You can generate plots, histograms, power spectra, bar charts, error charts, scatterplots, etc, with just a few lines of code. Perhaps the best way to get a sense for its capabilities is to look at the [screenshots](http://matplotlib.org/users/screenshots.html), [thumbnails](http://matplotlib.org/gallery.html), and [samples](http://matplotlib.org/examples/index.html) provided at the matplotlib website
 
-### Overview. 
-In this notebook, we'll introduce several notebooks that all provide support for performing exploratory analysis.  Typically, we'll use use Pandas to read data into Python, perform some form of processing, and then visualize the results in one of our visualization tools (matplotlib, pandas itself, or seaborn).
+### Overview.
+In this notebook, we'll introduce several packages that all provide support for performing exploratory analysis.  Typically, we'll use use Pandas to read data into Python, perform some form of processing, and then visualize the results in one of our visualization tools (matplotlib, pandas itself, or seaborn).
 
 One thing that I want to point out from the outset that you may find confusing: pandas provides a set of plotting functions which are methods on dataframes. You might be wondering to yourself why I'll keep refering to these as "matplotlib" methods rather than pandas methods. Strictly speaking you're absolutely right. They are in the pandas library since they're part of the DataFrame object. However, they are methods which sit directly on top of matplotlib and heavily rely on the matplotlib functionality, use basically the same syntax, etc.
 
@@ -33,7 +26,7 @@ One thing that I want to point out from the outset that you may find confusing: 
 
 **Objects and methods**. Recall that we apply the method *justdoit* to the object *x* with *x.justdoit*.
 
-**Help**. We can get help in the Jupyter console. For the hypothetical *x.justdoit*, we would type 
+**Help**. We can get help in the Jupyter console. For the hypothetical *x.justdoit*, we would type
 *x.justdoit?* in the Jupyter console.
 
 **Data structures**. That's the term we use for specific organizations of data. Examples are lists, tuples, and dictionaries. Each has a specific structure and a set of methods that can be applied. Lists are (ordered) collections of objects between square brackets: *numberlist = [1, -5, 2]*. Dictionaries are (unordered) pairs of items between curly brackets: *namedict = {'Brady': 12, 'Gronk': 87}*. The first item in each pair is the "key," the second is the "value.""
@@ -97,7 +90,42 @@ Since the data load requires access to the internet, I'm only going to do this o
 
 ## Summarizing Data Sets
 
-### Summarizing Variables
+### Summarizing Variables Using Descriptive Statistics
+
+```python
+>>> # As a reminder, let's take a look at the iris data again
+... df[:5]
+   Sepal_Length  Sepal_Width  Petal_Length  Petal_Width        Class
+0           5.1          3.5           1.4          0.2  Iris-setosa
+1           4.9          3.0           1.4          0.2  Iris-setosa
+2           4.7          3.2           1.3          0.2  Iris-setosa
+3           4.6          3.1           1.5          0.2  Iris-setosa
+4           5.0          3.6           1.4          0.2  Iris-setosa
+```
+
+```python
+>>> # Now, let's run through some simple statistics
+... print "\n\nThe mean: \n\n", df.mean()
+>>> print "\n\nThe std: \n\n", df.std()
+
+
+The mean:
+
+Sepal_Length    5.843333
+Sepal_Width     3.054000
+Petal_Length    3.758667
+Petal_Width     1.198667
+dtype: float64
+
+
+The std:
+
+Sepal_Length    0.828066
+Sepal_Width     0.433594
+Petal_Length    1.764420
+Petal_Width     0.763161
+dtype: float64
+```
 
 ```python
 >>> df.describe()
@@ -113,34 +141,54 @@ max        7.900000     4.400000      6.900000     2.500000
 ```
 
 ```python
->>> print "\n\nMEAN = ", df.Petal_Width.mean()
-
-
-MEAN =  1.19866666667
+>>> df.Petal_Length.describe()
+count    150.000000
+mean       3.758667
+std        1.764420
+min        1.000000
+25%        1.600000
+50%        4.350000
+75%        5.100000
+max        6.900000
+Name: Petal_Length, dtype: float64
 ```
 
-As it turns out, we can apply pretty much any aggregation algorithm that you could imagine to the variables. Since pandas is built on top of the numpy package, it leverages the algorithms that are already there. Are partial list is:
+As it turns out, we can apply use pretty much any aggregation algorithm that you could imagine to the variables. Since pandas is built on top of the numpy package, it leverages the algorithms that are already there. A partial list is:
 
-|Function | Description | 
-|:-------:|:-----------|
-| `min` | The minimum of the aggregated data |
-| `max` | The maximum of the aggregated data |
-| `mean` | The average of the aggregated data |
-| `std` | The standard deviation of the aggregated data |
-| `count` | The count of the aggregated data |
+```python
+>>> print "\n\nMEAN = ", df.Petal_Width.count()
 
 
-Similarly, having columns representing distinct variables, all of which are taken from the same observation, makes it very easy to compare or manipulate those variables. For instance, we can easily create a scatter plot or measure the correlation of the variables:
+MEAN =  150
+```
+
+|Method	| Description |
+| --- | --- |
+|count() | 	Number of non-null observations |
+|sum() | Sum of values |
+|mean() | Mean of values |
+|median() | Arithmetic median of values |
+|min() | Minimum |
+|max() | Maximum |
+|std() | Bessel-corrected sample standard deviation |
+|var() | Unbiased variance |
+|skew() | Sample skewness (3rd moment) |
+|kurt()	| Sample kurtosis (4th moment) |
+|quantile() | Sample quantile (value at %) |
+|apply() | Generic apply |
+|cov() | Unbiased covariance (binary) |
+|corr() | Correlation (binary) |
+| describe() | multiple summary statistics |
 
 
 
-### Pivot Tables to Obtain Conditional Summaries
+### Pivot Tables
 
 We've already seen pivot tables in the data wrangling notebook, but just as a reminder, this is one of our mechanisms for going from a long format data set into a wide format data set. From the viewpoint of exploratory analysis, this tool can be exceptionally useful as it allows us to aggregate data across multiple samples. For instance, let's remind ourselves of the structure of the iris data.
 
 ```python
 >>> # As a reminder, let's take a look at the iris data again
-... df.head()
+... df[:5]
    Sepal_Length  Sepal_Width  Petal_Length  Petal_Width        Class
 0           5.1          3.5           1.4          0.2  Iris-setosa
 1           4.9          3.0           1.4          0.2  Iris-setosa
@@ -149,9 +197,9 @@ We've already seen pivot tables in the data wrangling notebook, but just as a re
 4           5.0          3.6           1.4          0.2  Iris-setosa
 ```
 
-We've already seen how to calculate the mean for each of the variables, for instance Petal_Width, using the `describe()` and other aggregation methods, but what exactly happened there? We performed the aggregation across ALL of the samples. This may or may not make sense depending on the question we're asking. Often, we don't want the mean across all of the data. Instead we may want the mean across some collection of data that has been collected into a meaningful group. Perhaps this grouping will be by the date that the sample was taken, or in our case, by the class of iris that was sampled. When we do this, we are constructing what we call a *conditional mean*, which reflects that we are computing the mean conditioned on only looking at data that has certain characteristics, in this case it is drawn from a certain class.
+We've already seen how to calculate the mean for each of the variables, for instance Petal_Width, using the `describe()` and other aggregation methods, but what exactly happened there? We performed the aggregation across ALL of the samples. This may or may not make sense depending on the question we're asking. Often, we don't want the mean across all of the data. Instead we may want the mean across some collection of data that has been collected into a meaningful group. Perhaps this grouping will be by the date that the sample was taken, or in our case, by the class of iris that was sampled.
 
-As usual, this idea is easier done than said. Using the tools that we have so far, how might we construct the mean Petal_Length, conditioned on the the class of the sample being `Iris_Setosa`. One way to do so would be the following:
+As usual, this idea is easier done than said. Using the tools that we have so far, how might we construct the mean Petal_Length, conditioned on the the class of the sample being `Iris_Setosa`? One way to do so would be the following:
 
 ```python
 >>> # Walk through this statement and make sure that you understand step by step what is happening
@@ -159,18 +207,36 @@ As usual, this idea is easier done than said. Using the tools that we have so fa
 MEAN =  1.464
 ```
 
-Unfortunately, when we want to capture these conditional means, oftentimes we'll want to capture them for all of the various classes, not just one. This particular form of processing comes up pretty often, so pandas gives us a convenient way to construct them.
+Unfortunately, when we want to capture these conditional means, oftentimes we'll want to capture them for all of the various classes, not just one. This particular form of processing comes up pretty often, so pandas gives us a convenient way to construct them through the `pivot_table()` function. This function does the following:
+
+1. It collects all of the samples which share the specified index
+2. For each of these groups of samples, it summarizes the variables by applying some function
 
 ```python
->>> pd.pivot_table(df,index='Class', aggfunc = 'mean')
-                 Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
-Class                                                                
-Iris-setosa             1.464        0.244         5.006        3.418
-Iris-versicolor         4.260        1.326         5.936        2.770
-Iris-virginica          5.552        2.026         6.588        2.974
+>>> pd.pivot_table(df,index='Class', aggfunc = [np.mean, np.std, np.size])
+                        mean                                       \
+                Petal_Length Petal_Width Sepal_Length Sepal_Width
+Class
+Iris-setosa            1.464       0.244        5.006       3.418
+Iris-versicolor        4.260       1.326        5.936       2.770
+Iris-virginica         5.552       2.026        6.588       2.974
+
+                         std                                       \
+                Petal_Length Petal_Width Sepal_Length Sepal_Width
+Class
+Iris-setosa         0.173511    0.107210     0.352490    0.381024
+Iris-versicolor     0.469911    0.197753     0.516171    0.313798
+Iris-virginica      0.551895    0.274650     0.635880    0.322497
+
+                        size
+                Petal_Length Petal_Width Sepal_Length Sepal_Width
+Class
+Iris-setosa               50          50           50          50
+Iris-versicolor           50          50           50          50
+Iris-virginica            50          50           50          50
 ```
 
-An important thing to note is that the final argument `aggfunc` can take a list of functions. The functions which are available to it all come from the numpy package and are the same functions that we could use earlier when we summarized the individual variables.
+An important thing to note is that the final argument `aggfunc` can take a list of functions. The functions which are available to it all come from the numpy package and more or less the same functions that we could use earlier when we summarized the individual variables. One notable exception is `size`. To obtain the number of elements that contributed to the aggregation, we need to use `size` rather than `count`
 
 ### Understanding the Distribution of Data
 
@@ -184,9 +250,25 @@ Let's start off with the absolutely simplest possible plot that pandas provides.
 ... df.plot();
 ```
 
-to plot all of the variables against the index. The legend will provide the name of the variables
+This plots all of the variables against the index as a simple line graph, with the legend providing the name of the variables. This may or may not be what you ultimately intend to do since this type of graph is suggesting a relationship between the samples that may or may really be there. However, it is really easy to obtain and sets the stage for some more interesting graphs.
+
+For instance, if we use the `plot()` method in the pandas library, we can very rapidly switch between types of plots by switching the `kind` of plot being produced.
+
+```python
+>>> df.Sepal_Length[:20].plot(kind='bar')
+```
+
+```python
+>>> df.Sepal_Length[:20].plot(kind='box')
+```
+
+```python
+>>> df.Sepal_Length[:20].plot(kind='hist')
+```
 
 **An Aside: Creating Useful Plots**
+
+Throughout most of this notebook, we'll tend to use functions that are quite similar to the `plot()` method we just saw. Again, the main beauty of these methods is that they are simple. The down side, however, is that they don't offer much control.
 
 An alternative approach to plotting uses the subplots() method to create a figure and a set of axes which can be manipulated directly. This is purely a matter of opinion, but variations on this theme seem to offer the easiest and most complete mechanism for controlling the appearance of the plot. Some of the options you can control are illustrated below.
 
@@ -269,7 +351,7 @@ An alternative approach to plotting uses the subplots() method to create a figur
 
 ```python
 >>> # Choose the first 20 samples of Petal_Length and then plot a bar plot
-... df['Petal_Length'].head(20).plot.bar()
+... df['Petal_Length'].head(20).plot.barh()
 ...
 >>> # As an aside, here's an alternative approach to achieve the same objective
 ... # df['Petal_Length'].head(20).plot(kind='bar');
@@ -354,7 +436,7 @@ Petal_Width       0.817954    -0.356544      0.962757     1.000000
 
 ```python
 >>> sns.jointplot(data=df, x='Petal_Width', y='Petal_Length', size=7)
-<seaborn.axisgrid.JointGrid at 0x115d79bd0>
+<seaborn.axisgrid.JointGrid at 0x116f37b50>
 ```
 
 **Scatter Matrix Plot**
@@ -402,7 +484,7 @@ Petal_Width       0.817954    -0.356544      0.962757     1.000000
 ```python
 >>> plt.figure(figsize=(10,10))
 >>> sns.factorplot(x='measurement', y='value', hue="Class", data=df_melt, kind="bar", size=7)
-<seaborn.axisgrid.FacetGrid at 0x119affe10>
+<seaborn.axisgrid.FacetGrid at 0x119313c50>
 ```
 
 ### References
