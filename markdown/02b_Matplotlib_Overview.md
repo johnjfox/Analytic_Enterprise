@@ -1,4 +1,4 @@
-# matplotlib Overview
+# 2D Visualization Overview
 
 <div class="alert alert-info">
 This notebook is intended only to provide an overview of the matplotlib package. More complete documentation can be found at
@@ -9,7 +9,7 @@ This notebook is intended only to provide an overview of the matplotlib package.
 </div>
 
 <div class="alert alert-danger">
-You'll need to have an internet connection for portions of this notebook.
+You'll need to have an internet connection for portions of this notebook. You can eliminate this dependency by modifying the cell in the "Creating Our Sample Dataframe" section to read a local copy of the iris data rather than pulling it from guthub.
 </div>
 
 ## Introduction
@@ -20,12 +20,16 @@ Some of the leading packages for numerical ("scientific") computation in Python 
 * Pandas. The leading package for managing data.
 * Matplotlib. The leading graphics package and our focus in this notebook.
 
+Go to <a href=#bookmark>my bookmark</a>
+
 All of these packages come with the Anaconda distribution, which means we already have them installed and ready to use.
 
 matplotlib is a python 2D plotting library which, according to its developers, "produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms". You can generate plots, histograms, power spectra, bar charts, error charts, scatterplots, etc, with just a few lines of code. Perhaps the best way to get a sense for its capabilities is to look at the [screenshots](http://matplotlib.org/users/screenshots.html), [thumbnails](http://matplotlib.org/gallery.html), and [samples](http://matplotlib.org/examples/index.html) provided at the matplotlib website
 
 ### Overview. 
 In this notebook, we'll introduce matplotlib, the Python package devoted to 2D visualizations. Typically, we'll use use Pandas to read spreadsheet data into Python, perform some form of processing, and then visualize the results in matplotlib.
+
+One thing that I want to point out from the outset that you may find confusing: pandas provides a set of plotting functions which are methods on dataframes. You might be wondering to yourself why I'll keep refering to these as "matplotlib" methods rather than pandas methods. Strictly speaking you're absolutely right. They are in the pandas library since they're part of the DataFrame object. However, they are methods which sit directly on top of matplotlib and heavily rely on the matplotlib functionality, use basically the same syntax, etc.
 
 ### Reminders
 
@@ -40,7 +44,9 @@ In this notebook, we'll introduce matplotlib, the Python package devoted to 2D v
 
 **Function returns** We refer to the output of a function as its return. We would say, for example, that the function type(x) returns the type of the input object x. We capture the return with an assignment: *xtype = type(x)*.
 
-## Importing the libraries that we'll use
+**Importing the libraries that we'll use**
+
+Since I'm loading a singificant number of libraries, I'll only do it once
 
 ```python
 >>> # Our standard set of imports for pandas, numpy and matplotlib
@@ -59,6 +65,8 @@ In this notebook, we'll introduce matplotlib, the Python package devoted to 2D v
 A DataFrame in pandas is a tabular representation of data. You can sort of think of it as being the equivalent to a worksheet in Microsoft Excel. As always, the easiest way to get a handle on this is to actually grab some data.
 
 Now, let's write a little python to read a file in and create a DataFrame. We'll use the same *iris* data that we used with the DataFrame notebook.
+
+Since the data load requires access to the internet, I'm only going to do this once rather than everytime I try to use the data. As a result, if you actually modify the DataFrame, you may see some results that don't quite make sense when compared to the text that you've been reading. If that happens, then I suggest that you just re-read this next cell and see if the problem is fixed.
 
 ```python
 >>> # Let's import the pandas library
@@ -92,15 +100,15 @@ Now, let's write a little python to read a file in and create a DataFrame. We'll
 
 ## Basic Plotting Using The Built-In Methods on DataFrames
 
-Let's start off with the absolutely simplest possible plot
+Let's start off with the absolutely simplest possible plot that pandas provides.
 
 ```python
->>> # apply the `plot()` method to a data frame to plot all of the variables against
-... # the index.
-... # The legend will provide the name of the variables
+>>> # apply the `plot()` method to a data frame
 ...
 ... df.plot();
 ```
+
+to plot all of the variables against the index. The legend will provide the name of the variables
 
 ### Plotting a Single Line
 
@@ -163,7 +171,10 @@ Let's start off with the absolutely simplest possible plot
 ```
 
 ```python
->>> df.plot.hist(bins=20, subplots=True, alpha=0.5, figsize=(10,10));
+>>> df.plot.hist(bins=20,
+...              subplots=True,
+...              alpha=0.5,
+...              figsize=(10,10));
 ```
 
 ```python

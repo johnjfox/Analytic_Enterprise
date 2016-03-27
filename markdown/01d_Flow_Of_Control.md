@@ -183,7 +183,7 @@ ORIGINAL: pears -> NEW: PEARS
 ORIGINAL: grapes -> NEW: GRAPES
 ```
 
-Of course, the question may be "What do I do if I don't have some list to use?" In that case, we'll control the iteration by creating a list which has the correct number of values and then iterate through each of these values. In some cases you might imagine this new list to be a container for "dummy" variable that have no purpose other than to ensure we can iterate the correct number of times. In other cases, these made up values may actually be useful. For instance, if we create this dummy list so that it holds a list of integers, then at any given time the element that we're working on will represent the number of times that we've passed through the list. 
+Of course, the question may be "What do I do if I don't have some list to use?" In that case, we'll control the iteration by creating a list which has the correct number of values and then iterate through each of these values. In some cases you might imagine this new list to be a container for "dummy" variable that have no purpose other than to ensure we can iterate the correct number of times. In other cases, these made up values may actually be useful. For instance, if we create this dummy list so that it holds a list of integers, then at any given time the element that we're working on will represent the number of times that we've passed through the list.
 
 To create this list, we can use the `range()` function that we introduced earlier.
 

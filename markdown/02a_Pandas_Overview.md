@@ -310,17 +310,17 @@ As it turns out, we can use vectorized operations to create new variables within
 ...
 >>> print df
          Class  ID  Petal_Length  Petal_Width  Sepal_Length  Sepal_Width  \
-0  Iris-setosa   1           1.4          0.2           5.1          3.5
-1  Iris-setosa   2           1.4          0.2           4.9          3.0
-2  Iris-setosa   3           1.3          0.2           4.7          3.2
-3  Iris-setosa   4           1.5          0.2           4.6          3.1
-4  Iris-setosa   5           1.4          0.2           5.0          3.6
+0  Iris-setosa   1           1.4          0.2           5.1          3.5   
+1  Iris-setosa   2           1.4          0.2           4.9          3.0   
+2  Iris-setosa   3           1.3          0.2           4.7          3.2   
+3  Iris-setosa   4           1.5          0.2           4.6          3.1   
+4  Iris-setosa   5           1.4          0.2           5.0          3.6   
 
-   New_variable
-0      1.457143
-1      1.633333
-2      1.468750
-3      1.483871
+   New_variable  
+0      1.457143  
+1      1.633333  
+2      1.468750  
+3      1.483871  
 4      1.388889
 ```
 
@@ -396,7 +396,7 @@ Some examples of applying these functions are provided in the next few cells:
 4   5           5.0          3.6           1.4          0.2  Iris-setosa
 
 
-The mean:
+The mean: 
 
 ID              75.500000
 Sepal_Length     5.843333
@@ -406,7 +406,7 @@ Petal_Width      1.198667
 dtype: float64
 
 
-The std:
+The std: 
 
 ID              43.445368
 Sepal_Length     0.828066
@@ -416,7 +416,7 @@ Petal_Width      0.763161
 dtype: float64
 
 
-A summary level description:
+A summary level description: 
 
                ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width
 count  150.000000    150.000000   150.000000    150.000000   150.000000
@@ -429,7 +429,7 @@ min      1.000000      4.300000     2.000000      1.000000     0.100000
 max    150.000000      7.900000     4.400000      6.900000     2.500000
 
 
-The Petal_Width mean:
+The Petal_Width mean: 
 
 1.19866666667
 ```
@@ -502,7 +502,7 @@ One thing to note however, the default functionality of *rename()* may not be qu
 ... print "\n\nUSING A COPY \n\n",
 >>> df2 = df.rename(columns={'Petal_Width': 'Johns_Column'})
 >>> print df2
-WITHOUT A COPY OR USING inplace
+WITHOUT A COPY OR USING inplace 
 
          Class  ID  Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
 0  Iris-setosa   1           1.4          0.2           5.1          3.5
@@ -512,7 +512,7 @@ WITHOUT A COPY OR USING inplace
 4  Iris-setosa   5           1.4          0.2           5.0          3.6
 
 
-USING inplace = True
+USING inplace = True 
 
          Class  ID  Petal_Length  Johns_Column  Sepal_Length  Sepal_Width
 0  Iris-setosa   1           1.4           0.2           5.1          3.5
@@ -522,7 +522,7 @@ USING inplace = True
 4  Iris-setosa   5           1.4           0.2           5.0          3.6
 
 
-USING A COPY
+USING A COPY 
 
          Class  ID  Petal_Length  Johns_Column  Sepal_Length  Sepal_Width
 0  Iris-setosa   1           1.4           0.2           5.1          3.5
@@ -596,7 +596,7 @@ Often we'll receive a data file that has many more variables than we want to pro
 >>> print df
 
 
-A DATAFRAME CONTAINING THE EXTRACTED VARIABLES
+A DATAFRAME CONTAINING THE EXTRACTED VARIABLES 
 
    ID  Petal_Width  Petal_Length
 0   1          0.2           1.4
@@ -639,6 +639,15 @@ Sometimes it's easier to specify the variables to drop rather than to specify th
 ```
 
 Notice that we needed to specify *axis=1* here. This told the drop function that we were dropping columns. We could also specify *axis=0* to create a new dataframe without a subset of the observations (i.e. rows) using *drop()*.
+
+**Finding the unique values in a column**
+
+```python
+>>> # we won't re-read the data in order to save time, but here's one way to find the unique elements in a list
+...
+... print iris_dataframe['Class'].unique()
+['Iris-setosa' 'Iris-versicolor' 'Iris-virginica']
+```
 
 **Extracting the first or last N rows from a DataFrame**
 

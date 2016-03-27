@@ -13,7 +13,7 @@ You'll need to have an internet connection for portions of this notebook.
 
 ## Introduction
 
-Data wrangling is a loosely defined process for manually converting or mapping data from one "raw" form into another format. The purpose of this wrangling is to recast the data into a format which either simplifies our processing chain or enables us to use tools which require a certain layout of the data. Typically data wrangling is one of the first steps in  the processing once we extract the data from the data source. 
+Data wrangling is a loosely defined process for manually converting or mapping data from one raw form into another format. The purpose of this wrangling is to recast the data into a format which either simplifies our processing chain or enables us to use tools which require a certain layout of the data. Typically data wrangling is one of the first steps in  the processing once we extract the data from the data source.
 
 The process of wrangling can involve a broad variety of operations, such as sorting, filtering, or other operations. Many of these are covered elsewhere in our materials, so for the purposes of this chapter, we'll emphasize wrangling operations which involve reshaping data or combining multiple sets of data.
 
@@ -27,18 +27,20 @@ The process of wrangling can involve a broad variety of operations, such as sort
 >>> import matplotlib.pyplot as plt
 >>> import seaborn as sns
 ...
->>> # in addition, it will be useful in general if we keep our plots "inline" within the notebook
+>>> # in addition, it will be useful in general if we keep our plots `inline` within the notebook
 ... %matplotlib inline
 ...
->>> # finally, let's use a style that's a bit pretty than the default
+>>> # finally, let's use a style that's a bit prettier than the default
 ... mpl.style.use('ggplot')
 ```
 
 ## Reshaping Data
 
-The data that we have in the iris.data.csv file is what's called "wide-format" data, meaning that each line in the file contains a column for each variable. Wide-format data is almost certainly what you're most familiar with, since it's the format most commonly used to organize tabular data in Excel and, frankly, the notion of arranging all of the variable into a single row to represent a single observation feels pretty natural.
+### Wide form versus long form data
 
-In contrast, "long-format" data has a column for possible variable types and a column for the values of those variables. If you're like most people, then that description is probably pretty hard to get a handle on. To be honest, you're not alone. Frankly, it's much easier to actually see what long-format data looks like than it is to describe it, so why don't we work through a simple example.
+The data that we have in the iris.data.csv file is what's called *wide-format* data, meaning that each line in the file contains a column for each variable. Wide-format data is almost certainly what you're most familiar with, since it's the format most commonly used to organize tabular data in Excel and, frankly, the notion of arranging all of the variable into a single row to represent a single observation feels pretty natural.
+
+In contrast, *long-format* data has a column for possible variable types and a column for the values of those variables. If you're like most people, then that description is probably pretty hard to get a handle on. To be honest, you're not alone. Frankly, it's much easier to actually see what long-format data looks like than it is to describe it, so why don't we work through a simple example.
 
 Before we get started, let's make sure that we have a copy of our favorite DataFrame, the iris data set and remind ourselves of the layout of the data.
 
@@ -66,7 +68,7 @@ Before we get started, let's make sure that we have a copy of our favorite DataF
 9  10           4.9          3.1           1.5          0.1  Iris-setosa
 ```
 
-As you can see (and probably remember), each row has **all** of the data associated with our measurements for any one of the irises. Now, let's look at what happens if we convert this to long-format. In python, we do this using the *melt()* method.
+As you can see (and probably remember), each row has **all** of the data associated with our measurements for any one of the irises. Now, let's look at what happens if we convert this to long-format. In python, we do this using the `melt()` method.
 
 ```python
 >>> # first, let's drop the ID column
@@ -87,7 +89,7 @@ As you can see (and probably remember), each row has **all** of the data associa
 9  Iris-setosa  Sepal_Length    4.9
 ```
 
-So, what just happened there? First, we dropped the ID variable. You'll probably be able to tell why in a moment, but just trust me on this for now. The more interesting operation was the *melt()*. The process of "melting" the original DataFrame essentially pulled apart the data and created a new representation. After the melt, we have a format where one or more columns are identifier variables (in this case the contents of the "Class" variable). The only other columns in the new DataFrame are columns containing “variable names” and “values”. If you're familiar with MS Excel pivot tables, this might feel like we did the inverse of a pivot table operation.  In this representation, each of the values in the table now appears on a separate row, whereas before all of the related variable were collected into a 
+So, what just happened there? First, we dropped the ID variable. You'll probably be able to tell why in a moment, but just trust me on this for now. The more interesting operation was the `melt()`. The process of *melting* the original DataFrame essentially pulled apart the data and created a new representation. After the melt, we have a format where one or more columns are identifier variables (in this case the contents of the `Class` variable). The only other columns in the new DataFrame are columns containing variable names and values. If you're familiar with MS Excel pivot tables, this might feel like we did the inverse of a pivot table operation.  In this representation, each of the values in the table now appears on a separate row, whereas before all of the related variable were collected into a
 
 So, why did we do this? First off, we'll often receive data in a format that doesn't lend itself to analysis. This can happen in a lot of ways, for instance:
 
@@ -99,7 +101,53 @@ So, why did we do this? First off, we'll often receive data in a format that doe
 
 Melting the data is often the first step in reshaping the data into a format that is more amenable to analysis. Either we'll melt the data as an end unto itself, or we might use some of the other pandas operations (e.g. pivot or groupby) to reshape into a different form.
 
-#### Wide-format versus long-format representations
+### Pivot Tables
+
+There are multiple approaches for transforming long data into wide data, a.k.a. undoing a `melt`. The one which will be most familiar to Excel users is to create a pivot table.(By the way, apparently the word PivotTable is actually copyrighted by Microsoft). There are a few mechanisms to perform the pivot, but the one which I find easiest to remember is the `pivot_table()` function, which has the following form.
+
+```python
+>>> pd.pivot_table(df_melt,values = 'value', index='Class', columns='measurement', aggfunc = 'std')
+measurement      Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
+Class                                                                
+Iris-setosa          0.173511     0.107210      0.352490     0.381024
+Iris-versicolor      0.469911     0.197753      0.516171     0.313798
+Iris-virginica       0.551895     0.274650      0.635880     0.322497
+```
+
+An important thing to note is that the final argument `aggfunc` can take a list of functions. The functions which are available to it all come from the numpy package. A partial list of these functions (assuming that we import numpy as `np` is:
+
+|Function | Description | 
+|:-------:|:-----------|
+| `np.min` | The minimum of the aggregated data |
+| `np.max` | The maximum of the aggregated data |
+| `np.mean` | The average of the aggregated data |
+| `np.std` | The standard deviation of the aggregated data |
+| `np.count` | The count of the aggregated data |
+
+### Group By
+
+An alternative approach to aggregating the data can be found by using the `groupby()` method, which will create a hierarchical representation of the data using, you probably guessed it, the variables which you've chosen to group by. Once we have these groups, then we can once again apply the various numpy aggregation functions that we've just described.
+
+```python
+>>> grouped = df_melt.groupby(['Class', 'measurement'])
+>>> print grouped.aggregate('sum')
+                              value
+Class           measurement        
+Iris-setosa     Petal_Length   73.2
+                Petal_Width    12.2
+                Sepal_Length  250.3
+                Sepal_Width   170.9
+Iris-versicolor Petal_Length  213.0
+                Petal_Width    66.3
+                Sepal_Length  296.8
+                Sepal_Width   138.5
+Iris-virginica  Petal_Length  277.6
+                Petal_Width   101.3
+                Sepal_Length  329.4
+                Sepal_Width   148.7
+```
+
+### When should I use the various formats of data?
 
 So what kinds of analyses are particularly appropriate for wide format data. Well, as it turns out, most of the analyses that we've seen to this point work quite well with wide-format data. For instance, if we want to perform any form of visual or descriptive analysis of a single variable, wide-format data is extremely convenient since we have convenience methods that allow us to extract the data. For instance:
 
@@ -144,13 +192,13 @@ Petal_Length  0.882747      0.871754    -0.420516      1.000000     0.962757
 Petal_Width   0.899759      0.817954    -0.356544      0.962757     1.000000
 ```
 
-Now, consider this application of using the melted data. Notice one thing that happened as a result of the *melt()*: The variable names are now being treated as categorical variables in the new DataFrame. This can be exceptionally useful for exploratory analysis where we'd like to get a holistic view of all of the data in a single plot. For instance, consider a stripplot of all of the iris data as shown below;
+Now, consider this application of using the melted data. Notice one thing that happened as a result of the `melt()`: The variable names are now being treated as categorical variables in the new DataFrame. This can be exceptionally useful for exploratory analysis where we'd like to get a holistic view of all of the data in a single plot. For instance, consider a stripplot of all of the iris data as shown below;
 
-Long-format data isn’t necessarily only two columns. For example, we might have ozone measurements for each day of the year. In that case, we could have another column for day. In other words, there are different levels of “longness”. The ultimate shape you want to get your data into will depend on what you are doing with it.
+Long-format data isnt necessarily only two columns. For example, we might have ozone measurements for each day of the year. In that case, we could have another column for day. In other words, there are different levels of longness. The ultimate shape you want to get your data into will depend on what you are doing with it.
 
-It turns out that you need wide-format data for some types of data analysis and long-format data for others. In reality, you need long-format data much more commonly than wide-format data. 
+It turns out that you need wide-format data for some types of data analysis and long-format data for others. In reality, you need long-format data much more commonly than wide-format data.
 
-Here, the process of melting the iris data has ended up with a DataFrame where we can use the original variable names to partition the measurements. By using the categorical identifier variable ("Class") to determine the hue of each datapoint, we can easily see that the Petal_Length and Petal_Width are separable for one of the classes of irises.
+Here, the process of melting the iris data has ended up with a DataFrame where we can use the original variable names to partition the measurements. By using the categorical identifier variable (`Class`) to determine the hue of each datapoint, we can easily see that the Petal_Length and Petal_Width are separable for one of the classes of irises.
 
 ```python
 >>> plt.figure(figsize=(6,6))
@@ -158,8 +206,6 @@ Here, the process of melting the iris data has ended up with a DataFrame where w
 ```
 
 ## Data Merging
-
-We already saw how to
 
 Let's recall the contents of our original wide-format DataFrame:
 
@@ -187,11 +233,13 @@ Now, what if we wanted to merge this data with some other data set, say a table 
 >>> price_df = pd.DataFrame(data, columns=['Class', 'price'])
 >>> price_df
              Class     price
-0      Iris-setosa  2.377915
-1  Iris-versicolor  6.300895
-2   Iris-virginica  3.006378
-3      iris-fakosa  4.937169
+0      Iris-setosa  3.627298
+1  Iris-versicolor  2.327656
+2   Iris-virginica  8.030063
+3      iris-fakosa  2.326352
 ```
+
+As an aside, the `np.random.uniform(0,10,4)` in that last example is a function call to `numpy` which generates a list containing 4 samples of a uniformly distributed random number between 0 and 10, inclusive.
 
 ### Merging Via a Join
 
@@ -201,7 +249,7 @@ Users of relational databases will be familiar with the terminology used to desc
 * many-to-one joins: for example when joining an index (unique) to one or more columns in a DataFrame
 * many-to-many joins: joining columns on columns.
 
-pandas supports the combination of DataFrames through the "join" operations that most people are familiar with from relational databases. One common type of join operation is the "inner join". The most general purpose method for performing this is the *merge()* operator, which supports the following types of operations
+pandas supports the combination of DataFrames through the `join` operations that most people are familiar with from relational databases. One common type of join operation is the *inner join*. The most general purpose method for performing this is the `merge()` operator, which supports the following types of operations
 
 | merge method | SQL Join Name | Description | 
 | :---: | :--- | :--- |
@@ -215,28 +263,28 @@ pandas supports the combination of DataFrames through the "join" operations that
 ... random_df = df.sample(n=10)
 >>> random_df
       ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width  \
-36    37           5.5          3.5           1.3          0.2   
-118  119           7.7          2.6           6.9          2.3   
-140  141           6.7          3.1           5.6          2.4   
-42    43           4.4          3.2           1.3          0.2   
-25    26           5.0          3.0           1.6          0.2   
-77    78           6.7          3.0           5.0          1.7   
-13    14           4.3          3.0           1.1          0.1   
-29    30           4.7          3.2           1.6          0.2   
-23    24           5.1          3.3           1.7          0.5   
-129  130           7.2          3.0           5.8          1.6   
+11    12           4.8          3.4           1.6          0.2   
+17    18           5.1          3.5           1.4          0.3   
+86    87           6.7          3.1           4.7          1.5   
+81    82           5.5          2.4           3.7          1.0   
+45    46           4.8          3.0           1.4          0.3   
+74    75           6.4          2.9           4.3          1.3   
+49    50           5.0          3.3           1.4          0.2   
+97    98           6.2          2.9           4.3          1.3   
+105  106           7.6          3.0           6.6          2.1   
+0      1           5.1          3.5           1.4          0.2   
 
                Class  
-36       Iris-setosa  
-118   Iris-virginica  
-140   Iris-virginica  
-42       Iris-setosa  
-25       Iris-setosa  
-77   Iris-versicolor  
-13       Iris-setosa  
-29       Iris-setosa  
-23       Iris-setosa  
-129   Iris-virginica
+11       Iris-setosa  
+17       Iris-setosa  
+86   Iris-versicolor  
+81   Iris-versicolor  
+45       Iris-setosa  
+74   Iris-versicolor  
+49       Iris-setosa  
+97   Iris-versicolor  
+105   Iris-virginica  
+0        Iris-setosa
 ```
 
 Now, using this sample of the data, let's join the price data to each row using the Class variable.
@@ -244,35 +292,35 @@ Now, using this sample of the data, let's join the price data to each row using 
 ```python
 >>> pd.merge(random_df, price_df, how='inner', on='Class').head(10)
     ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width            Class  \
-0   37           5.5          3.5           1.3          0.2      Iris-setosa   
-1   43           4.4          3.2           1.3          0.2      Iris-setosa   
-2   26           5.0          3.0           1.6          0.2      Iris-setosa   
-3   14           4.3          3.0           1.1          0.1      Iris-setosa   
-4   30           4.7          3.2           1.6          0.2      Iris-setosa   
-5   24           5.1          3.3           1.7          0.5      Iris-setosa   
-6  119           7.7          2.6           6.9          2.3   Iris-virginica   
-7  141           6.7          3.1           5.6          2.4   Iris-virginica   
-8  130           7.2          3.0           5.8          1.6   Iris-virginica   
-9   78           6.7          3.0           5.0          1.7  Iris-versicolor   
+0   12           4.8          3.4           1.6          0.2      Iris-setosa   
+1   18           5.1          3.5           1.4          0.3      Iris-setosa   
+2   46           4.8          3.0           1.4          0.3      Iris-setosa   
+3   50           5.0          3.3           1.4          0.2      Iris-setosa   
+4    1           5.1          3.5           1.4          0.2      Iris-setosa   
+5   87           6.7          3.1           4.7          1.5  Iris-versicolor   
+6   82           5.5          2.4           3.7          1.0  Iris-versicolor   
+7   75           6.4          2.9           4.3          1.3  Iris-versicolor   
+8   98           6.2          2.9           4.3          1.3  Iris-versicolor   
+9  106           7.6          3.0           6.6          2.1   Iris-virginica   
 
       price  
-0  2.377915  
-1  2.377915  
-2  2.377915  
-3  2.377915  
-4  2.377915  
-5  2.377915  
-6  3.006378  
-7  3.006378  
-8  3.006378  
-9  6.300895
+0  3.627298  
+1  3.627298  
+2  3.627298  
+3  3.627298  
+4  3.627298  
+5  2.327656  
+6  2.327656  
+7  2.327656  
+8  2.327656  
+9  8.030063
 ```
 
 ### Concatenating Additional Samples
 
 Another very common way of combining datasets comes up when we obtain additional observations, or rows, which we want to append onto our existing dataset. To start, let's create a random set of observations.
 
-As we do this, notice that although we have most of the same variables in our new data set, they're not exactly the same as the variables in our original dataset. For instance, our new data includes a new variable called *Petal_Color* but does not include *Sepal_Length*
+As we do this, notice that although we have most of the same variables in our new data set, they're not exactly the same as the variables in our original dataset. For instance, our new data includes a new variable called `Petal_Color` but does not include `Sepal_Length`
 
 ```python
 >>> # sample randomly generated samples of our new class of iris
@@ -293,11 +341,11 @@ As we do this, notice that although we have most of the same variables in our ne
 ...
 >>> more_samples_df
          Class   ID  Sepal_Width  Petal_Length  Petal_Width Petal_Color
-0  Iris-fakosa  200     9.294842      6.766162     3.376811      purple
-1  Iris-fakosa  201     1.736263      9.140519     4.137983       green
-2  Iris-fakosa  202     7.352583      4.589010     9.238607         red
-3  Iris-fakosa  203     9.590828      1.936722     2.998982      yellow
-4  Iris-fakosa  204     6.466286      8.194248     0.071428      yellow
+0  Iris-fakosa  200     4.642440      6.358314     3.769740      purple
+1  Iris-fakosa  201     6.500538      5.567025     7.881036       green
+2  Iris-fakosa  202     8.574017      3.726654     6.062670         red
+3  Iris-fakosa  203     4.407359      6.289499     0.314357      yellow
+4  Iris-fakosa  204     6.375177      3.705342     0.630771      yellow
 ```
 
 Now, let's actually append the new data to the bottom of the original data.
@@ -305,38 +353,38 @@ Now, let's actually append the new data to the bottom of the original data.
 ```python
 >>> random_df.append(more_samples_df).tail(20)
                Class   ID Petal_Color  Petal_Length  Petal_Width  \
-36       Iris-setosa   37         NaN      1.300000     0.200000   
-118   Iris-virginica  119         NaN      6.900000     2.300000   
-140   Iris-virginica  141         NaN      5.600000     2.400000   
-42       Iris-setosa   43         NaN      1.300000     0.200000   
-25       Iris-setosa   26         NaN      1.600000     0.200000   
-77   Iris-versicolor   78         NaN      5.000000     1.700000   
-13       Iris-setosa   14         NaN      1.100000     0.100000   
-29       Iris-setosa   30         NaN      1.600000     0.200000   
-23       Iris-setosa   24         NaN      1.700000     0.500000   
-129   Iris-virginica  130         NaN      5.800000     1.600000   
-0        Iris-fakosa  200      purple      6.766162     3.376811   
-1        Iris-fakosa  201       green      9.140519     4.137983   
-2        Iris-fakosa  202         red      4.589010     9.238607   
-3        Iris-fakosa  203      yellow      1.936722     2.998982   
-4        Iris-fakosa  204      yellow      8.194248     0.071428   
+11       Iris-setosa   12         NaN      1.600000     0.200000   
+17       Iris-setosa   18         NaN      1.400000     0.300000   
+86   Iris-versicolor   87         NaN      4.700000     1.500000   
+81   Iris-versicolor   82         NaN      3.700000     1.000000   
+45       Iris-setosa   46         NaN      1.400000     0.300000   
+74   Iris-versicolor   75         NaN      4.300000     1.300000   
+49       Iris-setosa   50         NaN      1.400000     0.200000   
+97   Iris-versicolor   98         NaN      4.300000     1.300000   
+105   Iris-virginica  106         NaN      6.600000     2.100000   
+0        Iris-setosa    1         NaN      1.400000     0.200000   
+0        Iris-fakosa  200      purple      6.358314     3.769740   
+1        Iris-fakosa  201       green      5.567025     7.881036   
+2        Iris-fakosa  202         red      3.726654     6.062670   
+3        Iris-fakosa  203      yellow      6.289499     0.314357   
+4        Iris-fakosa  204      yellow      3.705342     0.630771   
 
      Sepal_Length  Sepal_Width  
-36            5.5     3.500000  
-118           7.7     2.600000  
-140           6.7     3.100000  
-42            4.4     3.200000  
-25            5.0     3.000000  
-77            6.7     3.000000  
-13            4.3     3.000000  
-29            4.7     3.200000  
-23            5.1     3.300000  
-129           7.2     3.000000  
-0             NaN     9.294842  
-1             NaN     1.736263  
-2             NaN     7.352583  
-3             NaN     9.590828  
-4             NaN     6.466286
+11            4.8     3.400000  
+17            5.1     3.500000  
+86            6.7     3.100000  
+81            5.5     2.400000  
+45            4.8     3.000000  
+74            6.4     2.900000  
+49            5.0     3.300000  
+97            6.2     2.900000  
+105           7.6     3.000000  
+0             5.1     3.500000  
+0             NaN     4.642440  
+1             NaN     6.500538  
+2             NaN     8.574017  
+3             NaN     4.407359  
+4             NaN     6.375177
 ```
 
-As you can see, the *append()* was smart! It recognized the observations did not all include the same variables and left room appropriately in the table to represent that there was missing data. Furthermore, it used the NaN to represent the missing data so that any subsequent functions would recognize that the data was missing.
+As you can see, the `append()` was smart! It recognized the observations did not all include the same variables and left room appropriately in the table to represent that there was missing data. Furthermore, it used the NaN to represent the missing data so that any subsequent functions would recognize that the data was missing.
