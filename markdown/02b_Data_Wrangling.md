@@ -168,7 +168,7 @@ There are multiple approaches for transforming long data into wide data, a.k.a. 
 ```python
 >>> pd.pivot_table(df_melt,values = 'value', index='Class', columns='measurement', aggfunc = 'std')
 measurement      Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
-Class
+Class                                                                
 Iris-setosa          0.173511     0.107210      0.352490     0.381024
 Iris-versicolor      0.469911     0.197753      0.516171     0.313798
 Iris-virginica       0.551895     0.274650      0.635880     0.322497
@@ -215,10 +215,10 @@ Now, what if we wanted to merge this data with some other data set, say a table 
 >>> price_df = pd.DataFrame(data, columns=['Class', 'price'])
 >>> price_df
              Class     price
-0      Iris-setosa  3.627298
-1  Iris-versicolor  2.327656
-2   Iris-virginica  8.030063
-3      iris-fakosa  2.326352
+0      Iris-setosa  0.592444
+1  Iris-versicolor  6.889166
+2   Iris-virginica  2.216736
+3      iris-fakosa  7.203758
 ```
 
 As an aside, the `np.random.uniform(0,10,4)` in that last example is a function call to `numpy` which generates a list containing 4 samples of a uniformly distributed random number between 0 and 10, inclusive.
@@ -245,28 +245,28 @@ pandas supports the combination of DataFrames through the `join` operations that
 ... random_df = df.sample(n=10)
 >>> random_df
       ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width  \
-11    12           4.8          3.4           1.6          0.2
-17    18           5.1          3.5           1.4          0.3
-86    87           6.7          3.1           4.7          1.5
-81    82           5.5          2.4           3.7          1.0
-45    46           4.8          3.0           1.4          0.3
-74    75           6.4          2.9           4.3          1.3
-49    50           5.0          3.3           1.4          0.2
-97    98           6.2          2.9           4.3          1.3
-105  106           7.6          3.0           6.6          2.1
-0      1           5.1          3.5           1.4          0.2
+75    76           6.6          3.0           4.4          1.4   
+77    78           6.7          3.0           5.0          1.7   
+9     10           4.9          3.1           1.5          0.1   
+26    27           5.0          3.4           1.6          0.4   
+45    46           4.8          3.0           1.4          0.3   
+138  139           6.0          3.0           4.8          1.8   
+46    47           5.1          3.8           1.6          0.2   
+111  112           6.4          2.7           5.3          1.9   
+137  138           6.4          3.1           5.5          1.8   
+33    34           5.5          4.2           1.4          0.2   
 
-               Class
-11       Iris-setosa
-17       Iris-setosa
-86   Iris-versicolor
-81   Iris-versicolor
-45       Iris-setosa
-74   Iris-versicolor
-49       Iris-setosa
-97   Iris-versicolor
-105   Iris-virginica
-0        Iris-setosa
+               Class  
+75   Iris-versicolor  
+77   Iris-versicolor  
+9        Iris-setosa  
+26       Iris-setosa  
+45       Iris-setosa  
+138   Iris-virginica  
+46       Iris-setosa  
+111   Iris-virginica  
+137   Iris-virginica  
+33       Iris-setosa
 ```
 
 Now, using this sample of the data, let's join the price data to each row using the Class variable.
@@ -274,28 +274,28 @@ Now, using this sample of the data, let's join the price data to each row using 
 ```python
 >>> pd.merge(random_df, price_df, how='inner', on='Class').head(10)
     ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width            Class  \
-0   12           4.8          3.4           1.6          0.2      Iris-setosa
-1   18           5.1          3.5           1.4          0.3      Iris-setosa
-2   46           4.8          3.0           1.4          0.3      Iris-setosa
-3   50           5.0          3.3           1.4          0.2      Iris-setosa
-4    1           5.1          3.5           1.4          0.2      Iris-setosa
-5   87           6.7          3.1           4.7          1.5  Iris-versicolor
-6   82           5.5          2.4           3.7          1.0  Iris-versicolor
-7   75           6.4          2.9           4.3          1.3  Iris-versicolor
-8   98           6.2          2.9           4.3          1.3  Iris-versicolor
-9  106           7.6          3.0           6.6          2.1   Iris-virginica
+0   76           6.6          3.0           4.4          1.4  Iris-versicolor   
+1   78           6.7          3.0           5.0          1.7  Iris-versicolor   
+2   10           4.9          3.1           1.5          0.1      Iris-setosa   
+3   27           5.0          3.4           1.6          0.4      Iris-setosa   
+4   46           4.8          3.0           1.4          0.3      Iris-setosa   
+5   47           5.1          3.8           1.6          0.2      Iris-setosa   
+6   34           5.5          4.2           1.4          0.2      Iris-setosa   
+7  139           6.0          3.0           4.8          1.8   Iris-virginica   
+8  112           6.4          2.7           5.3          1.9   Iris-virginica   
+9  138           6.4          3.1           5.5          1.8   Iris-virginica   
 
-      price
-0  3.627298
-1  3.627298
-2  3.627298
-3  3.627298
-4  3.627298
-5  2.327656
-6  2.327656
-7  2.327656
-8  2.327656
-9  8.030063
+      price  
+0  6.889166  
+1  6.889166  
+2  0.592444  
+3  0.592444  
+4  0.592444  
+5  0.592444  
+6  0.592444  
+7  2.216736  
+8  2.216736  
+9  2.216736
 ```
 
 ### Concatenating Additional Samples
@@ -323,11 +323,11 @@ As we do this, notice that although we have most of the same variables in our ne
 ...
 >>> more_samples_df
          Class   ID  Sepal_Width  Petal_Length  Petal_Width Petal_Color
-0  Iris-fakosa  200     4.642440      6.358314     3.769740      purple
-1  Iris-fakosa  201     6.500538      5.567025     7.881036       green
-2  Iris-fakosa  202     8.574017      3.726654     6.062670         red
-3  Iris-fakosa  203     4.407359      6.289499     0.314357      yellow
-4  Iris-fakosa  204     6.375177      3.705342     0.630771      yellow
+0  Iris-fakosa  200     6.282183      6.110786     1.018306      purple
+1  Iris-fakosa  201     5.115510      0.176953     0.045177       green
+2  Iris-fakosa  202     1.042321      7.300588     1.012756         red
+3  Iris-fakosa  203     1.297915      0.778939     9.115031      yellow
+4  Iris-fakosa  204     5.390748      1.427535     5.017641      yellow
 ```
 
 Now, let's actually append the new data to the bottom of the original data.
@@ -335,38 +335,38 @@ Now, let's actually append the new data to the bottom of the original data.
 ```python
 >>> random_df.append(more_samples_df).tail(20)
                Class   ID Petal_Color  Petal_Length  Petal_Width  \
-11       Iris-setosa   12         NaN      1.600000     0.200000
-17       Iris-setosa   18         NaN      1.400000     0.300000
-86   Iris-versicolor   87         NaN      4.700000     1.500000
-81   Iris-versicolor   82         NaN      3.700000     1.000000
-45       Iris-setosa   46         NaN      1.400000     0.300000
-74   Iris-versicolor   75         NaN      4.300000     1.300000
-49       Iris-setosa   50         NaN      1.400000     0.200000
-97   Iris-versicolor   98         NaN      4.300000     1.300000
-105   Iris-virginica  106         NaN      6.600000     2.100000
-0        Iris-setosa    1         NaN      1.400000     0.200000
-0        Iris-fakosa  200      purple      6.358314     3.769740
-1        Iris-fakosa  201       green      5.567025     7.881036
-2        Iris-fakosa  202         red      3.726654     6.062670
-3        Iris-fakosa  203      yellow      6.289499     0.314357
-4        Iris-fakosa  204      yellow      3.705342     0.630771
+75   Iris-versicolor   76         NaN      4.400000     1.400000   
+77   Iris-versicolor   78         NaN      5.000000     1.700000   
+9        Iris-setosa   10         NaN      1.500000     0.100000   
+26       Iris-setosa   27         NaN      1.600000     0.400000   
+45       Iris-setosa   46         NaN      1.400000     0.300000   
+138   Iris-virginica  139         NaN      4.800000     1.800000   
+46       Iris-setosa   47         NaN      1.600000     0.200000   
+111   Iris-virginica  112         NaN      5.300000     1.900000   
+137   Iris-virginica  138         NaN      5.500000     1.800000   
+33       Iris-setosa   34         NaN      1.400000     0.200000   
+0        Iris-fakosa  200      purple      6.110786     1.018306   
+1        Iris-fakosa  201       green      0.176953     0.045177   
+2        Iris-fakosa  202         red      7.300588     1.012756   
+3        Iris-fakosa  203      yellow      0.778939     9.115031   
+4        Iris-fakosa  204      yellow      1.427535     5.017641   
 
-     Sepal_Length  Sepal_Width
-11            4.8     3.400000
-17            5.1     3.500000
-86            6.7     3.100000
-81            5.5     2.400000
-45            4.8     3.000000
-74            6.4     2.900000
-49            5.0     3.300000
-97            6.2     2.900000
-105           7.6     3.000000
-0             5.1     3.500000
-0             NaN     4.642440
-1             NaN     6.500538
-2             NaN     8.574017
-3             NaN     4.407359
-4             NaN     6.375177
+     Sepal_Length  Sepal_Width  
+75            6.6     3.000000  
+77            6.7     3.000000  
+9             4.9     3.100000  
+26            5.0     3.400000  
+45            4.8     3.000000  
+138           6.0     3.000000  
+46            5.1     3.800000  
+111           6.4     2.700000  
+137           6.4     3.100000  
+33            5.5     4.200000  
+0             NaN     6.282183  
+1             NaN     5.115510  
+2             NaN     1.042321  
+3             NaN     1.297915  
+4             NaN     5.390748
 ```
 
 As you can see, the `append()` was smart! It recognized the observations did not all include the same variables and left room appropriately in the table to represent that there was missing data. Furthermore, it used the NaN to represent the missing data so that any subsequent functions would recognize that the data was missing.
