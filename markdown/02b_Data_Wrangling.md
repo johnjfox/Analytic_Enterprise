@@ -101,52 +101,6 @@ So, why did we do this? First off, we'll often receive data in a format that doe
 
 Melting the data is often the first step in reshaping the data into a format that is more amenable to analysis. Either we'll melt the data as an end unto itself, or we might use some of the other pandas operations (e.g. pivot or groupby) to reshape into a different form.
 
-### Pivot Tables
-
-There are multiple approaches for transforming long data into wide data, a.k.a. undoing a `melt`. The one which will be most familiar to Excel users is to create a pivot table.(By the way, apparently the word PivotTable is actually copyrighted by Microsoft). There are a few mechanisms to perform the pivot, but the one which I find easiest to remember is the `pivot_table()` function, which has the following form.
-
-```python
->>> pd.pivot_table(df_melt,values = 'value', index='Class', columns='measurement', aggfunc = 'std')
-measurement      Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
-Class                                                                
-Iris-setosa          0.173511     0.107210      0.352490     0.381024
-Iris-versicolor      0.469911     0.197753      0.516171     0.313798
-Iris-virginica       0.551895     0.274650      0.635880     0.322497
-```
-
-An important thing to note is that the final argument `aggfunc` can take a list of functions. The functions which are available to it all come from the numpy package. A partial list of these functions (assuming that we import numpy as `np` is:
-
-|Function | Description | 
-|:-------:|:-----------|
-| `np.min` | The minimum of the aggregated data |
-| `np.max` | The maximum of the aggregated data |
-| `np.mean` | The average of the aggregated data |
-| `np.std` | The standard deviation of the aggregated data |
-| `np.count` | The count of the aggregated data |
-
-### Group By
-
-An alternative approach to aggregating the data can be found by using the `groupby()` method, which will create a hierarchical representation of the data using, you probably guessed it, the variables which you've chosen to group by. Once we have these groups, then we can once again apply the various numpy aggregation functions that we've just described.
-
-```python
->>> grouped = df_melt.groupby(['Class', 'measurement'])
->>> print grouped.aggregate('sum')
-                              value
-Class           measurement        
-Iris-setosa     Petal_Length   73.2
-                Petal_Width    12.2
-                Sepal_Length  250.3
-                Sepal_Width   170.9
-Iris-versicolor Petal_Length  213.0
-                Petal_Width    66.3
-                Sepal_Length  296.8
-                Sepal_Width   138.5
-Iris-virginica  Petal_Length  277.6
-                Petal_Width   101.3
-                Sepal_Length  329.4
-                Sepal_Width   148.7
-```
-
 ### When should I use the various formats of data?
 
 So what kinds of analyses are particularly appropriate for wide format data. Well, as it turns out, most of the analyses that we've seen to this point work quite well with wide-format data. For instance, if we want to perform any form of visual or descriptive analysis of a single variable, wide-format data is extremely convenient since we have convenience methods that allow us to extract the data. For instance:
@@ -204,6 +158,34 @@ Here, the process of melting the iris data has ended up with a DataFrame where w
 >>> plt.figure(figsize=(6,6))
 >>> sns.stripplot(y='value', x='measurement', hue='Class', data=df_melt, jitter= True);
 ```
+
+### Going From Long Form to Wide Form
+
+### Pivot Tables
+
+There are multiple approaches for transforming long data into wide data, a.k.a. undoing a `melt`. The one which will be most familiar to Excel users is to create a pivot table.(By the way, apparently the word PivotTable is actually copyrighted by Microsoft). There are a few mechanisms to perform the pivot, but the one which I find easiest to remember is the `pivot_table()` function, which has the following form.
+
+```python
+>>> pd.pivot_table(df_melt,values = 'value', index='Class', columns='measurement', aggfunc = 'std')
+measurement      Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
+Class
+Iris-setosa          0.173511     0.107210      0.352490     0.381024
+Iris-versicolor      0.469911     0.197753      0.516171     0.313798
+Iris-virginica       0.551895     0.274650      0.635880     0.322497
+```
+
+An important thing to note is that the final argument `aggfunc` can take a list of functions. The functions which are available to it all come from the numpy package. A partial list of these functions (assuming that we import numpy as `np` is:
+
+|Function | Description | 
+|:-------:|:-----------|
+| `np.min` | The minimum of the aggregated data |
+| `np.max` | The maximum of the aggregated data |
+| `np.mean` | The average of the aggregated data |
+| `np.std` | The standard deviation of the aggregated data |
+| `np.count` | The count of the aggregated data |
+
+We'll see some other approach for transforming the data when we discuss exploratory analysis.
+
 
 ## Data Merging
 
@@ -263,27 +245,27 @@ pandas supports the combination of DataFrames through the `join` operations that
 ... random_df = df.sample(n=10)
 >>> random_df
       ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width  \
-11    12           4.8          3.4           1.6          0.2   
-17    18           5.1          3.5           1.4          0.3   
-86    87           6.7          3.1           4.7          1.5   
-81    82           5.5          2.4           3.7          1.0   
-45    46           4.8          3.0           1.4          0.3   
-74    75           6.4          2.9           4.3          1.3   
-49    50           5.0          3.3           1.4          0.2   
-97    98           6.2          2.9           4.3          1.3   
-105  106           7.6          3.0           6.6          2.1   
-0      1           5.1          3.5           1.4          0.2   
+11    12           4.8          3.4           1.6          0.2
+17    18           5.1          3.5           1.4          0.3
+86    87           6.7          3.1           4.7          1.5
+81    82           5.5          2.4           3.7          1.0
+45    46           4.8          3.0           1.4          0.3
+74    75           6.4          2.9           4.3          1.3
+49    50           5.0          3.3           1.4          0.2
+97    98           6.2          2.9           4.3          1.3
+105  106           7.6          3.0           6.6          2.1
+0      1           5.1          3.5           1.4          0.2
 
-               Class  
-11       Iris-setosa  
-17       Iris-setosa  
-86   Iris-versicolor  
-81   Iris-versicolor  
-45       Iris-setosa  
-74   Iris-versicolor  
-49       Iris-setosa  
-97   Iris-versicolor  
-105   Iris-virginica  
+               Class
+11       Iris-setosa
+17       Iris-setosa
+86   Iris-versicolor
+81   Iris-versicolor
+45       Iris-setosa
+74   Iris-versicolor
+49       Iris-setosa
+97   Iris-versicolor
+105   Iris-virginica
 0        Iris-setosa
 ```
 
@@ -292,27 +274,27 @@ Now, using this sample of the data, let's join the price data to each row using 
 ```python
 >>> pd.merge(random_df, price_df, how='inner', on='Class').head(10)
     ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width            Class  \
-0   12           4.8          3.4           1.6          0.2      Iris-setosa   
-1   18           5.1          3.5           1.4          0.3      Iris-setosa   
-2   46           4.8          3.0           1.4          0.3      Iris-setosa   
-3   50           5.0          3.3           1.4          0.2      Iris-setosa   
-4    1           5.1          3.5           1.4          0.2      Iris-setosa   
-5   87           6.7          3.1           4.7          1.5  Iris-versicolor   
-6   82           5.5          2.4           3.7          1.0  Iris-versicolor   
-7   75           6.4          2.9           4.3          1.3  Iris-versicolor   
-8   98           6.2          2.9           4.3          1.3  Iris-versicolor   
-9  106           7.6          3.0           6.6          2.1   Iris-virginica   
+0   12           4.8          3.4           1.6          0.2      Iris-setosa
+1   18           5.1          3.5           1.4          0.3      Iris-setosa
+2   46           4.8          3.0           1.4          0.3      Iris-setosa
+3   50           5.0          3.3           1.4          0.2      Iris-setosa
+4    1           5.1          3.5           1.4          0.2      Iris-setosa
+5   87           6.7          3.1           4.7          1.5  Iris-versicolor
+6   82           5.5          2.4           3.7          1.0  Iris-versicolor
+7   75           6.4          2.9           4.3          1.3  Iris-versicolor
+8   98           6.2          2.9           4.3          1.3  Iris-versicolor
+9  106           7.6          3.0           6.6          2.1   Iris-virginica
 
-      price  
-0  3.627298  
-1  3.627298  
-2  3.627298  
-3  3.627298  
-4  3.627298  
-5  2.327656  
-6  2.327656  
-7  2.327656  
-8  2.327656  
+      price
+0  3.627298
+1  3.627298
+2  3.627298
+3  3.627298
+4  3.627298
+5  2.327656
+6  2.327656
+7  2.327656
+8  2.327656
 9  8.030063
 ```
 
@@ -353,37 +335,37 @@ Now, let's actually append the new data to the bottom of the original data.
 ```python
 >>> random_df.append(more_samples_df).tail(20)
                Class   ID Petal_Color  Petal_Length  Petal_Width  \
-11       Iris-setosa   12         NaN      1.600000     0.200000   
-17       Iris-setosa   18         NaN      1.400000     0.300000   
-86   Iris-versicolor   87         NaN      4.700000     1.500000   
-81   Iris-versicolor   82         NaN      3.700000     1.000000   
-45       Iris-setosa   46         NaN      1.400000     0.300000   
-74   Iris-versicolor   75         NaN      4.300000     1.300000   
-49       Iris-setosa   50         NaN      1.400000     0.200000   
-97   Iris-versicolor   98         NaN      4.300000     1.300000   
-105   Iris-virginica  106         NaN      6.600000     2.100000   
-0        Iris-setosa    1         NaN      1.400000     0.200000   
-0        Iris-fakosa  200      purple      6.358314     3.769740   
-1        Iris-fakosa  201       green      5.567025     7.881036   
-2        Iris-fakosa  202         red      3.726654     6.062670   
-3        Iris-fakosa  203      yellow      6.289499     0.314357   
-4        Iris-fakosa  204      yellow      3.705342     0.630771   
+11       Iris-setosa   12         NaN      1.600000     0.200000
+17       Iris-setosa   18         NaN      1.400000     0.300000
+86   Iris-versicolor   87         NaN      4.700000     1.500000
+81   Iris-versicolor   82         NaN      3.700000     1.000000
+45       Iris-setosa   46         NaN      1.400000     0.300000
+74   Iris-versicolor   75         NaN      4.300000     1.300000
+49       Iris-setosa   50         NaN      1.400000     0.200000
+97   Iris-versicolor   98         NaN      4.300000     1.300000
+105   Iris-virginica  106         NaN      6.600000     2.100000
+0        Iris-setosa    1         NaN      1.400000     0.200000
+0        Iris-fakosa  200      purple      6.358314     3.769740
+1        Iris-fakosa  201       green      5.567025     7.881036
+2        Iris-fakosa  202         red      3.726654     6.062670
+3        Iris-fakosa  203      yellow      6.289499     0.314357
+4        Iris-fakosa  204      yellow      3.705342     0.630771
 
-     Sepal_Length  Sepal_Width  
-11            4.8     3.400000  
-17            5.1     3.500000  
-86            6.7     3.100000  
-81            5.5     2.400000  
-45            4.8     3.000000  
-74            6.4     2.900000  
-49            5.0     3.300000  
-97            6.2     2.900000  
-105           7.6     3.000000  
-0             5.1     3.500000  
-0             NaN     4.642440  
-1             NaN     6.500538  
-2             NaN     8.574017  
-3             NaN     4.407359  
+     Sepal_Length  Sepal_Width
+11            4.8     3.400000
+17            5.1     3.500000
+86            6.7     3.100000
+81            5.5     2.400000
+45            4.8     3.000000
+74            6.4     2.900000
+49            5.0     3.300000
+97            6.2     2.900000
+105           7.6     3.000000
+0             5.1     3.500000
+0             NaN     4.642440
+1             NaN     6.500538
+2             NaN     8.574017
+3             NaN     4.407359
 4             NaN     6.375177
 ```
 
