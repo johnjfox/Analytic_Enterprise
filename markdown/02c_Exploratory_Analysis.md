@@ -178,10 +178,6 @@ An important thing to note is that the final argument `aggfunc` can take a list 
 
 Let's start off with the absolutely simplest possible plot that pandas provides.
 
----
-!!python/unicode 'scrolled': true
-...
-
 ```python
 >>> # apply the `plot()` method to a data frame
 ...
@@ -324,10 +320,6 @@ An alternative approach to plotting uses the subplots() method to create a figur
 >>> sns.boxplot(data=df, orient='h')
 >>> sns.swarmplot(data=df, orient='h', color='grey')
 ```
-
----
-!!python/unicode 'scrolled': false
-...
 
 ```python
 >>> df_melt = pd.melt(df,'Class', var_name='measurement')
