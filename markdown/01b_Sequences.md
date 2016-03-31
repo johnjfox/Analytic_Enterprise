@@ -240,7 +240,7 @@ A list is basically a collection of objects. They are special in a few ways:
 * they can grow without bound
 * they can contain pretty much anything we'd like them to contain
 
-Creating a list is straightforward. We simple create a collection of what's called key-value pairs. Here, the "key" will be the information we use to perform our lookup and the "value" will be the information we get back. The general form we will be
+Creating a list is straightforward. We simple create a collection of objects. The general form we will be
 
 The general form we will be
     
@@ -249,7 +249,7 @@ The general form we will be
              value2
            ]
 
-As we'll see, in a lot of important ways, lists and strings are actually quite similar although strings are limited to containing characters whereas lists can contain any type of Python object.
+As we'll see, in a lot of important ways, lists and strings are actually quite similar although strings are limited to containing characters whereas lists are much more flexible.
 
 **Creation**
 
