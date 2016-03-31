@@ -35,7 +35,7 @@
 
 ## Dictionaries
 
-A dictionary is basically a mapping between objects. What we've seen so far are sequences, objects where we can index them based on their position. A dictionary allows us to look up data based upon a "key". You can think of this as being analogous to a real dictionary. There, we look up a word, which is the "ley" for searching the disctionary, and obtain the definition (among other things). Here, we use the key to retrieve information, but instead of just the definition, we can store any class of information.
+A dictionary is basically a mapping between objects. What we've seen so far are sequences, objects where we can index them based on their position. A dictionary allows us to look up data based upon a "key". You can think of this as being analogous to a real dictionary. There, we look up a word, which is the "key" for searching the dictionary, and obtain the definition (among other things). Here, we use the key to retrieve information, but instead of just the definition, we can store any class of information.
 
 Creating a dictionary is straightforward. We simple create a collection of what's called key-value pairs. Here, the "key" will be the information we use to perform our lookup and the "value" will be the information we get back. The general form we will be
     
@@ -177,7 +177,7 @@ We can perform the typical set operations on Python `Set` collections, including
 * take the intersection of two sets
 * take the difference of two sets
 
-in addition, we can use them to simplify other operations, like identifying the unique elements in a list.functi
+in addition, we can use them to simplify other operations, like identifying the unique elements in a list.
 
 **Set Functions**
 
