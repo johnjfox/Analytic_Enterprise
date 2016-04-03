@@ -168,7 +168,7 @@ There are multiple approaches for transforming long data into wide data, a.k.a. 
 ```python
 >>> pd.pivot_table(df_melt,values = 'value', index='Class', columns='measurement', aggfunc = 'std')
 measurement      Petal_Length  Petal_Width  Sepal_Length  Sepal_Width
-Class                                                                
+Class
 Iris-setosa          0.173511     0.107210      0.352490     0.381024
 Iris-versicolor      0.469911     0.197753      0.516171     0.313798
 Iris-virginica       0.551895     0.274650      0.635880     0.322497
@@ -245,27 +245,27 @@ pandas supports the combination of DataFrames through the `join` operations that
 ... random_df = df.sample(n=10)
 >>> random_df
       ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width  \
-34    35           4.9          3.1           1.5          0.1   
-13    14           4.3          3.0           1.1          0.1   
-129  130           7.2          3.0           5.8          1.6   
-74    75           6.4          2.9           4.3          1.3   
-5      6           5.4          3.9           1.7          0.4   
-31    32           5.4          3.4           1.5          0.4   
-23    24           5.1          3.3           1.7          0.5   
-81    82           5.5          2.4           3.7          1.0   
-88    89           5.6          3.0           4.1          1.3   
-58    59           6.6          2.9           4.6          1.3   
+34    35           4.9          3.1           1.5          0.1
+13    14           4.3          3.0           1.1          0.1
+129  130           7.2          3.0           5.8          1.6
+74    75           6.4          2.9           4.3          1.3
+5      6           5.4          3.9           1.7          0.4
+31    32           5.4          3.4           1.5          0.4
+23    24           5.1          3.3           1.7          0.5
+81    82           5.5          2.4           3.7          1.0
+88    89           5.6          3.0           4.1          1.3
+58    59           6.6          2.9           4.6          1.3
 
-               Class  
-34       Iris-setosa  
-13       Iris-setosa  
-129   Iris-virginica  
-74   Iris-versicolor  
-5        Iris-setosa  
-31       Iris-setosa  
-23       Iris-setosa  
-81   Iris-versicolor  
-88   Iris-versicolor  
+               Class
+34       Iris-setosa
+13       Iris-setosa
+129   Iris-virginica
+74   Iris-versicolor
+5        Iris-setosa
+31       Iris-setosa
+23       Iris-setosa
+81   Iris-versicolor
+88   Iris-versicolor
 58   Iris-versicolor
 ```
 
@@ -274,27 +274,27 @@ Now, using this sample of the data, let's join the price data to each row using 
 ```python
 >>> pd.merge(random_df, price_df, how='inner', on='Class').head(10)
     ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width            Class  \
-0   35           4.9          3.1           1.5          0.1      Iris-setosa   
-1   14           4.3          3.0           1.1          0.1      Iris-setosa   
-2    6           5.4          3.9           1.7          0.4      Iris-setosa   
-3   32           5.4          3.4           1.5          0.4      Iris-setosa   
-4   24           5.1          3.3           1.7          0.5      Iris-setosa   
-5  130           7.2          3.0           5.8          1.6   Iris-virginica   
-6   75           6.4          2.9           4.3          1.3  Iris-versicolor   
-7   82           5.5          2.4           3.7          1.0  Iris-versicolor   
-8   89           5.6          3.0           4.1          1.3  Iris-versicolor   
-9   59           6.6          2.9           4.6          1.3  Iris-versicolor   
+0   35           4.9          3.1           1.5          0.1      Iris-setosa
+1   14           4.3          3.0           1.1          0.1      Iris-setosa
+2    6           5.4          3.9           1.7          0.4      Iris-setosa
+3   32           5.4          3.4           1.5          0.4      Iris-setosa
+4   24           5.1          3.3           1.7          0.5      Iris-setosa
+5  130           7.2          3.0           5.8          1.6   Iris-virginica
+6   75           6.4          2.9           4.3          1.3  Iris-versicolor
+7   82           5.5          2.4           3.7          1.0  Iris-versicolor
+8   89           5.6          3.0           4.1          1.3  Iris-versicolor
+9   59           6.6          2.9           4.6          1.3  Iris-versicolor
 
-      price  
-0  8.771866  
-1  8.771866  
-2  8.771866  
-3  8.771866  
-4  8.771866  
-5  9.335015  
-6  0.533054  
-7  0.533054  
-8  0.533054  
+      price
+0  8.771866
+1  8.771866
+2  8.771866
+3  8.771866
+4  8.771866
+5  9.335015
+6  0.533054
+7  0.533054
+8  0.533054
 9  0.533054
 ```
 
@@ -335,37 +335,37 @@ Now, let's actually append the new data to the bottom of the original data.
 ```python
 >>> random_df.append(more_samples_df).tail(20)
                Class   ID Petal_Color  Petal_Length  Petal_Width  \
-34       Iris-setosa   35         NaN      1.500000     0.100000   
-13       Iris-setosa   14         NaN      1.100000     0.100000   
-129   Iris-virginica  130         NaN      5.800000     1.600000   
-74   Iris-versicolor   75         NaN      4.300000     1.300000   
-5        Iris-setosa    6         NaN      1.700000     0.400000   
-31       Iris-setosa   32         NaN      1.500000     0.400000   
-23       Iris-setosa   24         NaN      1.700000     0.500000   
-81   Iris-versicolor   82         NaN      3.700000     1.000000   
-88   Iris-versicolor   89         NaN      4.100000     1.300000   
-58   Iris-versicolor   59         NaN      4.600000     1.300000   
-0        Iris-fakosa  200      purple      1.127238     7.734680   
-1        Iris-fakosa  201       green      2.434078     1.718914   
-2        Iris-fakosa  202         red      7.624704     1.291397   
-3        Iris-fakosa  203      yellow      5.057075     9.488924   
-4        Iris-fakosa  204      yellow      5.658852     2.471303   
+34       Iris-setosa   35         NaN      1.500000     0.100000
+13       Iris-setosa   14         NaN      1.100000     0.100000
+129   Iris-virginica  130         NaN      5.800000     1.600000
+74   Iris-versicolor   75         NaN      4.300000     1.300000
+5        Iris-setosa    6         NaN      1.700000     0.400000
+31       Iris-setosa   32         NaN      1.500000     0.400000
+23       Iris-setosa   24         NaN      1.700000     0.500000
+81   Iris-versicolor   82         NaN      3.700000     1.000000
+88   Iris-versicolor   89         NaN      4.100000     1.300000
+58   Iris-versicolor   59         NaN      4.600000     1.300000
+0        Iris-fakosa  200      purple      1.127238     7.734680
+1        Iris-fakosa  201       green      2.434078     1.718914
+2        Iris-fakosa  202         red      7.624704     1.291397
+3        Iris-fakosa  203      yellow      5.057075     9.488924
+4        Iris-fakosa  204      yellow      5.658852     2.471303
 
-     Sepal_Length  Sepal_Width  
-34            4.9     3.100000  
-13            4.3     3.000000  
-129           7.2     3.000000  
-74            6.4     2.900000  
-5             5.4     3.900000  
-31            5.4     3.400000  
-23            5.1     3.300000  
-81            5.5     2.400000  
-88            5.6     3.000000  
-58            6.6     2.900000  
-0             NaN     9.510011  
-1             NaN     5.640253  
-2             NaN     2.394429  
-3             NaN     9.676942  
+     Sepal_Length  Sepal_Width
+34            4.9     3.100000
+13            4.3     3.000000
+129           7.2     3.000000
+74            6.4     2.900000
+5             5.4     3.900000
+31            5.4     3.400000
+23            5.1     3.300000
+81            5.5     2.400000
+88            5.6     3.000000
+58            6.6     2.900000
+0             NaN     9.510011
+1             NaN     5.640253
+2             NaN     2.394429
+3             NaN     9.676942
 4             NaN     9.001745
 ```
 
