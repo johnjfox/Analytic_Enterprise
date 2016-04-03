@@ -1,0 +1,37 @@
+## Constructing a Test Statistic for Proportions
+
+Let's imagine that we have two sets of data, which we'll call A and B.
+
+
+Let's start by supposing that we have obtained data from $n$ visitors. Of this total sample, $n_A$ have been (randomly) sent to page A, and $n_B$ have been sent to page B. Let's also assume that of each group, the number of visitors for whom we obtained a 'successful' outcome is  $X_A$ and $X_B$ respectively. Then the proportion of successes in sample distributions corresponding to each of the two alternatives is given by
+
+$$\hat{\pi}_{A}=\frac{X_{A}}{n_{A}}$$
+
+and
+
+$$\hat{\pi}_{B}=\frac{X_{B}}{n_{B}}.$$
+
+The "$\hat{}$" here is used to remind us that these are sample proportions based upon the data that we've captured, not the true proportion.
+
+For simplicity, let's start by considering the sample distribution on $\pi_A$. If we assume that we have a large number of samples (> 30), then we know from the Central Limit Theorem that this distribution will be Normal with mean equal to the mean of the true population, i.e.
+
+$$\mu_{\hat\pi_A} = \pi_A.$$
+
+Our z-test statistic is given by
+
+$$
+\begin{aligned}
+	z 	& =\frac{\hat{\pi}_A - \hat{\pi}_B}{\sigma_{\hat\pi_A-\hat\pi_B}} \\
+		& = \frac{\hat{\pi}_A - \hat{\pi}_B}
+			{\sqrt{\hat{\pi} (1-\hat{\pi} )\left(\frac{1}{n_A} + \frac{1}{n_B}\right)}}
+\end{aligned} % line 156
+$$
+
+and we can compare our calculated z-statistic to the critical values we get from the N(0,1) distribution to determine a p-value.
+
+## Some Comments
+1. Hopefully, you noticed that the test that we used was the z-test, not the t-test. As a general rule, our standard approach for performing hypothesis testing on the sample mean of a numerical variables will be to use the t-test whenever the test statistic requires calculating a sample standard deviation. If we somehow know the true population standard deviation or can assume it from the null hypothesis, then we can use the z-test, but it's rare to know the true population standard deviation(s) but not the mean.  When working with proportions, as we're doing in this note, the standard deviation is a function of the proportion and is therefore treated as though it's "known", so we never use the t-test for proportions.
+
+2. Next, the hypothesis test used here was deliberately chosen to follow a development which should be familiar to you from hypothesis testing. There is a frequently used alternative called _Pearson's Chi-Squared Test_ which tests for independence in a contingency table. For the simplest case of two alternatives and two outcomes, i.e. what we have worked through in this note, the Chi-Squared test is exactly equivalent to the Z-test we've developed here. The advantage of the Chi-Squared Test, however, is that it can handle the more general case where we have an arbitrary number of alternatives each with an arbitrary number of outcomes.
+
+3. Finally, buried within our development is the assumption that we have a large number of samples. Often, this won't be the case. Under the situation where we are expecting the number of potential responses to be low (say $\le 5$), there are other more appropriate tests such as Fisher's Exact Test which do not assume that the sample distribution can be approximated by a Normal distribution.

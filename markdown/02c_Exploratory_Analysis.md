@@ -109,7 +109,7 @@ Since the data load requires access to the internet, I'm only going to do this o
 >>> print "\n\nThe std: \n\n", df.std()
 
 
-The mean:
+The mean: 
 
 Sepal_Length    5.843333
 Sepal_Width     3.054000
@@ -118,7 +118,7 @@ Petal_Width     1.198667
 dtype: float64
 
 
-The std:
+The std: 
 
 Sepal_Length    0.828066
 Sepal_Width     0.433594
@@ -215,24 +215,24 @@ Unfortunately, when we want to capture these conditional means, oftentimes we'll
 ```python
 >>> pd.pivot_table(df,index='Class', aggfunc = [np.mean, np.std, np.size])
                         mean                                       \
-                Petal_Length Petal_Width Sepal_Length Sepal_Width
-Class
-Iris-setosa            1.464       0.244        5.006       3.418
-Iris-versicolor        4.260       1.326        5.936       2.770
-Iris-virginica         5.552       2.026        6.588       2.974
+                Petal_Length Petal_Width Sepal_Length Sepal_Width   
+Class                                                               
+Iris-setosa            1.464       0.244        5.006       3.418   
+Iris-versicolor        4.260       1.326        5.936       2.770   
+Iris-virginica         5.552       2.026        6.588       2.974   
 
                          std                                       \
-                Petal_Length Petal_Width Sepal_Length Sepal_Width
-Class
-Iris-setosa         0.173511    0.107210     0.352490    0.381024
-Iris-versicolor     0.469911    0.197753     0.516171    0.313798
-Iris-virginica      0.551895    0.274650     0.635880    0.322497
+                Petal_Length Petal_Width Sepal_Length Sepal_Width   
+Class                                                               
+Iris-setosa         0.173511    0.107210     0.352490    0.381024   
+Iris-versicolor     0.469911    0.197753     0.516171    0.313798   
+Iris-virginica      0.551895    0.274650     0.635880    0.322497   
 
-                        size
-                Petal_Length Petal_Width Sepal_Length Sepal_Width
-Class
-Iris-setosa               50          50           50          50
-Iris-versicolor           50          50           50          50
+                        size                                       
+                Petal_Length Petal_Width Sepal_Length Sepal_Width  
+Class                                                              
+Iris-setosa               50          50           50          50  
+Iris-versicolor           50          50           50          50  
 Iris-virginica            50          50           50          50
 ```
 
@@ -436,7 +436,7 @@ Petal_Width       0.817954    -0.356544      0.962757     1.000000
 
 ```python
 >>> sns.jointplot(data=df, x='Petal_Width', y='Petal_Length', size=7)
-<seaborn.axisgrid.JointGrid at 0x116f37b50>
+<seaborn.axisgrid.JointGrid at 0x117b80110>
 ```
 
 **Scatter Matrix Plot**
@@ -484,7 +484,7 @@ Petal_Width       0.817954    -0.356544      0.962757     1.000000
 ```python
 >>> plt.figure(figsize=(10,10))
 >>> sns.factorplot(x='measurement', y='value', hue="Class", data=df_melt, kind="bar", size=7)
-<seaborn.axisgrid.FacetGrid at 0x119313c50>
+<seaborn.axisgrid.FacetGrid at 0x119329610>
 ```
 
 ### References

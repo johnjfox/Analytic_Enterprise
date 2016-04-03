@@ -52,7 +52,10 @@ The probability distribution we just derived by flipping coins is called the **B
 >>> from math import factorial
 >>> import pandas as pd
 >>> import numpy as np
+>>> import matplotlib as mpl
 >>> import matplotlib.pyplot as plt
+...
+>>> mpl.style.use('fivethirtyeight')
 ```
 
 ## The Computation
@@ -113,6 +116,17 @@ Of her 10 opportunities, how many must Dr Bristol correctly identify before we s
 10		0.0010	1.0000
 ```
 
+```python
+>>> # plot the results
+... plt.figure(figsize=(8,6))
+...
+>>> # this time, I also want the filled area corresponding to the p-value
+... plt.bar(range(num_flips+1),guess);
+>>> #plt.step(range(num_flips+1),guess_cum, where='post');
+... plt.xlabel('NUMBER OF HEADS')
+>>> plt.ylabel('PROBABILITY')
+```
+
 ## Thinking About The Results
 
 Let's stop at this point and think about these results.
@@ -121,20 +135,13 @@ Let's stop at this point and think about these results.
 * What is it saying that the cumulative probability for $ X = 10 $ is 0.1%?
 
 ```python
->>> plt.figure(figsize=(8,6))
->>> plt.plot(guess)
->>> plt.plot(guess_cum)
-[<matplotlib.lines.Line2D at 0x10d018a90>]
-```
-
-```python
 >>> # plot the results
 ... plt.figure(figsize=(8,6))
 ...
 >>> # this time, I also want the filled area corresponding to the p-value
-... plt.fill_between(range(8,11),guess[-3:], color='r', alpha =0.25);
->>> plt.plot(guess);
->>> plt.plot(guess_cum);
+... plt.bar(range(num_flips+1),guess);
+>>> # plt.step(range(num_flips+1),guess_cum, where='post');
+... plt.bar(range(8,11),guess[8:11],color='r');
 ```
 
 ## Introducing the "P-Value"
@@ -174,5 +181,5 @@ Let's stop at this point and think about these results.
 ... plt.fill_between(range(8,11),guess[-3:], color='r', alpha =0.25);
 >>> plt.plot(guess);
 >>> # plt.plot(guess_cum);
-[<matplotlib.lines.Line2D at 0x1114ecf90>]
+[<matplotlib.lines.Line2D at 0x10fb93950>]
 ```
