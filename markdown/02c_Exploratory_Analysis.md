@@ -164,7 +164,7 @@ MEAN =  150
 
 |Method	| Description |
 | --- | --- |
-|count() | 	Number of non-null observations |
+|count | 	Number of non-null observations |
 |sum() | Sum of values |
 |mean() | Mean of values |
 |median() | Arithmetic median of values |
