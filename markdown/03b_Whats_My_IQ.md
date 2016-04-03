@@ -36,7 +36,7 @@ Well, an IQ of 115 is one standard deviation above the mean, which means that ab
 
 ## Generate Your IQ
 
-As you may know, IQ tests are considered somewhat controversial for a lot of reasons. We'll avoid the controversy by using a new and improved testing approach developed especially for this class: a random number generator with the appropriate statistics. In the interest of total transparency, I'll point out that this test has not yet been adopted by the Mensa society, or for that matter anyone else, but I like to think that we're "innovating". 
+As you may know, IQ tests are considered somewhat controversial for a lot of reasons. We'll avoid the controversy by using a new and improved testing approach developed especially for this class: a random number generator with the appropriate statistics. In the interest of total transparency, I'll point out that this test has not yet been adopted by the Mensa society, or for that matter anyone else, but I like to think that we're "innovating".
 
 Please "estimate" your IQ by running this test. If you'd like, you can ensure that you get a fair assessment by running the cell a few times. for the sake of argument, let's say that you execute the cell 10 times. Before you ask, it doesn't really matter how many times you run it so if you run it more times, that's fine too. When you're done with your self-assessment, please submit it using the instructions in the next cell.
 

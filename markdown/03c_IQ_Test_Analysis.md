@@ -8,11 +8,16 @@
 >>> import numpy as np
 >>> import matplotlib.pyplot as plt
 >>> import seaborn as sns
+>>> import scipy.stats as stats
+...
+>>> from math import sqrt
 ...
 >>> # some imports to handle HTML requests and parsing the results
 ... from StringIO import StringIO
 >>> import requests
 ```
+
+## Let's Look At The Results of Our IQ Test
 
 ```python
 >>> # set up the URL
@@ -47,7 +52,8 @@ unique          0         0   0
 ```python
 >>> # let's get a distribution plot
 ...
-... # df.IQ.plot.hist()
+... # g = sns.distplot(df.IQ,rug=True, bins=10);
+... # g.figure.set_size_inches(10,7)
 ```
 
 ## Let's Actually Go Back And Look At Some Previously Collected Data
