@@ -37,8 +37,9 @@
 ... df.rename(columns={'My IQ is:': 'IQ'}, inplace=True)
 ...
 >>> df.head()
-          Timestamp        Username   IQ
-0  4/2/2016 8:33:16  johnfox@bu.edu  111
+Empty DataFrame
+Columns: [Timestamp, Username, IQ]
+Index: []
 ```
 
 ```python
@@ -46,20 +47,14 @@
 ...
 ... print 'NUM ENTRIES = ', len(df)
 >>> df.describe()
-NUM ENTRIES =  1
-        IQ
-count    1
-mean   111
-std    NaN
-min    111
-25%    111
-50%    111
-75%    111
-max    111
+NUM ENTRIES =  0
+        Timestamp  Username  IQ
+count           0         0   0
+unique          0         0   0
 ```
 
 ```python
 >>> # let's get a distribution plot
 ...
-... df.IQ.plot.hist()
+... # df.IQ.plot.hist()
 ```
