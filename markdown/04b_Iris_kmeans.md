@@ -47,7 +47,7 @@
 
 ```python
 >>> sns.pairplot(iris_df.iloc[:,1:], hue='Class')
-<seaborn.axisgrid.PairGrid at 0x10fad5f50>
+<seaborn.axisgrid.PairGrid at 0x10f00c690>
 ```
 
 ```python
@@ -57,21 +57,25 @@
 ```python
 >>> iris_no_id_df = iris_df.iloc[:,1:]
 >>> iris_no_id_df.sample(5)
-     Sepal_Length  Sepal_Width  Petal_Length  Petal_Width            Class
-124           6.7          3.3           5.7          2.1   Iris-virginica
-108           6.7          2.5           5.8          1.8   Iris-virginica
-139           6.9          3.1           5.4          2.1   Iris-virginica
-118           7.7          2.6           6.9          2.3   Iris-virginica
-71            6.1          2.8           4.0          1.3  Iris-versicolor
+    Sepal_Length  Sepal_Width  Petal_Length  Petal_Width            Class
+40           5.0          3.5           1.3          0.3      Iris-setosa
+35           5.0          3.2           1.2          0.2      Iris-setosa
+82           5.8          2.7           3.9          1.2  Iris-versicolor
+92           5.8          2.6           4.0          1.2  Iris-versicolor
+5            5.4          3.9           1.7          0.4      Iris-setosa
 ```
 
 ```python
 >>> iris_no_id_df.boxplot(vert =False, by='Class')
-array([[<matplotlib.axes._subplots.AxesSubplot object at 0x116b0bad0>,
-        <matplotlib.axes._subplots.AxesSubplot object at 0x1163de150>],
-       [<matplotlib.axes._subplots.AxesSubplot object at 0x117214c10>,
-        <matplotlib.axes._subplots.AxesSubplot object at 0x117278b10>]], dtype=object)
+array([[<matplotlib.axes._subplots.AxesSubplot object at 0x11577be50>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x1163bf3d0>],
+       [<matplotlib.axes._subplots.AxesSubplot object at 0x11673ecd0>,
+        <matplotlib.axes._subplots.AxesSubplot object at 0x1167a3b10>]], dtype=object)
 ```
+
+### NOTE: CORRECTION
+
+This is a correction relative to what I showed in class! Thanks to a helpful quality control editor :) a mistake was corrected and this is now producing a more interesting result. Specifically, I was fitting my model using the original dataset which still had the embedded ID. In effect, I was "learning" that the ID gave me a perfect way to tell which iris was which (which, errr... isn't very helpful in general). I've corrected and now you see a more interesting set of results, in the sense that the classification is far from perfect.
 
 ```python
 >>> # let's map all of the strings in the 'Class' variable into
@@ -79,33 +83,33 @@ array([[<matplotlib.axes._subplots.AxesSubplot object at 0x116b0bad0>,
 ...
 ... model = KMeans( n_clusters = 3 ) #Set the model to have 3 clusters
 ...
->>> model = model.fit( iris_df.iloc[:,0:4] )
+>>> model = model.fit( iris_no_id_df.iloc[:,0:4] )
 ...
 >>> # We can print out the cluster for each instance
 ... print model.labels_
-[2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
- 2 2 2 2 2 2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1
- 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- 1 1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 2 2 2 2 1 2 2 2 2
+ 2 2 1 1 2 2 2 2 1 2 1 2 1 2 2 1 1 2 2 2 2 2 1 2 2 2 2 1 2 2 2 1 2 2 2 1 2
+ 2 1]
 ```
 
 ```python
 >>> iris_df['kmeans_class'] = model.labels_
 >>> iris_df.sample(5)
       ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width  \
-81    82           5.5          2.4           3.7          1.0   
-111  112           6.4          2.7           5.3          1.9   
-134  135           6.1          2.6           5.6          1.4   
-89    90           5.5          2.5           4.0          1.3   
-113  114           5.7          2.5           5.0          2.0   
+39    40           5.1          3.4           1.5          0.2   
+50    51           7.0          3.2           4.7          1.4   
+100  101           6.3          3.3           6.0          2.5   
+49    50           5.0          3.3           1.4          0.2   
+60    61           5.0          2.0           3.5          1.0   
 
                Class  kmeans_class  
-81   Iris-versicolor             0  
-111   Iris-virginica             1  
-134   Iris-virginica             1  
-89   Iris-versicolor             0  
-113   Iris-virginica             1
+39       Iris-setosa             0  
+50   Iris-versicolor             1  
+100   Iris-virginica             2  
+49       Iris-setosa             0  
+60   Iris-versicolor             1
 ```
 
 ```python
@@ -117,7 +121,7 @@ array([[<matplotlib.axes._subplots.AxesSubplot object at 0x116b0bad0>,
 >>> pd.pivot_table(iris_df, index='Class', columns = 'kmeans_class', values ='ID', aggfunc = 'count')
 kmeans_class      0   1   2
 Class                      
-Iris-setosa     NaN NaN  50
-Iris-versicolor  50 NaN NaN
-Iris-virginica  NaN  50 NaN
+Iris-setosa      50 NaN NaN
+Iris-versicolor NaN  48   2
+Iris-virginica  NaN  14  36
 ```
