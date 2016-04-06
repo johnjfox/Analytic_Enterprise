@@ -93,6 +93,10 @@ So, what just happened there? First, we dropped the ID variable. You'll probably
 
 So, why did we do this? First off, we'll often receive data in a format that doesn't lend itself to analysis. This can happen in a lot of ways, for instance:
 
+```python
+
+```
+
 * Column headers are values, not variable names.
 * Multiple variables are stored in one column.
 * Variables are stored in both rows and columns.

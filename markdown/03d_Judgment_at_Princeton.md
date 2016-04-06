@@ -36,28 +36,28 @@
 >>> # Finally, let's print the first few lines
 ... scores.sample(5)
                    Judge Wine Variety  Rating
+171  Jean-Marie Cardebat    T     Red    14.5
+118         Tyler Colman    Q     Red    14.0
 92              John Foy    F   White    14.5
-159     Daniele Meulders    S     Red    15.0
-59          Linda Murphy    D   White    18.0
-63   Jean-Marie Cardebat    N     Red    16.0
-132     Daniele Meulders    H   White    12.0
+14          Linda Murphy    K     Red    13.0
+56              John Foy    D   White    15.0
 ```
 
 ```python
 >>> wines.sample(5)
    Wine                                      Type/Vineyard  Year    Location  \
-8     I              Amalthea Cellars Europa VI Chardonnay  2008  New Jersey
-19    T                                 Chateau Haut-Brion  2004      France
 5     F                         Bellview Winery Chardonnay  2010  New Jersey
-7     H  Domaine Jean Latour-Labille Meursault-Charmes ...  2008      France
 11    L                          Chateau Mouton Rothschild  2004      France
+10    K                                   Chateau Montrose  2004      France
+9     J  Domaine Marc-Antonin Blain Grand Cru Batard-Mo...  2009      France
+7     H  Domaine Jean Latour-Labille Meursault-Charmes ...  2008      France
 
    Variety
-8    White
-19     Red
 5    White
-7    White
 11     Red
+10     Red
+9    White
+7    White
 ```
 
 ### What's Our Plan?
@@ -69,26 +69,26 @@
 ```python
 >>> df = pd.merge(scores, wines, how='inner', on='Wine')
 >>> df.sample(5)
-                Judge Wine Variety_x  Rating  \
-20           John Foy    B     White      17
-6    Daniele Meulders    A     White      10
-46       Tyler Colman    M       Red      16
-23       Linda Murphy    B     White      15
-150  Daniele Meulders    I     White      15
+              Judge Wine Variety_x  Rating  \
+134  Francis Schott    H     White    14.0
+74         John Foy    E     White    14.5
+115    Jamal Rayyis    G     White    12.0
+140    Linda Murphy    R       Red    15.5
+83         John Foy    O       Red    15.0
 
                                          Type/Vineyard  Year    Location  \
-20   Unionville Vineyards Pheasant Hill Single Vine...  2010  New Jersey
-6                        Heritage Vineyards Chardonnay  2010  New Jersey
-46                  Silver Decoy Winery Cabernet Franc  2008  New Jersey
-23   Unionville Vineyards Pheasant Hill Single Vine...  2010  New Jersey
-150              Amalthea Cellars Europa VI Chardonnay  2008  New Jersey
+134  Domaine Jean Latour-Labille Meursault-Charmes ...  2008      France
+74        Silver Decoy Winery Black Feather Chardonnay  2010  New Jersey
+115                             Ventimiglia Chardonnay  2010  New Jersey
+140                                 Amalthea Europa VI  2008  New Jersey
+83                             Bellview Winery Lumiere  2010  New Jersey
 
     Variety_y
-20      White
-6       White
-46        Red
-23      White
-150     White
+134     White
+74      White
+115     White
+140       Red
+83        Red
 ```
 
 ### Let's Do Some Quick Analyses
@@ -107,11 +107,11 @@ New Jersey  13.712963  14.314815
 >>> df_select = df_select.rename(columns={'Variety_x': 'Variety'})
 >>> df_select.sample(5)
     Wine Variety    Location  Rating
-21     B   White  New Jersey    19.0
-126    H   White      France    11.0
-50     M     Red  New Jersey    17.0
-154    S     Red  New Jersey    13.0
-117    Q     Red      France    14.5
+114    G   White  New Jersey      15
+3      A   White  New Jersey      14
+33     L     Red      France      16
+118    Q     Red      France      14
+32     L     Red      France      14
 ```
 
 ```python
