@@ -436,14 +436,14 @@ Petal_Width       0.817954    -0.356544      0.962757     1.000000
 
 ```python
 >>> sns.jointplot(data=df, x='Petal_Width', y='Petal_Length', size=7)
-<seaborn.axisgrid.JointGrid at 0x117de0e90>
+<seaborn.axisgrid.JointGrid at 0x118e30390>
 ```
 
 **Scatter Matrix Plot**
 
 ```python
 >>> sns.pairplot(df, hue='Class')
-<seaborn.axisgrid.PairGrid at 0x11b23b5d0>
+<seaborn.axisgrid.PairGrid at 0x118be81d0>
 ```
 
 ### Comparing Multivariate Data
@@ -485,7 +485,7 @@ Petal_Width       0.817954    -0.356544      0.962757     1.000000
 ```python
 >>> plt.figure(figsize=(10,10))
 >>> sns.factorplot(x='measurement', y='value', hue="Class", data=df_melt, kind="bar", size=7)
-<seaborn.axisgrid.FacetGrid at 0x119531150>
+<seaborn.axisgrid.FacetGrid at 0x11b5108d0>
 ```
 
 ### References

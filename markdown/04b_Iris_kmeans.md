@@ -98,17 +98,17 @@ This is a correction relative to what I showed in class! Thanks to a helpful qua
 >>> iris_df['kmeans_class'] = model.labels_
 >>> iris_df.sample(5)
       ID  Sepal_Length  Sepal_Width  Petal_Length  Petal_Width  \
-39    40           5.1          3.4           1.5          0.2   
-50    51           7.0          3.2           4.7          1.4   
-100  101           6.3          3.3           6.0          2.5   
-49    50           5.0          3.3           1.4          0.2   
-60    61           5.0          2.0           3.5          1.0   
+39    40           5.1          3.4           1.5          0.2
+50    51           7.0          3.2           4.7          1.4
+100  101           6.3          3.3           6.0          2.5
+49    50           5.0          3.3           1.4          0.2
+60    61           5.0          2.0           3.5          1.0
 
-               Class  kmeans_class  
-39       Iris-setosa             0  
-50   Iris-versicolor             1  
-100   Iris-virginica             2  
-49       Iris-setosa             0  
+               Class  kmeans_class
+39       Iris-setosa             0
+50   Iris-versicolor             1
+100   Iris-virginica             2
+49       Iris-setosa             0
 60   Iris-versicolor             1
 ```
 
@@ -120,7 +120,7 @@ This is a correction relative to what I showed in class! Thanks to a helpful qua
 ```python
 >>> pd.pivot_table(iris_df, index='Class', columns = 'kmeans_class', values ='ID', aggfunc = 'count')
 kmeans_class      0   1   2
-Class                      
+Class
 Iris-setosa      50 NaN NaN
 Iris-versicolor NaN  48   2
 Iris-virginica  NaN  14  36
