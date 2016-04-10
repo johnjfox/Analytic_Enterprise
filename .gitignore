@@ -1,9 +1,10 @@
 ## Local tweaks
-*.ini 
+*.ini
+\~*
 
-## Potentially large files 
+## Potentially large files
 # *.zip
-*.exe 
+*.exe
 
 .dropbox
 .dropbox.attr
@@ -13,7 +14,7 @@
 previous/
 Untitled*.ipynb
 
-## Video and images 
+## Video and images
 *.mp4
 *.mov
 <<<<<<< Updated upstream
